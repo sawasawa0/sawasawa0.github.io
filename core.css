@@ -1,0 +1,1300 @@
+@charset "utf-8";
+/*
+  Theme: sawasawaworks
+  Author: sawasawa
+  Description: sawasawaworks用
+*/
+
+/* css リセット ここから*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: solid 1px #000;
+	border: 0;
+	font-style:normal;
+	font-weight: normal;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+html{
+    overflow-y: scroll;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+input, textarea,{
+	margin: 0;
+	padding: 0;
+}
+
+ol, ul{
+    list-style:none;
+}
+
+table{
+    border-collapse: collapse;
+    border-spacing:0;
+}
+
+caption, th{
+    text-align: left;
+}
+
+a:focus {
+	outline:none;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	height: 0;
+	visibility: hidden;
+}
+
+a {
+text-decoration: none;
+	color: #444;
+}
+a:hover {
+text-decoration: underline;
+}
+
+
+.clearfix {
+	min-height: 1px;
+}
+
+* html .clearfix {
+	height: 1px;
+	/*\*//*/
+	height: auto;
+	overflow: hidden;
+	/**/
+}
+
+.both{
+	clear:both;
+}
+
+.inline_block {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+body {
+	background-color: #fff;
+	color: #444;
+	font: 16px "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS P Gothic", Verdana, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	overflow: hidden;
+}
+
+h1,h2,h3,h4,h5,h6 {
+font-weight: bold;
+}
+
+h1 {
+font-size: 300%;
+text-shadow: 0px 1px 1px #fff;
+}
+
+h2 {
+font-size: 200%;
+}
+
+h3 {
+font-size: 150%;
+}
+
+h1 a {
+font-weight: bold;
+}
+
+p {
+line-height: 1.6em;
+}
+
+
+
+.clear-float {
+  clear: both;
+  height: 0;
+  margin: 0;
+}
+
+
+@media(min-width:960px){
+	.container {
+		width: 960px;
+	}
+}
+
+@media(max-width:959px){
+	.container {
+		width: 660px;
+	}
+}
+
+#header{
+	width: 100%;
+	background-color: #ffffff;
+	margin: 0 auto;
+
+}
+
+#wrapper{
+	width: 1200px;
+	margin: 0 auto;
+
+}
+
+.container {
+margin-right: auto;
+margin-left: auto;
+padding-left: 30px;
+padding-right: 15px;
+}
+
+
+header {
+	position: fixed !important;
+	top: 0;
+	width: 100%;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	background-color: #ffffff;
+	  box-shadow: 0px 4px 8px #999999;
+	box-shadow-blend-mode: linear;
+	z-index: 99;
+}
+
+
+#feedly {
+float: right;
+margin: -60px 10px 10px;
+height: 60px;
+text-align: center;
+}
+
+
+#mail {
+float: right;
+font-size: 15px;
+margin: -60px 10px 10px;
+padding-top: 15px;
+height: 40px;
+width: 120px;
+text-align: center;
+border: solid 1px #cccccc;
+border-radius: 5px;
+box-shadow: 1px 0px #ffffff inset;
+text-shadow:0 -1px 0px #ccc,0 1px 0px #fff;
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = '#ffffff', endColorstr = '#eeeeee');
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = '#ffffff', endColorstr = '#eeeeee')";
+background-image: -moz-linear-gradient(top, #ffffff, #eeeeee);
+background-image: -ms-linear-gradient(top, #ffffff, #eeeeee);
+background-image: -o-linear-gradient(top, #ffffff, #eeeeee);
+background-image: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#eeeeee));
+background-image: -webkit-linear-gradient(top, #ffffff, #eeeeee);
+background-image: linear-gradient(top, #ffffff, #eeeeee);
+
+}
+
+a.mail :hover{
+background-color: #ffffff;
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = '#ffffff', endColorstr = '#ffffff');
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = '#ffffff', endColorstr = '#ffffff')";
+background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+background-image: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#ffffff));
+background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+background-image: linear-gradient(top, #ffffff, #ffffff);
+text-decoration: underline;
+		-webkit-transition: 0.2s ease-in-out;
+	   -moz-transition: 0.2s ease-in-out;
+		 -o-transition: 0.2s ease-in-out;
+			transition: 0.2s ease-in-out;
+}
+
+
+<!-- ナビゲーション -->
+
+nav {
+	width: 1100px;
+  padding:0;
+  margin:0 auto;
+  text-align: justify;
+  list-style-type: none;
+}
+
+
+#navi {
+}
+
+#navi li {
+  width:14%;
+  float:left;
+  padding:0;
+  margin:0;
+  text-align:center;
+}
+#navi li a {
+  width:auto;
+  color:#333333;
+  font-size:18px;
+  font-weight:bold;
+  padding:0.2em 0;
+  display:block;
+  background:#cccccc;
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #cccccc 50%, #ffffff 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.50, #fff), color-stop(0.50, #ccc), color-stop(1, #fff));
+  text-shadow:0 -1px 0px #ccc,0 1px 0px #fff;
+  border: 1px solid #ccc;
+  border-right: 0;
+box-shadow: 0px 0px 0px 1px rgba(235,235,235,0.5) inset;
+
+}
+#navi li a:hover {
+  background:#ffffff;
+  background-image: -moz-linear-gradient(top, #ffffff 0%, #ffffff 50%, #eeeeee 50%, #ffffff 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.50, #fff), color-stop(0.50, #eee), color-stop(1, #fff));
+}
+
+#navi li:first-child a{
+  border-radius:5px 0 0 5px;
+  border-left: 1px solid #ccc;
+}
+#navi li:last-child a{
+  border-radius:0 5px 5px 0;
+  border-right: 1px solid #ccc;
+}
+
+
+div.flexslider{
+height: 450px;
+width: 950px;
+margin: 135px auto 15px;
+padding: 0;
+overflow: hidden;
+  box-shadow: 4px 4px 8px #999999;
+  box-shadow-blend-mode: linear;
+}
+
+
+#main-thumb {
+	width: 960px;
+	text-align: center;
+	margin: 40px 0;
+}
+
+div.center-fix{
+	width: 960px;
+	margin: 0 auto;
+}
+
+
+.circle-thumb {
+	width: 220px;
+	height: 220px;
+	border-radius:500px;
+	float: left;
+	margin: 10px 8px;
+	border: solid 1px #cccccc;
+	overflow: hidden;
+  box-shadow: 4px 4px 8px #999999;
+  box-shadow-blend-mode: linear;
+}
+
+div.circle-thumb img {
+width: 400px;
+margin-left: -100px;
+margin-top: -40px;
+}
+
+#large-port{
+margin: 40px 0;
+}
+
+#portfolio-a{
+float: left;
+width: 49.5%;
+}
+
+#portfolio-b{
+float: right;
+width: 49.5%;
+}
+
+
+
+.portfolio-large{
+height: 150px;
+border: solid 1px #cccccc;
+overflow: hidden;
+  box-shadow: 4px 4px 8px #999999;
+  box-shadow-blend-mode: linear;
+}
+
+div.portfolio-large img {
+height: 150px;
+}
+
+
+#small-port{
+margin: 60px 0;
+}
+
+
+.sp-thumb{
+float: left;
+width: 220px;
+margin: 0 10px;
+}
+
+
+
+
+#blog-article-a{
+float: left;
+width: 49.5%;
+margin: 40px 0;
+}
+#blog-article-a h2{
+margin-left: 5px;
+padding-left: 50px;
+background-image: url("http://media.tumblr.com/27484e3ebf1c0512156ff2d1ae9b48a7/tumblr_inline_n9u87ysR1j1rqh3fv.png");
+background-repeat: no-repeat;
+background-size: 40px;
+line-height: 40px;
+
+}
+#blog-article-b{
+float: right;
+width: 49.5%;
+margin: 40px 0;
+}
+
+#blog-article-b h2{
+margin-left: 5px;
+padding-left: 50px;
+background-image: url("http://media.tumblr.com/ba8f43c9bf66c0d51d7b47b5467e3cdf/tumblr_inline_n9u88wgTyP1rqh3fv.png");
+background-repeat: no-repeat;
+background-size: 40px;
+line-height: 40px;
+}
+
+.blogfeed {
+height: 300px;
+margin: 10px 5px;
+border: solid 1px #cccccc;
+box-shadow: 4px 4px 8px #999999 inset;
+box-shadow-blend-mode: inline;
+overflow: auto;
+}
+
+
+div.post_title {
+float:left;
+font-weight: bold;
+padding: 5px 10px;
+font-size: 20px;
+width: 290px;
+height: 82px;
+}
+
+
+ul.tumblr_post_list li {
+clear:both;
+height: 100px;
+padding: 20px 20px 10px 20px;
+border-bottom: solid 1px #cccccc;
+}
+
+ul.tumblr_post_list li :hover{
+background-color: #eeeeee;
+text-decoration: underline;
+		-webkit-transition: 0.2s ease-in-out;
+	   -moz-transition: 0.2s ease-in-out;
+		 -o-transition: 0.2s ease-in-out;
+			transition: 0.2s ease-in-out;
+}
+
+
+div.rss{
+clear:both;
+height: 100px;
+padding: 20px 20px 10px 20px;
+border-bottom: solid 1px #cccccc;
+}
+
+div.rss :hover{
+background-color: #eeeeee;
+text-decoration: underline;
+		-webkit-transition: 0.2s ease-in-out;
+	   -moz-transition: 0.2s ease-in-out;
+		 -o-transition: 0.2s ease-in-out;
+			transition: 0.2s ease-in-out;
+}
+
+div.rssimgcut{
+float: left;
+padding:0px;
+width: 74px;
+height: 74px;
+}
+
+span.rssimg{
+    display: inline-block;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+width: 74px;
+height: 74px;
+}
+
+
+span.rssimg :hover{
+background-color: #eeeeee;
+text-decoration: underline;
+		-webkit-transition: 0.2s ease-in-out;
+	   -moz-transition: 0.2s ease-in-out;
+		 -o-transition: 0.2s ease-in-out;
+			transition: 0.2s ease-in-out;
+}
+
+
+h3.rss{
+float:left;
+padding: 5px 10px;
+font-size: 20px;
+width: 290px;
+height: 82px;
+}
+
+
+footer {
+  margin: 0;
+  padding: 10px 0;
+  background:url('http://3books.hateblo.jp/images/theme/backgrounds/theme21.png') repeat scroll;
+  box-shadow: 0px -4px 8px #999999;
+  z-index: 80;
+  text-shadow: 0px 1px 1px #fff;
+}
+
+h1.foot-title {
+font-size: 36px;
+}
+
+#footer-area {
+  width: 960px;
+  margin: 0 auto;
+  }
+
+#footer-left {
+ width:48%;
+ float:left;
+}
+
+
+#footer-left h1 {
+ width:100%;
+ font-size: 130%;
+ margin: 5px 0 10px 0;
+}
+
+#pro-photo {
+ margin-top: 0;
+ height: 200px;
+ width: 200px;
+ float:left;
+  background-color: #fff;
+  -webkit-border-top-right-radius: 100px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 100px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+
+
+#pro-text {
+ font-size: 0.88em;
+ width: 215px;
+ float:left;
+ line-height: 1.5em;
+  margin: 10px 10px;
+  padding: 5px 10px;
+  margin-top: 0;
+  background-color: #fefefe;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  box-shadow: 4px 4px 8px #999999;
+  box-shadow-blend-mode: linear;
+}
+
+
+#footer-right {
+  width:48%;
+  float:right;
+}
+
+
+/*a img {
+	-webkit-transition: 0.2s ease-in-out;
+	   -moz-transition: 0.2s ease-in-out;
+		 -o-transition: 0.2s ease-in-out;
+			transition: 0.2s ease-in-out;
+	border-radius:500px;
+
+	overflow: hidden;
+
+}
+*/
+a:hover img {
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	overflow: hidden;
+}
+
+.twitter-follow {
+	margin: 5px auto;
+	text-align: center;
+}
+
+.btn-circle {
+	width: 60px;
+	height: 60px;
+	background-color: #fff;
+	display: block;
+	float: left;
+	margin: 10px 3px;
+	-webkit-border-top-right-radius: 30px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 30px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 28px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+#main{
+width: 1100px;
+margin: 150px auto 15px;
+min-height: 500px;
+}
+
+#leftcol_index {
+padding: 10px;
+float: left;
+width: 720px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  box-shadow:2px 2px 10px 1px #999999;
+  -moz-box-shadow:2px 2px 10px 1px #999999;
+  -webkit-box-shadow:2px 2px 10px 1px #999999;
+  box-shadow-blend-mode: linear;
+  background-color: #ffffff;
+}
+
+#leftcol_index h2{
+float: right;
+width: 480px;
+min-height: 36px;
+font-size: 22px;
+font-weight: bold;
+margin-left: 60px;
+margin: 10px 0 15px;
+padding: 0.1em 0.3em;
+background-image: url("http://media.tumblr.com/27484e3ebf1c0512156ff2d1ae9b48a7/tumblr_inline_n9u87ysR1j1rqh3fv.png");
+background-repeat: no-repeat;
+background-size: 40px;
+}
+
+#leftcol_index h2 a{
+display: block;
+;color: #333333;
+font-weight: bold;
+margin-left: 46px;
+}
+
+#leftcol_index p.entry-date{
+float: right;
+width: 460px;
+font-size: 0.9em;
+text-align: right;
+padding: 0.2em;
+margin-top: -1.2em;
+box-shadow: 0px 0px 0px #ffffff;
+box-shadow-blend-mode: linear;
+background: none;
+}
+
+#leftcol_index div.entry-date_line{
+float: right;
+width: 460px;
+height: 1px;
+padding: 0px;
+margin-top: -0.3em;
+margin-bottom: 0.8em;
+box-shadow-blend-mode: linear;
+    background-image: -webkit-linear-gradient(left, transparent, #ffcc32 90%, #ffcc32 70%, transparent);
+    background-image: linear-gradient(to right, transparent, #ffcc32 90%, #ffcc32 70%, transparent);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+#leftcol_index p{
+float: right;
+width: 460px;
+}
+
+
+#leftcol_index p.catch{
+float: left;
+width: 210px;
+margin-top: -80px;
+margin-bottom: 1.5em;
+}
+
+
+#leftcol_index a{
+color: #1487BD;
+}
+
+#leftcol_index img{
+display: block;
+float: left;
+max-width: 200px;
+height: auto;
+overflow: hidden;
+margin:10px;
+border: solid 1px #cccccc;
+}
+
+#leftcol_index figure.tmblr-full{
+margin-top: -100px;
+width: 0px;
+}
+
+
+
+#leftcol_index blockquote {
+float: right;
+width: 460px;
+background-color:#eee;
+margin: 1.5em;
+padding:1em 1em 1em 3em;
+position:relative;
+}
+
+#leftcol_index blockquote:before{
+float: right;
+width: 460px;
+content:"”";
+font-size:80px;
+font-family: Century;
+line-height:1em;
+color:#999;
+position:absolute;
+left:5px;
+top:0px;
+}
+
+#leftcol_index ul{
+float: right;
+width: 460px;
+list-style-type: disc;
+padding: 1em 1.5em;
+}
+
+#leftcol_index ol{
+float: right;
+width: 460px;
+list-style-type: decimal;
+padding: 1em 1.5em;
+}
+
+#leftcol_index embed[src*="nicovideo.jp"]{
+max-width: 200px;
+height: auto;
+margin: 10px;
+padding: 5px;
+border: solid 1px #cccccc;
+box-shadow: 2px 2px 4px #999999;
+box-shadow-blend-mode: linear;
+
+}
+
+
+#leftcol {
+padding: 10px;
+float: left;
+width: 720px;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  box-shadow:2px 2px 10px 1px #999999;
+  -moz-box-shadow:2px 2px 10px 1px #999999;
+  -webkit-box-shadow:2px 2px 10px 1px #999999;
+  box-shadow-blend-mode: linear;
+  background-color: #ffffff;
+}
+
+#leftcol a{
+color: #1487BD;
+}
+
+#leftcol h2{
+font-size: 28px;
+font-weight: bold;
+border-left: solid 6px #cccccc;
+margin: 10px 0 15px;
+padding: 0.1em 0.3em;
+}
+
+#leftcol h2 a{
+color: #333333;
+font-weight: bold;
+}
+
+#leftcol h3{
+font-size: 20px;
+border-left: solid 6px #cccccc;
+margin: 5px 0;
+padding: 0.1em 0.3em;
+}
+
+#leftcol p{
+margin-bottom: 1.5em;
+}
+
+#leftcol p.catch{
+text-align: center;
+margin: 1.5em;
+}
+
+#leftcol p img{
+border: solid 1px #cccccc;
+}
+
+#leftcol blockquote {
+background-color:#eee;
+margin: 1.5em;
+padding:1em 1em 1em 3em;
+position:relative;
+}
+
+#leftcol blockquote:before{
+content:"”";
+font-size:80px;
+font-family: Century;
+line-height:1em;
+color:#999;
+position:absolute;
+left:5px;
+top:0px;
+}
+
+#leftcol ul{
+list-style-type: disc;
+padding: 1em 1.5em;
+}
+
+#leftcol ol{
+list-style-type: decimal;
+padding: 1em 1.5em;
+}
+
+embed[src*="nicovideo.jp"]{
+width: 685px;
+margin: 10px;
+padding: 5px;
+border: solid 1px #cccccc;
+box-shadow: 2px 2px 4px #999999;
+box-shadow-blend-mode: linear;
+
+}
+
+
+#leftcol h3.relatedpost{
+margin-top: 15px;
+padding-left: 54px;
+background-image: url("http://media.tumblr.com/27484e3ebf1c0512156ff2d1ae9b48a7/tumblr_inline_n9u87ysR1j1rqh3fv.png");
+background-repeat: no-repeat;
+background-size: 40px;
+line-height: 40px;
+border-left: none;
+}
+
+
+
+div.related-img{
+height: 300px;
+width: 200px;
+padding: 10px 20px 10px 20px;
+border-bottom: solid 1px #cccccc;
+float: left;
+}
+
+
+div.related-imgcut{
+float: left;
+border: 1px solid #cccccc;
+padding:0px;
+width: 200px;
+height: 200px;
+overflow: hidden;
+margin-bottom: 10px;
+}
+
+img.related-img{
+display: table-cell;
+width: 200px;
+vertical-align: middle;
+overflow: hidden;
+}
+
+
+img.related-img :hover{
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	overflow: hidden;
+}
+
+
+p.related{
+text-align: center;
+font-size: 14px;
+font-weight: bold;
+color: #333333;
+}
+
+p.related-img :hover{
+background-color: #eeeeee;
+text-decoration: underline;
+		-webkit-transition: 0.2s ease-in-out;
+	   -moz-transition: 0.2s ease-in-out;
+		 -o-transition: 0.2s ease-in-out;
+			transition: 0.2s ease-in-out;
+}
+
+
+div.item img :hover{
+	opacity: 0.6;
+	filter: alpha(opacity=60);
+	overflow: hidden;
+}
+
+
+#leftcol h3.comment{
+margin-top: 25px;
+padding-left: 54px;
+background-image: url("http://media.tumblr.com/27484e3ebf1c0512156ff2d1ae9b48a7/tumblr_inline_n9u87ysR1j1rqh3fv.png");
+background-repeat: no-repeat;
+background-size: 40px;
+line-height: 40px;
+border-left: none;
+}
+
+
+.more {
+font-weight: bold;
+margin-top: 10px;
+}
+
+.ninja_onebutton{
+margin: 10px 4px;
+}
+
+.entry-date{
+font-size: 0.9em;
+text-align: right;
+padding: 3px;
+margin-bottom: 5px;
+
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = '#ffffff', endColorstr = '#cccccc');
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType = 1, startColorstr = '#ffffff', endColorstr = '#cccccc')";
+background-image: -moz-linear-gradient(left, #ffffff, #cccccc);
+background-image: -ms-linear-gradient(left, #ffffff, #cccccc);
+background-image: -o-linear-gradient(left, #ffffff, #cccccc);
+background-image: -webkit-gradient(linear, left top, right top, from(#ffffff), to(#cccccc));
+background-image: -webkit-linear-gradient(left, #ffffff, #cccccc);
+background-image: linear-gradient(left, #ffffff, #cccccc);
+box-shadow: 4px 4px 8px #999999;
+box-shadow-blend-mode: linear;
+}
+
+.entry-tags{
+text-align: left;
+font-size: 0.9em;
+padding: 3px;
+margin: 10px 0;
+}
+
+
+.banner-h {
+margin: 10px 10px;
+padding-top: 10px;
+float: left;
+}
+
+.banner-l {
+margin: 15px 5px;
+}
+
+.banner-s {
+margin: 15px 5px;
+text-align: center;
+}
+
+
+.like_and_reblog_buttons {
+list-style: none;
+border-bottom: solid 1px #cccccc;
+}
+
+.like_and_reblog_buttons li {
+float: left;
+margin: 10px;
+margin-top: -15px;
+height: 30px;
+}
+
+.like_and_reblog_buttons li:first-child {
+}
+
+
+
+#rightcol {
+padding: 10px;
+float: right;
+width: 310px;
+word-wrap: break-word;
+font-size: 80%;
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-bottom-right-radius: 0;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-top-left-radius: 0;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-bottomright: 0;
+  -moz-border-radius-bottomleft: 0;
+  -moz-border-radius-topleft: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  box-shadow:2px 2px 10px 1px #999999;
+  -moz-box-shadow:2px 2px 10px 1px #999999;
+  -webkit-box-shadow:2px 2px 10px 1px #999999;
+  box-shadow-blend-mode: linear;
+  background-color: #ffffff;
+}
+
+div.banner-s img{
+	width: 280px;
+	margin: 0 auto;
+	border: solid 1px #cccccc;
+}
+
+h4.sidebar{
+margin: 20px 0 5px;
+padding: 0 2.2em;
+font-size: 120%;
+background-image: url("http://media.tumblr.com/27484e3ebf1c0512156ff2d1ae9b48a7/tumblr_inline_n9u87ysR1j1rqh3fv.png");
+background-repeat: no-repeat;
+background-size: 26px;
+line-height: 32px;
+}
+
+input.gsc-search-button gsc-search-button-v2 {
+    border-radius: 100px;
+	padding: 10px;
+	}
+
+
+div.hatena-bookmark-widget-title{
+	display: none;
+}
+
+div.hatena-bookmark-widget-footer{
+	display: none;
+}
+
+div.hatena-bookmark-widget-body li {
+clear:both;
+height: 100px;
+padding: 20px 20px 10px 20px;
+border-bottom: solid 1px #cccccc;
+}
+
+div.hatena-bookmark-widget-body  li :hover{
+background-color: #eeeeee;
+text-decoration: underline;
+		-webkit-transition: 0.2s ease-in-out;
+	   -moz-transition: 0.2s ease-in-out;
+		 -o-transition: 0.2s ease-in-out;
+			transition: 0.2s ease-in-out;
+}
+
+
+
+#copy-right {
+  margin: 10px 0 0 0;
+  width: 100%;
+  font: 80%;
+  text-align: center;
+  display: block;
+}
+
+#toTop {
+padding-top: 40px;
+}
+
+#fixedbtn{
+position: fixed;
+bottom: 20px;
+left: -2px;
+padding: 0 10px;
+padding-bottom:-8px;
+background-color: rgba(255,255,255,0.6);
+border: solid 1px #cccccc;
+border-radius: 4px;
+box-shadow: 4px 4px 8px #999999;
+box-shadow-blend-mode: linear;
+z-index: 99;
+}
+
+#toTop a{
+font-family: sans;
+font-size: 40px;
+font-weight: bold;
+color: #ffffff;
+text-align: center;
+position: fixed;
+bottom: 20px;
+right: 10px;
+width: 80px;
+height: 80px;
+line-height: 80px;
+border-radius: 500px;
+border: solid 1px #cccccc;
+padding: 80px auto;
+background-color: #666666;
+  box-shadow: 4px 4px 8px #999999;
+  box-shadow-blend-mode: linear;
+}
+
+#toTop :hover{
+background-color: #F08080;
+		-webkit-transition: 0.2s ease-in-out;
+	   -moz-transition: 0.2s ease-in-out;
+		 -o-transition: 0.2s ease-in-out;
+			transition: 0.2s ease-in-out;
+
+
+}
+
+h1.timeline-Header-title u-inlineBlock{
+font-size: 16px;
+}
+
+
+/* css リセット ここまで*/
+
+
+/* よく使うCSS start
+
+img {
+	max-width:100%;
+}
+
+table {
+	width:100%;
+}
+
+a,a:hover {
+	-webkit-transition: 0.7s;
+	-moz-transition: 0.7s;
+	-o-transition: 0.7s;
+	transition: 0.7s;
+}
+
+a img:hover {
+	filter: alpha(opacity=75);
+	-moz-opacity:0.75;
+	opacity:0.75;
+}
+
+よく使うCSS end -----
+時々使うCSS3 start ---
+
+テキストシャドウ {
+	text-shadow: 1px 1px 3px #000;
+}
+
+テキストシャドウ {
+	text-shadow: 1px 1px 3px #000;
+}
+
+ボックスシャドウ {
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+
+ボックスシャドウ内側 {
+	-moz-box-shadow: inset 1px 1px 3px #000;
+	-webkit-box-shadow: inset 1px 1px 3px #000;
+	box-shadow: inset 1px 1px 3px #000;
+}
+
+角丸 {
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+}
+
+トランジション {
+	-webkit-transition: 1.5s;
+	-moz-transition: 1.5s;
+	-o-transition: 1.5s;
+	transition: 1.5s;
+}
+
+透明 {
+	filter: alpha(opacity=25);
+	-moz-opacity:0.25;
+	opacity:0.25;
+}
+
+背景のみ透明 {
+	background-color:rgba(255,255,255,0.2);
+}
+
+グラデーション {
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#000000');
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr = '#ffffff', endColorstr = '#000000')";
+	background-image: -moz-linear-gradient(top, #ffffff, #000000);
+	background-image: -ms-linear-gradient(top, #ffffff, #000000);
+	background-image: -o-linear-gradient(top, #ffffff, #000000);
+	background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#000000));
+	background-image: -webkit-linear-gradient(top, #ffffff, #000000);
+	background-image: linear-gradient(top, #ffffff, #000000);
+}
+
+スマホ対応
+@media screen and (max-width: 480px){
+
+}
+@media screen and (max-width: 320px){
+
+}
+
+時々使うCSS3 end */
