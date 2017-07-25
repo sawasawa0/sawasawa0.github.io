@@ -391,7 +391,7 @@ margin: 40px 0;
 #blog-article-a h2{
 margin-left: 5px;
 padding-left: 50px;
-background-image: url("https://sawasawa0.github.io/sawasawaworks/img/logo40.png");
+background-image: url("http://media.tumblr.com/27484e3ebf1c0512156ff2d1ae9b48a7/tumblr_inline_n9u87ysR1j1rqh3fv.png");
 background-repeat: no-repeat;
 background-size: 40px;
 line-height: 40px;
@@ -406,7 +406,7 @@ margin: 40px 0;
 #blog-article-b h2{
 margin-left: 5px;
 padding-left: 50px;
-background-image: url("https://sawasawa0.github.io/sawasawaworks/img/logo40.png");
+background-image: url("http://media.tumblr.com/ba8f43c9bf66c0d51d7b47b5467e3cdf/tumblr_inline_n9u88wgTyP1rqh3fv.png");
 background-repeat: no-repeat;
 background-size: 40px;
 line-height: 40px;
@@ -690,7 +690,7 @@ font-weight: bold;
 margin-left: 60px;
 margin: 10px 0 15px;
 padding: 0.1em 0.3em;
-background-image: url("https://sawasawa0.github.io/sawasawaworks/img/logo40.png");
+background-image: url("http://media.tumblr.com/27484e3ebf1c0512156ff2d1ae9b48a7/tumblr_inline_n9u87ysR1j1rqh3fv.png");
 background-repeat: no-repeat;
 background-size: 40px;
 }
@@ -702,7 +702,7 @@ font-weight: bold;
 margin-left: 46px;
 }
 
-p.entry-date{
+#leftcol_index p.entry-date{
 float: right;
 width: 460px;
 font-size: 0.9em;
@@ -714,7 +714,7 @@ box-shadow-blend-mode: linear;
 background: none;
 }
 
-div.entry-date_line{
+#leftcol_index div.entry-date_line{
 float: right;
 width: 460px;
 height: 1px;
@@ -813,7 +813,7 @@ box-shadow-blend-mode: linear;
 
 
 #leftcol {
-padding: 10px;
+padding: 20px 40px;
 float: left;
 width: 720px;
   -webkit-border-top-right-radius: 10px;
@@ -866,7 +866,7 @@ padding: 0.1em 0.3em;
 }
 
 #leftcol p{
-margin-bottom: 1.5em;
+margin-bottom: 1.2em;
 }
 
 #leftcol p.catch{
@@ -898,7 +898,7 @@ top:0px;
 
 #leftcol ul{
 list-style-type: disc;
-padding: 1em 1.5em;
+padding: 0.8em 2em;
 }
 
 #leftcol ol{
@@ -920,7 +920,7 @@ box-shadow-blend-mode: linear;
 #leftcol h3.relatedpost{
 margin-top: 15px;
 padding-left: 54px;
-background-image: url("https://sawasawa0.github.io/sawasawaworks/img/logo40.png");
+background-image: url("http://media.tumblr.com/27484e3ebf1c0512156ff2d1ae9b48a7/tumblr_inline_n9u87ysR1j1rqh3fv.png");
 background-repeat: no-repeat;
 background-size: 40px;
 line-height: 40px;
@@ -990,7 +990,7 @@ div.item img :hover{
 #leftcol h3.comment{
 margin-top: 25px;
 padding-left: 54px;
-background-image: url("https://sawasawa0.github.io/sawasawaworks/img/logo40.png");
+background-image: url("http://media.tumblr.com/27484e3ebf1c0512156ff2d1ae9b48a7/tumblr_inline_n9u87ysR1j1rqh3fv.png");
 background-repeat: no-repeat;
 background-size: 40px;
 line-height: 40px;
@@ -1034,7 +1034,6 @@ text-align: left;
 font-size: 0.9em;
 padding: 3px;
 margin: 10px 0;
-clear:both;
 }
 
 
@@ -1112,7 +1111,7 @@ h4.sidebar{
 margin: 20px 0 5px;
 padding: 0 2.2em;
 font-size: 120%;
-background-image: url("https://sawasawa0.github.io/sawasawaworks/img/logo40.png");
+background-image: url("http://media.tumblr.com/27484e3ebf1c0512156ff2d1ae9b48a7/tumblr_inline_n9u87ysR1j1rqh3fv.png");
 background-repeat: no-repeat;
 background-size: 26px;
 line-height: 32px;
