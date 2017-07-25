@@ -647,7 +647,7 @@ a:hover img {
 }
 
 #main{
-width: 1100px;
+width: 1150px;
 margin: 150px auto 15px;
 min-height: 500px;
 }
@@ -762,56 +762,6 @@ margin-top: -100px;
 width: 0px;
 }
 
-
-
-#leftcol_index blockquote {
-float: right;
-width: 460px;
-background-color:#eee;
-margin: 1.5em;
-padding:1em 1em 1em 3em;
-position:relative;
-}
-
-#leftcol_index blockquote:before{
-float: right;
-width: 460px;
-content:"”";
-font-size:80px;
-font-family: Century;
-line-height:1em;
-color:#999;
-position:absolute;
-left:5px;
-top:0px;
-}
-
-#leftcol_index ul{
-float: right;
-width: 460px;
-list-style-type: disc;
-padding: 1em 1.5em;
-}
-
-#leftcol_index ol{
-float: right;
-width: 460px;
-list-style-type: decimal;
-padding: 1em 1.5em;
-}
-
-#leftcol_index embed[src*="nicovideo.jp"]{
-max-width: 200px;
-height: auto;
-margin: 10px;
-padding: 5px;
-border: solid 1px #cccccc;
-box-shadow: 2px 2px 4px #999999;
-box-shadow-blend-mode: linear;
-
-}
-
-
 #leftcol {
 padding: 20px 40px;
 float: left;
@@ -841,6 +791,34 @@ width: 720px;
   background-color: #ffffff;
 }
 
+#leftcol p.entry-date{
+float: right;
+width: 460px;
+font-size: 0.9em;
+text-align: right;
+padding: 0.2em;
+margin-top: -1.2em;
+box-shadow: 0px 0px 0px #ffffff;
+box-shadow-blend-mode: linear;
+background: none;
+}
+
+#leftcol div.entry-date_line{
+float: right;
+width: 460px;
+height: 1px;
+padding: 0px;
+margin-top: -0.3em;
+margin-bottom: 0.8em;
+box-shadow-blend-mode: linear;
+    background-image: -webkit-linear-gradient(left, transparent, #ffcc32 90%, #ffcc32 70%, transparent);
+    background-image: linear-gradient(to right, transparent, #ffcc32 90%, #ffcc32 70%, transparent);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
 #leftcol a{
 color: #1487BD;
 }
@@ -861,12 +839,12 @@ font-weight: bold;
 #leftcol h3{
 font-size: 20px;
 border-left: solid 6px #cccccc;
-margin: 5px 0;
+margin: 1.8em 0 1em;
 padding: 0.1em 0.3em;
 }
 
 #leftcol p{
-margin-bottom: 1.2em;
+margin-bottom: 0.8em;
 }
 
 #leftcol p.catch{
@@ -898,7 +876,7 @@ top:0px;
 
 #leftcol ul{
 list-style-type: disc;
-padding: 0.8em 2em;
+padding: 0em 2em 0.8em;
 }
 
 #leftcol ol{
