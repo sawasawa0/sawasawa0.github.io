@@ -52,9 +52,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
     <!-- CSS -->
-    <!-- <link rel="stylesheet" href="https://sawasawa0.github.io/sawasawaworks/css/style.css"> -->
     <link rel="stylesheet" href="css/style.css">
-    <style>{customcss}</style>
+
     <!--[if lt IE 9]>
       <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
@@ -163,7 +162,7 @@
             <div class="ly_container">
                 <!-- タグ一覧表示-->
                 {block:TagPage}
-                    <h2 class="bl_tagged">「{Tag}」関連の記事一覧</h2>
+                    <h2 class="bl_ttl">「{Tag}」関連の記事一覧</h2>
                 {/block:TagPage}
 
                 <!-- インデックス用 ここから-->
@@ -171,7 +170,7 @@
                     {block:Posts}
                         <!-- テキスト投稿 -->
                             {block:Text}
-                            <h2 class="bl_entry_ttl"><a href="{Permalink}">{Title}</a></h2>
+                            <h2 class="bl_ttl"><a href="{Permalink}">{Title}</a></h2>
                             <p class="bl_entry_date">{Year}年{MonthNumber}月{DayOfMonth}日　{block:HasTags} {/block:HasTags}</p>
                             <div>
                                 {Body}

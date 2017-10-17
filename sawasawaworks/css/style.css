@@ -32,7 +32,6 @@ ul,li {
     width: 100%;
     position: fixed;
     background-color: rgba(248, 248, 248, 0.8);
-    background-color: red;
 }
 
 .ly_logo {
@@ -83,6 +82,7 @@ ul,li {
     color: #aaa;
 }
 /* block */
+
 ul.bl_navbar {
 	width: 100%;
 	*zoom: 1; /*forIE6,7*/
@@ -134,6 +134,23 @@ ul.bl_navbar li a {
 	zoom: 1;
 }
 
+h2.bl_ttl {
+    min-height: 30px;
+    padding-top: 0.2em;
+    font-size: 160%;
+    line-height: 1.4em;
+    margin-bottom: 10px;
+}
+
+h2.bl_ttl::before{
+    content: " ";
+    background-image: url(img/logo.svg);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 34px;
+    width: 34px;
+    margin-right: 4px;
+}
 
 
 /* element */
