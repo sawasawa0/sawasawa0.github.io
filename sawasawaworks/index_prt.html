@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>楽し人の自由帳</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <link rel="stylesheet" href="css/dropdownMenu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <header class="ly_header">
+        <div id="blog_ttl" class="ly_logo row">
+            <a href="#"><h1 class="col-sm-4"><img src="img/logo.png" alt="楽し人の自由帳"></h1></a>
+            <p>スタークリエイツの中の人のブログ</p>
+        </div>
+        <nav class="navbar-default">
+            <!-- ナビ１：ポートフォリオ関連 -->
+                    <ul class="bl_navbar el_nav__col5 cf">
+                        <li><a href="#">ポートフォリオ</a></li>
+                        <li><a href="#">イラストギャラリー</a></li>
+                        <li><a href="#">制作実績</a></li>
+                        <li><a href="#">配信動画一覧（準備中）</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                    </ul>
+        </nav>
+        <!-- ナビ２：ブログ関連 -->
+        <ul class="bl_navbar el_nav_dropdown el_nav__pink cf el_nav__col8">
+          <li><a href="#">ホーム</a></li>
+          <li>
+              <a href="#">日記</a>
+              <ul>
+                <div>
+                    <li><a href="#">ただの日記</a></li>
+                    <li><a href="#">制作報告</a></li>
+                    <li><a href="#">時事ネタ</a></li>
+                    <li><a href="#">ブログ運営</a></li>
+                </div>
+              </ul>
+          </li>
+          <li>
+              <a href="#">マンガ・イラスト</a>
+              <ul>
+                <li><a href="#">マンガ</a></li>
+                <li><a href="#">イラスト</a></li>
+                <li><a href="#">マンガ論</a></li>
+                <li><a href="#">イラスト技術</a></li>
+                <li><a href="#">CLIP STUDIO</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">独立・起業</a>
+              <ul>
+                <li><a href="#">行政手続き</a></li>
+                <li><a href="#">マーケティング</a></li>
+                <li><a href="#">生産性UP</a></li>
+                <li><a href="#">Excel</a></li>
+                <li><a href="#">パソコンスキル</a></li>
+                <li><a href="#">タイムマネジメント</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">IT・システム開発</a>
+              <ul>
+                <li><a href="#">アプリ_Windows</a></li>
+                <li><a href="#">アプリ_Mac</a></li>
+                <li><a href="#">アプリ_iPhone</a></li>
+                <li><a href="#">tumblr</a></li>
+                <li><a href="#">システム開発</a></li>
+                <li><a href="#">プログラミング</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">書評</a>
+              <ul>
+                <li><a href="#">書評_マンガ</a></li>
+                <li><a href="#">書評_ビジネス</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">生活</a>
+              <ul>
+                <li><a href="#">札幌</a></li>
+                <li><a href="#">イベント</a></li>
+                <li><a href="#">グルメ</a></li>
+                <li><a href="#">子育て</a></li>
+                <li><a href="#">買い物</a></li>
+              </ul>
+          </li>
+          <li>
+              <a href="#">ゲーム・ネット</a>
+              <ul>
+                <li><a href="#">ゲーム</a></li>
+                <li><a href="#">ポケモン</a></li>
+                <li><a href="#">ニコニコ動画</a></li>
+                <li><a href="#">youtube</a></li>
+              </ul>
+          </li>
+        </ul>
+    </header>
+    <div id="wrapper" class="row ly_body">
+        <div id="main" class="ly_main col-sm-8">
+            <div class="ly_container">
+                <!-- 記事の情報-->
+                <section id="info_Entry">
+                    <div>
+                        <h2 class="bl_EntryTtl"><a href="{Permalink}">{Title}</a></h2>
+                        <p class="bl_EntryDate">{Year}年{MonthNumber}月{DayOfMonth}日　{block:HasTags} {/block:HasTags}</p>
+                        <p class="bl_EntryTags">{block:HasTags}{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}{/block:HasTags}</p>
+                        <div class="bl_EntrySocial"></div>
+                    </div>
+                </section>
+
+                <!-- 記事キャッチ-->
+                <section id="catch_Entry">
+                </section>
+                <!-- 記事上部広告-->
+                <section id="ad_Entry">
+                </section>
+                <!-- 記事本文-->
+                <section id="main_Entry">
+                </section>
+                <!-- 関連記事-->
+                <section id="related_Entry">
+                </section>
+                <!-- 記事下部広告-->
+                <section id="ad2_Entry">
+                </section>
+                <!-- 常設おすすめ記事-->
+                <section  id="recomended_Entry">
+                </section>
+                <!-- ソーシャルボタン-->
+                <section id="social_Entry">
+                </section>
+                <!-- tumblrのいいねボタンなど -->
+                    <div>
+                        <ul class="like_and_reblog_buttons" style="list-style: none;">
+                            <li>{block:NoteCount}<span class="meta-elements notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>{/block:NoteCount}</li>
+                            <li>{ReblogButton}</li>
+                            <li>{LikeButton}</li>
+                        </ul>
+                    </div>
+
+                <!-- ページネーション（インデックス）-->
+                <section>
+                    <div class="el_pager"></div>
+                </section>
+
+                <!-- ページネーション（パーマリンク）-->
+                <section>
+                    <div class="el_pager"></div>
+                </section>
+            </div>
+        </div>
+        <aside class="ly_aside col-sm-4">
+            <div class="ly_aside_content">
+                <section id="bl_search">
+                    <!-- 検索 -->
+                        <div id="search">
+                            <script>
+                                (function() {
+                                var cx = '005017387964795471960:c6bvzmqb9ke';
+                                var gcse = document.createElement('script');
+                                gcse.type = 'text/javascript';
+                                gcse.async = true;
+                                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                                '//www.google.com/cse/cse.js?cx=' + cx;
+                                var s = document.getElementsByTagName('script')[0];
+                                s.parentNode.insertBefore(gcse, s);
+                                })();
+                            </script>
+                            <gcse:search></gcse:search>
+                        </div>
+                </section>
+                <section>
+                    <h4>プロフィール</h4>
+                    <div class="portrait" style="text-align:center; margin:0 auto;">
+                        <img src="{PortraitURL-128}" alt="User">
+                    </div>
+                    {Description}
+                </section>
+                <section>
+                    <h4>他の運営サイト</h4>
+                    <div id="OtherSites">
+                    </div>
+                </section>
+                <section>
+                    <h4>フォローお願いいたします</h4>
+                    <div id="followbtn_side"></div>
+                </section>
+                <!-- nozbe広告 -->
+                <div class="banner-s">
+                    <a href="http://www.nozbe.com/a-sawasawa0">
+                        <img src="https://68.media.tumblr.com/9f861d9946cfb701065f4fdf37d4e7a9/tumblr_inline_oa94joUU241rqh3fv_500.png">
+                    </a>
+                </div>
+                <section>
+                    <h4>最近の記事</h4>
+                    <div id="el_ResentPost">ここに最近の記事を置く</div>
+                </section>
+                <section>
+                    <h4>人気の記事</h4>
+                    <div id="el_PopularPost">ここに人気の記事を置く</div>
+                </section>
+            </div>
+        </aside>
+    </div>
+    <footer class="ly_footer fdb-block footer-large">
+      <div class="container">
+        <div class="row align-items-top text-center text-md-left">
+          <div class="col-12 col-sm-6 col-md-4">
+            <div id="pro-photo">
+              <img class="img-circle" src="img/prof.png" alt="sawasawa">
+            </div>
+            <h3>sawasawa</h3>
+            <p>（梅沢　太一）</p>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 mt-4 mt-sm-0">
+            <h4>自己紹介</h4>
+            <p>
+                {Description}
+            </p>
+          </div>
+
+          <div class="col-12 col-md-4 mt-5 mt-md-0 text-md-left">
+            <h3>フォローはこちらから</h3>
+            <p class="text-h3">
+              <p><a href="https://www.froala.com"><i class="fa fa-twitter" aria-hidden="true"></i></a>&nbsp;&nbsp;</p>
+              <p><a href="https://www.froala.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>&nbsp;&nbsp;</p>
+              <p><a href="https://www.froala.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>&nbsp;&nbsp;</p>
+              <p><a href="https://www.froala.com"><i class="fa fa-pinterest" aria-hidden="true"></i></a>&nbsp;&nbsp;</p>
+              <p><a href="https://www.froala.com"><i class="fa fa-google" aria-hidden="true"></i></a></p>
+            </p>
+          </div>
+        </div>
+
+        <div class="row mt-5">
+          <div class="col text-center">
+            &copy; {CopyrightYears} sawasawaworks.com
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="bl_btn_BackToTop js_BackToTop"><a href="#">∧</a></div>
+
+    <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

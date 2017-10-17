@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+ul#DropDownMenu {
+	width: 100%;
+	*zoom: 1; /*forIE6,7*/
+}
+ul#DropDownMenu:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+ul#DropDownMenu li {
+	width: 25%;
+	float: left;
+	*zoom: 1; /*forIE6,7*/
+	white-space: nowrap;
+}
+ul#DropDownMenu li ul {
+	display: none;
+	visibility: hidden;
+	position: absolute;
+	width:25%;
+}
+ul#DropDownMenu li:hover > ul {
+	visibility: visible;
+}
+ul#DropDownMenu li ul li {
+	width: auto !important;
+	width: 100%;
+	min-width: 100%;
+	clear: left;
+	position: relative;
+	top:100%;
+}
+ul#DropDownMenu li ul li ul {
+	top: 100%;
+	left: 0;
+	z-index:100;
+	width:100%;
+}
+ul#DropDownMenu li a {
+	display: block;
+	background-color: #364062;
+	border-right: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	padding: 10px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+}
+* html ul#DropDownMenu li a { /*forIE6*/
+	zoom: 1;
+}
+ul#DropDownMenu li a:hover {
+	background-color: #535d80;
+}

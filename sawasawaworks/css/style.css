@@ -1,0 +1,185 @@
+@charset "UTF-8";
+/* PRECSS */
+/* 要素 */
+body {
+    font-size: 16px;
+    text-align: center;
+    color: #555;
+    overflow-x: hidden;
+}
+
+header {
+    z-index: 99;
+    position: absolute;
+}
+
+ul,li {
+    margin: 0;
+    padding: 0;
+}
+
+/* クリアフィックス */
+.cf::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* layout */
+.ly_header{
+    margin: -160px auto;
+    margin-bottom: 0px;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(248, 248, 248, 0.8);
+}
+
+.ly_logo {
+    text-align: left;
+    padding: 10px;
+    padding-bottom: 0;
+    margin-bottom: -10px;
+}
+
+.ly_logo img{
+    height: 60px;
+    width: auto;
+}
+
+.ly_logo p{
+    min-height: 60px;
+    padding-top: 38px;
+}
+
+.ly_body{
+    margin-top: 160px
+}
+.ly_main{
+    padding: 20px;
+}
+
+.ly_container{
+    margin-left: 20px;
+    box-shadow: 0px 2px 20px #ccc;
+    border-radius: 10px;
+    min-height: 2400px;
+}
+.ly_aside{
+    padding: 20px;
+}
+
+.ly_aside_content{
+    margin-right: 20px;
+    box-shadow: 0px 2px 20px #ccc;
+    border-radius: 10px;
+}
+
+.ly_footer{
+    background-color: #333;
+    color: #aaa;
+}
+/* block */
+ul.bl_navbar {
+	width: 100%;
+	*zoom: 1; /*forIE6,7*/
+    list-style: none;
+}
+
+ul.bl_navbar li {
+	float: left;
+	*zoom: 1; /*forIE6,7*/
+	white-space: nowrap;
+}
+
+ul.el_nav_dropdown li ul {
+	display: none;
+	visibility: hidden;
+	position: absolute;
+    list-style: none;
+}
+
+ul.el_nav_dropdown li:hover > ul {
+	visibility: visible;
+}
+
+ul.bl_navbar li ul li {
+	width: auto !important;
+	width: 100%;
+	min-width: 100%;
+	clear: left;
+	position: relative;
+	top:100%;
+}
+ul.bl_navbar li ul li ul {
+	top: 100%;
+	left: 0;
+	z-index:100;
+	width:100%;
+}
+ul.bl_navbar li a {
+	display: block;
+    border-top:  1px solid #ccc;
+    border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	text-decoration: none;
+    min-height: 40px;
+    padding-top: 10px;
+}
+* html ul.bl_navbar li a { /*forIE6*/
+	zoom: 1;
+}
+
+
+
+/* element */
+.el_nav__pink li a {
+    background-color: #ffdddd;
+    color: #333;
+}
+
+ul.el_nav__pink li a:hover {
+	background-color: #ffbbbb;
+}
+
+ul.el_nav__col8 li {
+	width: 12.5%;
+}
+ul.el_nav__col8 li ul {
+	width: 12.5%;
+}
+
+ul.el_nav__col5 li {
+	width: 20%;
+}
+ul.el_nav__col5 li ul {
+	width: 20%;
+}
+
+/* トップに戻るボタン */
+.bl_btn_BackToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    background-color: #ff6666;
+    display: none;
+    color: #ffffff;
+    opacity: 0.9;
+
+    /* 透明度をふわっと変える演出 */
+    transition: opacity .25s;
+
+    font-size: 3rem;
+    line-height: 55px;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* マウスを乗せた時に透明度を変える */
+.bl-btn-BackToTop:hover {
+    opacity: 0.9;
+    color: #ffffff;
+}
