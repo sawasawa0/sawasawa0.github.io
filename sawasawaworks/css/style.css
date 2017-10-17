@@ -52,7 +52,8 @@ ul,li {
 }
 
 .ly_body{
-    margin-top: 160px
+    margin-top: 160px;
+    width: 100%;
 }
 .ly_main{
     padding: 20px;
@@ -63,6 +64,7 @@ ul,li {
     box-shadow: 0px 2px 20px #ccc;
     border-radius: 10px;
     min-height: 2400px;
+    padding: 20px;
 }
 .ly_aside{
     padding: 20px;
@@ -72,14 +74,35 @@ ul,li {
     margin-right: 20px;
     box-shadow: 0px 2px 20px #ccc;
     border-radius: 10px;
+    padding: 20px;
 }
 .ly_aside_content div {
     width: 100%;
+    max-width: 100%;
+    text-align: left;
+}
+
+.ly_aside_content img {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #ccc;
+    margin: 10px auto;
+}
+
+
+.ly_aside_content h4 {
+    font-size: 110%;
+    font-weight: 700;
+    text-align: left;
+    border-left: 4px solid #333;
+    margin: 10px auto;
+    padding: 0.2em 0.4em;
 }
 
 .ly_footer{
     background-color: #333;
     color: #aaa;
+    width: 100%;
 }
 /* block */
 
@@ -135,21 +158,40 @@ ul.bl_navbar li a {
 }
 
 h2.bl_ttl {
-    min-height: 30px;
-    padding-top: 0.2em;
-    font-size: 160%;
-    line-height: 1.4em;
-    margin-bottom: 10px;
+    text-align: left;
+    padding-top: -10px;
+    font-weight: 700;
+    font-size: 180%;
 }
-
-h2.bl_ttl::before{
+h2.bl_ttl:before{
     content: " ";
-    background-image: url(img/logo.svg);
+    background-image: url(../img/logo.svg);
     background-repeat: no-repeat;
     display: inline-block;
     height: 34px;
     width: 34px;
-    margin-right: 4px;
+    margin-right: 8px;
+    padding-top: 10px;
+}
+
+.bl_taggs{
+    text-align: left;
+}
+
+.bl_entry_date{
+    text-align: right;
+}
+
+.bl_entry_txt{
+    text-align: left;
+    line-height: 1.8em;
+}
+
+.bl_entry_txt h3{
+    font-weight: 700;
+    font-size: 150%;
+    border-left: 4px solid #666;
+    padding: 0.2em 0.4em;
 }
 
 
@@ -175,6 +217,24 @@ ul.el_nav__col5 li {
 }
 ul.el_nav__col5 li ul {
 	width: 20%;
+}
+
+.el_catch img{
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.el_underline{
+    height: 1px;
+    padding: 0px;
+    width: 100%;
+    margin-top: 0.3em;
+    margin-bottom: 0.8em;
+    box-shadow-blend-mode: linear;
+        background-image: -webkit-linear-gradient(left, transparent, #ffcc32 90%, #ffcc32 70%, transparent);
+        background-image: linear-gradient(to right, transparent, #ffcc32 90%, #ffcc32 70%, transparent);
+        background-position: center;
+        background-repeat: no-repeat;
 }
 
 /* トップに戻るボタン */

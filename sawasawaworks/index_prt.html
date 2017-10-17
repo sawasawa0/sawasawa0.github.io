@@ -6,47 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- title index-->
-  <title>{block:PermalinkPage}{block:PostSummary}{PostSummary} | {/block:PostSummary}{/block:PermalinkPage}{block:TagPage}{Tag}の投稿一覧 | {/block:TagPage}{Title}</title>
-
-  <!-- OGP -->
-    <meta property="og:title" content="{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:image" content="{PortraitURL-128}" />
-    {block:Description}
-    <meta property="og:description" content="{MetaDescription}">
-    {/block:Description}
-
-  <!-- Twitter tags -->
-  <meta name="twitter:image" content="{PortraitURL-128}" />
-   <!-- photo だったら og-image は photoURL にする -->
-  {block:PermalinkPage}
-    {block:Posts}
-      {block:Photo}
-        <meta property="og:image" content="{PhotoURL-HighRes}" />
-      {/block:Photo}
-      {block:Photoset}
-        {block:Photos}
-        <meta property="og:image" content="{PhotoURL-HighRes}" />
-        {/block:Photos}
-      {/block:Photoset}
-    {/block:Posts}
-  {/block:PermalinkPage}
-  <meta property="og:site_name" content="{Title}" />
-  {block:Description}
-    <meta property="og:description" content="{MetaDescription}">
-  {/block:Description}
-  {block:IfGoogleAuthor}
-    <link rel="author" href="{text:Google Author}" />
-  {/block:IfGoogleAuthor}
-  {block:IndexPage}
-    <link rel="canonical" href="{BlogURL}"/>
-    <meta property="og:url" content="{BlogURL}" />
-  {/block:IndexPage}
-  {block:PermalinkPage}
-    <link rel="canonical" href="{Permalink}"/>
-    <meta property="og:url" content="{Permalink}" />
-  {/block:PermalinkPage}
-
+    <title>{block:PermalinkPage}{block:PostSummary}{PostSummary} | {/block:PostSummary}{/block:PermalinkPage}{block:TagPage}{Tag}の投稿一覧 | {/block:TagPage}{Title}</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
@@ -69,9 +29,7 @@
                     <img src="https://sawasawa0.github.io/sawasawaworks/img/logo.png" alt="楽し人の自由帳">
                 </h1>
             </a>
-            {block:Description}
-                <p class="blog-description">{Description}</p>
-            {/block:Description}
+                <p>スタークリエイツの中の人のブログ</p>
         </div>
         <nav class="navbar-default">
             <!-- ナビ１：ポートフォリオ関連 -->
@@ -160,241 +118,76 @@
     <div id="wrapper" class="row ly_body">
         <div id="main" class="ly_main col-sm-8" role="main">
             <div class="ly_container">
-                <!-- タグ一覧表示-->
-                {block:TagPage}
-                    <h2 class="bl_ttl">「{Tag}」関連の記事一覧</h2>
-                {/block:TagPage}
+                    <h2 class="bl_ttl">「タグ」関連の記事一覧</h2>
+                    <h2 class="bl_ttl">本日会社を退職しました。</h2>
+                    <div class="bl_entry_info row">
+                        <div class="bl_taggs col-sm-8">#独立・起業</div>
+                        <div class="bl_entry_date col-sm-4">2017年8月20日</div>
+                        <div class="el_underline cf"></div>
+                    </div>
+                    <div class="bl_entry_txt">
+                        <!--【導入】-->
+                        <p class="el_catch">
+                        <img src="https://lh3.googleusercontent.com/kNItFmNYwxqqERF22lPK7qn0XNvSiaVfKGNb1dVDINx27AmjJjEw_v76miMDGqcRalICpC9tl707EFiCdaoCYXRLmGGedVnc_Suo796VUoGptDZfXP-QCKYlLCX2B0h7HlicFEIW3sMnNWR-9a0aTZbeyUhqGS4GdhPuP_zx28DWQ66Irn33I3np_XVPKNC_iMq0U0myKWHJ4aQrazRfaMLQia5rXr20TxpSTGWXa1ATI4c20I--2UtHIavxV-S9aM-PYnQ4fwLVIlqH2J8DjxWG-9YCWJaJOzY41f8vETs1a1Inls0HcKPJISVK8LB4hQTr8h6RNfuHxpq1q568RNA2rbRG55Mq_nOrvNdB5PlvXrhiBBtKhRjIf0E3Zlbf2fwmDcDzKhMNEKW358reXfMYFq1lHOw8FwERJEkl6QusgCtFD-BP4xhuX7F78l5e0AQr6Yge5_5UJ43TzyiKPD1LDZozD0IHrL1lL9JMbcFB84z0pxpUvXx-HT_l9BJtuV_QRJ_9CRwRD0t5ETMXuuAOPsto4q7IMqFT60_GwDYXeKrp_KVzJBSdBoxtgY7WAWOHe_2IjouPbsUWUwwG1TbhcrsbktWHwvCd_4-u=w985-h949-no">
+                        </p>
+                        <p>
+                        こんにちは。sawasawa（<a href="https://twitter.com/sawasawa0">@sawasawa0</a>）です。<br>
+                        本日付で会社を辞め、晴れて個人事業主として一歩を踏み出しましたので、所感をまとめておきたいなーということで、はい。<br>
+                        </p>
+                        [[MORE]]
 
-                <!-- インデックス用 ここから-->
-                {block:IndexPage}
-                    {block:Posts}
-                        <!-- テキスト投稿 -->
-                            {block:Text}
-                            <h2 class="bl_ttl"><a href="{Permalink}">{Title}</a></h2>
-                            <p class="bl_entry_date">{Year}年{MonthNumber}月{DayOfMonth}日　{block:HasTags} {/block:HasTags}</p>
-                            <div>
-                                {Body}
-                                {block:More}
-                                    <p class="el_more"><a href="{Permalink}">→記事を読む</a></p>
-                                {/block:More}
-                                </div>
-
-                            <hr>
-                        {/block:Text}
-
-                    <!-- 画像投稿 -->
-                    {block:Photo}
-                    <article class="{TagsAsClasses} {block:Even}box-left{/block:Even} {block:Odd}box-right{/block:Odd} box-flat">
-                        <a href="{Permalink}">
-                        <div class="text">
-                                <h2 class="bl_entry_ttl add_title"><a href="{Permalink}">{Title}</a></h2>
-                            <p class="entry-date">{Year}年{MonthNumber}月{DayOfMonth}日　{block:HasTags} {/block:HasTags}</p>
-                            {block:Tags}<div class="el_tags">{Tag}</div>{/block:Tags}
-
-                            <figure><div class="el_img__catch"><img src="{PhotoURL-HighRes}" alt=""></div></figure>
-
-                            <div>
-                            {block:Caption}<p> {Caption}</p>{/block:Caption}
-                                {block:More}
-                                    <p class="more"><a href="{Permalink}">→記事を読む</a></p>
-                                {/block:More}
-                            </div>
-                            </a>
-                    </article>
-                    <hr>
-                    {/block:Photo}
-                {/block:Posts}
-
-                {block:Pagination}
-                <div class="pagenation pagenation-index">
-                {block:PreviousPage}<a href="{PreviousPage}">前のページ</a>{/block:PreviousPage}
-
-                {block:JumpPagination length="5"}
-                {block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
-                {block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
-                {/block:JumpPagination}
-
-                {block:NextPage}<a href="{NextPage}" class="next" rel="next">次のページ</a>{/block:NextPage}
-                </div>
-                {/block:Pagination}
-                </div>
-                {/block:IndexPage}
-                <!-- インデックス用 ここまで-->
+                        <!--【内容】-->
+                        <h3>大丈夫か。自分？</h3>
+                        <p>
+                        さて、正直に言うと、あまり良い出だしではない自覚がある。<br>
+                        以前書いたように、<br>
 
 
-				<!-- パーマリンク ここから-->
-				{block:PermalinkPage}
-					<div id="leftcol">
-						{block:Posts}
+                        独立の王道は、先に顧客をつかみ、すでに収入がある状態で辞めることだ。<br>
+                        あとは「会社勤めしている文の時間の投下さえすれば、少なくとも食っていけるだけの収入の見込みがある」という状態であれば、着実に自営業としてのキャリアを積んでいくことができる。<br>
+                        <br>
+                        だが、自分の場合はそうではない。今日から無収入だ。<br>
+                        もちろん、独立にあたっては、準備を万端にしてから踏み出すつもりだったが、それが整う前にタイミングが来てしまったという感じだ。<br>
+                        もし今、自分がもし逮捕され、報道された場合、おそらく「自称自営業のsawasawa容疑者」となるだろう。こんな独立は、客観的には好ましくないと思っている。<br>
+                        そんな人はいないと思うが、このブログを見て、独立しよう！と思う人は、今すぐ踏みとどまってほしい。<br>
+                        もし、あなたが私の友人なら、とりあえず止めると思う。
+                        </p>
+                        <h3>自分を信じられるかどうかが鍵</h3>
+                        <p>
+                        結構ネガティブな書き方をしたが、実のところはどう思っているのかというと、あまり心配はしていない。<br>
+                        と言うのも、自分のキャリアは、「絶対こんなのできっこない」をなんとかしてきたからだ。<br>
+                        こう言うと、「会社員なんて、せいぜい与えられた範囲での仕事しかない。独立とは違う。」と言われるかもしれないが、<br>
+                        自分としては、「これまでにやってきたことを思えば、独立なんてヌルゲー」くらいに思える修羅場をくぐってきたつもりだ。<br>
+                        </p>
+                        <p>
+                        先日、下記のエントリを読んだが、まさに自分の言いたいことが書かれていた。<br>
 
 
-								<!-- 記事タイトル -->
-									<h2 class="entry-title"><a href="{Permalink}">{Title}</a></h2>
-
-								<!-- 投稿日 -->
-								<p class="entry-date" style="margin-bottom:0.2em;">{Year}年{MonthNumber}月{DayOfMonth}日</p>
-								<div class="entry-date_line"style="margin-top:0.2em;"></div>
-
-								<!-- タグ -->
-									<p class="entry-tags">{block:HasTags}{block:Tags}<a href="{TagURL}">#{Tag} </a>{/block:Tags}{/block:HasTags}</p>
-
-								<!-- ソーシャルボタン -->
-									<div class="ninja_onebutton">
-										<script type="text/javascript">
-											//<![CDATA[
-											(function(d){
-											if(typeof(window.NINJA_CO_JP_ONETAG_BUTTON_9ab2fc66b63379d759d09599f61ed4dd)=='undefined'){
-											document.write("<sc"+"ript type='text\/javascript' src='http:\/\/omt.shinobi.jp\/b\/9ab2fc66b63379d759d09599f61ed4dd'><\/sc"+"ript>");
-											}else{
-											window.NINJA_CO_JP_ONETAG_BUTTON_9ab2fc66b63379d759d09599f61ed4dd.ONETAGButton_Load();}
-											})(document);
-											//]]>
-										</script>
-										<!--
-										<span class="ninja_onebutton_hidden" style="display:none;">{Permalink}</span>
-										<span style="display:none;" class="ninja_onebutton_hidden">{block:Title}{Title}{/block:Title}</span>
-										 -->
-									</div>
-
-							<!-- 記事本文 -->
-								<!-- テキスト投稿 -->
-								{block:Text}{Body}{/block:Text}
+                        （この若さで、こういうことを書けるのはすごいことだと思う。）<br>
+                        <br>
+                        「たぶん、その時の自分がなんとかするだろう」<br>
+                        こういう自分への信頼を作るのは、一朝一夕ではできない。<br>
+                        何度も「自分にはできないこと」にチャレンジし、成功と失敗の経験を積み重ねること。<br>
+                        そして、「成功」をもたらしたものを、抽象化して再現できるようにしておくこと。<br>
+                        <br>
+                        この辺りについて、今の自分はクリアしていると思っていることが、独立を決断させてくれた。<br>
+                        </p>
 
 
-								<!-- 画像投稿 -->
-								{block:Photo}
-									{LinkOpenTag}
-						                <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
-						              {LinkCloseTag}
-						              {block:Caption}
-						                <div class="caption">
-						                  {Caption}
-						                </div>
-						              {/block:Caption}
-
-								{/block:Photo}
-
-								<!-- フォトセット投稿 -->
-								{block:Photoset}{Body}{/block:Photoset}
-
-								<!-- リンク投稿 -->
-								{block:Link}{Body}{/block:Link}
-
-								<!-- 引用投稿 -->
-								{block:Quote}{Body}{/block:Quote}
-
-								<!-- チャット投稿 -->
-								{block:Chat}{Body}{/block:Chat}
-
-								<!-- 動画投稿 -->
-								{block:Video}{Body}{/block:Video}
-
-								<!-- 音声投稿 -->
-								{block:Audio}{Body}{/block:Audio}
-
-								<!-- 回答投稿 -->
-								{block:Answer}{Body}{/block:Answer}
-
-
-								<!-- tumblrのいいねボタンなど -->
-									<div>
-										<ul class="like_and_reblog_buttons" style="list-style: none;">
-											<li>{block:NoteCount}<span class="meta-elements notecount"><a href="{Permalink}">{NoteCountWithLabel}</a></span>{/block:NoteCount}</li>
-											<li>{ReblogButton}</li>
-											<li>{LikeButton}</li>
-										</ul>
-									</div>
-
-								<div class="clear-float"></div>
-
-	<!-- 関連する記事 -->
-
-
-
-								<div class="related-posts" style="display:block;">
-<h3 class="relatedpost">こちらの記事もどうぞ</h3>
-<script>
-        (function() {
-      var scripts = document.getElementsByTagName('script');
-      var script = scripts[scripts.length-1];
-      var key = 'wefweodiqehdqowehdfnoqwienfdqlwkewpkjqwd';
-        window[key] = (function(data) {
-            var ul = document.createElement('ul');
-            for (var i = 0; i < data.posts.length; i++) {
-                if (data.posts[i]['url-with-slug'] === location.href) {
-                    continue;
-                }
-                var li = document.createElement('li');
-                var a = document.createElement('a');
-                a.href = data.posts[i]['url-with-slug'];
-                a[('innerText' in a)? 'innerText' : 'textContent'] = data.posts[i]['regular-title'];
-                li.appendChild(a);
-                ul.appendChild(li);
-            }
-            script.parentNode.replaceChild(ul, script);
-            delete window[key];
-        });
-      var s = document.createElement('script');
-      s.src = location.protocol + "//" + location.hostname + '/api/read/json?tagged=' + ('{block:Tags}{Tag},{/block:Tags}'.split(',')[0] || '') + '&type=text&num=3&start=0&callback=' + key;
-      document.head.appendChild(s);
-    })();
-    </script>
-</div>
-
-							<hr>
-
-							<!-- コメント -->
-								<h3 class="comment">コメント</h3>
-								{block:IfDisqusShortname}
-									<div id="disqus_thread"></div>
-									<script src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
-									<noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
-								{/block:IfDisqusShortname}
-
-
-								 <!-- パーマリンクのページャ -->
-									{block:PermalinkPagination}
-										<div class="pagenation pagenation-permalink">
-											{block:PreviousPost}<a href="{PreviousPost}">＜＜　前の記事</a>{/block:PreviousPost}
-											{block:NextPost}<a href="{NextPost}" class="next" rel="next">次の記事　＞＞</a>{/block:NextPost}
-										</div>
-									{/block:PermalinkPagination}
-
-
-
-							<!-- ソーシャルボタン -->
-								<div id="fixedbtn">
-                                    <div class="ninja_onebutton">
-<script type="text/javascript">
-//<![CDATA[
-(function(d){
-if(typeof(window.NINJA_CO_JP_ONETAG_BUTTON_a6b9314eeb81bf0ff370e0e4362654a1)=='undefined'){
-    document.write("<sc"+"ript type='text\/javascript' src='\/\/omt.shinobi.jp\/b\/a6b9314eeb81bf0ff370e0e4362654a1'><\/sc"+"ript>");
-}else{
-    window.NINJA_CO_JP_ONETAG_BUTTON_a6b9314eeb81bf0ff370e0e4362654a1.ONETAGButton_Load();}
-})(document);
-//]]>
-</script><span class="ninja_onebutton_hidden" style="display:none;">{Permalink}</span><span style="display:none;" class="ninja_onebutton_hidden">{block:Title}{Title}{/block:Title}</span>
-</div>
-
-
-								</div>
-
-
-						{/block:Posts}
-					</div>
-				{/block:PermalinkPage}
-				<!-- パーマリンク ここまで-->
-
-                <!-- ページネーション（インデックス）-->
-                <section>
-                    <div class="el_pager"></div>
-                </section>
-
-                <!-- ページネーション（パーマリンク）-->
-                <section>
-                    <div class="el_pager"></div>
-                </section>
+                        <!--【クロージング】-->
+                        <h3>今後の展望について</h3>
+                        <p>
+                        とりあえず今は、会社員時代よりまとまった時間を確保できるのを活かして、プログラミングの勉強をしている。<br>
+                        「イラスト描くんじゃないの？」と思うかもしれないが、<br>
+                        おそらく「自分で自分が必要なシステムを組める」ということが、バクマン。の七峰透が作ったような会社を作りたいという自分の夢にいずれ必要になるはずだと考えているためだ。<br>
+                        </p>
+                        <p>
+                        また、たぶんだけど、世の中には「王道ではない独立」をしてしまった人というのは、それなりにいて、<br>
+                        「それでもなんとか生き延びています」<br>
+                        という情報は、きっと誰かの役に立つんじゃないかとも思っているので、そんな感じに役立つブログに育てていきたいなー。<br>
+                        おわり。
+                        </p>
+                  </div>
             </div>
         </div>
         <aside class="ly_aside col-sm-4">
