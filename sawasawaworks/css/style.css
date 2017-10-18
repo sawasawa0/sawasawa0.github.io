@@ -27,11 +27,9 @@ ul,li {
 
 /* layout */
 .ly_header{
-    margin: -160px auto;
+    margin-top: -150px;
     margin-bottom: 0px;
     width: 100%;
-    position: fixed;
-    background-color: rgba(248, 248, 248, 0.8);
 }
 
 .ly_logo {
@@ -52,11 +50,15 @@ ul,li {
 }
 
 .ly_body{
-    margin-top: 160px;
     width: 100%;
+    margin: 0;
+    margin-top: 150px;
+    background-color: #fff;
+    background-image: -moz-linear-gradient(top, #fff 0%, #fff 50%, #00568c 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.5, #fff), color-stop(1, #00568c));
 }
 .ly_main{
-    padding: 20px;
+    padding: 10px;
 }
 
 .ly_container{
@@ -65,26 +67,28 @@ ul,li {
     border-radius: 10px;
     min-height: 2400px;
     padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
 }
 .ly_aside{
-    padding: 20px;
+    padding: 10px;
+    font-size: 90%;
 }
 
 .ly_aside_content{
-    margin-right: 20px;
     box-shadow: 0px 2px 20px #ccc;
     border-radius: 10px;
     padding: 20px;
+    margin-top: 20px;
+    background-color: #fff;
 }
 .ly_aside_content div {
-    width: 100%;
     max-width: 100%;
     text-align: left;
 }
 
 .ly_aside_content img {
     width: 100%;
-    max-width: 100%;
     border: 1px solid #ccc;
     margin: 10px auto;
 }
@@ -94,18 +98,26 @@ ul,li {
     font-size: 110%;
     font-weight: 700;
     text-align: left;
-    border-left: 4px solid #333;
     margin: 10px auto;
     padding: 0.2em 0.4em;
 }
 
+.ly_aside_content h4::before{
+    content: url(../img/logo.svg);
+    display: inline-block;
+    width: 20px;
+    height: auto;
+    margin-left: -14px;
+    margin-right: 6px;
+}
+
 .ly_footer{
-    background-color: #333;
-    color: #aaa;
+    background-color: #00568c;
+    color: #fff;
     width: 100%;
+    padding: 20px;
 }
 /* block */
-
 ul.bl_navbar {
 	width: 100%;
 	*zoom: 1; /*forIE6,7*/
@@ -117,6 +129,12 @@ ul.bl_navbar li {
 	*zoom: 1; /*forIE6,7*/
 	white-space: nowrap;
 }
+
+ul.bl_navbar:first-child :hover{
+    opacity: 0.9;
+    transition: 0.6s;
+}
+
 
 ul.el_nav_dropdown li ul {
 	display: none;
@@ -145,14 +163,19 @@ ul.bl_navbar li ul li ul {
 }
 ul.bl_navbar li a {
 	display: block;
-    border-top:  1px solid #ccc;
-    border-right: 1px solid #ccc;
-	border-bottom: 1px solid #ccc;
 	text-align: center;
 	text-decoration: none;
     min-height: 40px;
     padding-top: 10px;
+    font-size: 85%;
 }
+
+ul.bl_navbar li ul li  :hover{
+    opacity: 0.8;
+    transition: 0.6s;
+}
+
+
 * html ul.bl_navbar li a { /*forIE6*/
 	zoom: 1;
 }
@@ -162,29 +185,65 @@ h2.bl_ttl {
     padding-top: -10px;
     font-weight: 700;
     font-size: 180%;
+    padding-left: 40px;
+    margin: 20px 4px;
 }
+
 h2.bl_ttl:before{
-    content: " ";
-    background-image: url(../img/logo.svg);
-    background-repeat: no-repeat;
+    content: url(../img/logo.svg);
     display: inline-block;
-    height: 34px;
     width: 34px;
-    margin-right: 8px;
-    padding-top: 10px;
+    height: auto;
+    margin-left: -40px;
+    margin-right: 6px;
 }
+
+
+.ly_index h2.bl_ttl {
+}
+
+.ly_index .bl_entry_info {
+    float: right;
+    margin-left: 0;
+    width: 420px;
+}
+
+.ly_index p{
+    float: right;
+    margin-left: 0;
+    width: 420px;
+}
+
+
+.ly_index p.el_catch{
+    float: left;
+    width: 180px;
+    height: auto;
+    margin-right: 10px;
+}
+
 
 .bl_taggs{
     text-align: left;
 }
+.bl_taggs a{
+    display: inline-block;
+    background-color: #3a489e;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 90%;
+    padding: 0.2em 0.4em;
+}
 
 .bl_entry_date{
     text-align: right;
+    min-width: 200px;
 }
 
 .bl_entry_txt{
     text-align: left;
     line-height: 1.8em;
+    margin-bottom: 30px;
 }
 
 .bl_entry_txt h3{
@@ -194,15 +253,180 @@ h2.bl_ttl:before{
     padding: 0.2em 0.4em;
 }
 
+.bl_btn_social{
+    width: 100%;
+    margin-left: 18px;
+    margin-bottom: 16px;
+}
+
+div.bl_btn_social{
+}
+
+.bl_btn_social div{
+}
+
+.el_snsbtn__amount{
+    font-family: Arial;
+    color: #555;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+
+.el_snsbtn__hatena{
+    background-color: #00A4DE;
+    color: #fff;
+    padding: 4px;
+}
+
+.el_snsbtn__facebook{
+    background-color: #405BA7;
+    color: #fff;
+    padding: 4px;
+}
+.el_snsbtn__twitter{
+    background-color:#55ACEE;
+    color: #fff;
+    padding: 4px;
+}
+.el_snsbtn__googleplus{
+    background-color:#C53727;
+    color: #fff;
+    padding: 4px;
+}
+.el_snsbtn__pocket{
+    background-color:#EE4256;
+    color: #fff;
+    padding: 4px;
+}
+
+.bl_prof_aside{
+    background-color: #eee;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 95%;
+}
+
+
+
+.bl_prof_aside ul{
+    list-style: none;
+}
+
+.bl_prof_aside ul a{
+    font-size: 110%;
+}
+
+
+ul.bl_postList {
+    list-style: none;
+}
+
+div.bl_postList_box{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+}
+
+div.bl_postList_box:hover{
+    opacity: 0.5;
+    transition: 0.8s;
+}
+
+
+.bl_postList_img {
+    border: 1px solid #ccc;
+    margin-right: 6px;
+}
+
+div.bl_postList_img {
+    overflow: hidden;
+    padding: 0;
+}
+.bl_postList_img img {
+    border: none;
+    object-fit: cover;
+    margin-left: -25%;
+    margin-top: -25%;
+}
+
+.bl_postList_img img:hover {
+
+}
+
+
+div.bl_postList_ttl {
+    overflow: hidden;
+    text-align: left;
+}
+
+
+.bl_postList a {
+    color: #333;
+    font-weight: 700;
+}
+
+.bl_postList a:hover {
+    opacity: 0.5;
+    transition: 0.8s;
+    text-decoration: none;
+}
+
+.el_postList__small div.bl_postList_img {
+    height: 120px;
+    width: 120px;
+    min-width: 120px;
+}
+
+.el_postList__small .bl_postList_img img{
+    width: 200px;
+    height: auto;
+}
+
+.el_postList__small div.bl_postList_box{
+    height: 140px;
+}
+.el_postList__small div.bl_postList_ttl{
+    max-height: 120px;
+}
+
+
+.el_postList__middle div.bl_postList_img {
+    height: 180px;
+    width: 180px;
+    min-width: 180px;
+}
+
+.el_postList__middle .bl_postList_img img{
+    width: 360px;
+    height: auto;
+}
+
+.el_postList__middle div.bl_postList_box{
+    height: 200px;
+}
+.el_postList__middle div.bl_postList_ttl{
+    max-height: 180px;
+    font-size: 130%;
+}
 
 /* element */
 .el_nav__pink li a {
-    background-color: #ffdddd;
-    color: #333;
+    background: #154290;
+    background-image: -moz-linear-gradient(top, #154290 0%, #154290 5%, #06398f 5%, #154290 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #154290), color-stop(0.05, #154290), color-stop(0.05, #06398f), color-stop(1, #154290));
+    color: #fff;
+    border: 1px solid #154290;
+    border-right: 0;
 }
 
-ul.el_nav__pink li a:hover {
-	background-color: #ffbbbb;
+.el_nav__pink2 li a {
+    background: #3161b4;
+    background-image: -moz-linear-gradient(top, #3161b4 0%, #3161b4 5%, #154290 5%, #3161b4 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #3161b4), color-stop(0.05, #3161b4), color-stop(0.05, #154290), color-stop(1, #3161b4));
+    color: #fff;
+    border: 1px solid #3161b4;
+    border-right: 0;
 }
 
 ul.el_nav__col8 li {
@@ -240,12 +464,13 @@ ul.el_nav__col5 li ul {
 /* トップに戻るボタン */
 .bl_btn_BackToTop {
     position: fixed;
-    bottom: 20px;
+    bottom: 60px;
     right: 20px;
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
     border-radius: 100%;
-    background-color: #ff6666;
+    background-color: #ff6b00;
+    border: 1px solid #fff ;
     display: none;
     color: #ffffff;
     opacity: 0.9;
@@ -259,8 +484,27 @@ ul.el_nav__col5 li ul {
     text-decoration: none;
 }
 
-/* マウスを乗せた時に透明度を変える */
-.bl-btn-BackToTop:hover {
-    opacity: 0.9;
+.bl_btn_BackToTop a{
     color: #ffffff;
+}
+
+
+/* マウスを乗せた時に透明度を変える */
+.bl_btn_BackToTop:hover {
+    background-color: #ffae36;
+    transition: 0.6s;
+}
+
+.bl_btn_BackToTop a :hover {
+}
+
+.bl_btn_BackToTop a :hover {
+    text-decoration: none;
+}
+
+/* Font Awesome hatena bookmark */
+.fa-hatena:before {
+    content: "B!";
+    font-family: Verdana;
+    font-weight: bold
 }

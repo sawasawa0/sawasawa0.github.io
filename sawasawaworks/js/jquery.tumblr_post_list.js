@@ -36,7 +36,7 @@
 	                                var img_karia = test_body.substr(img_index);
                                   var img_indexc = img_karia.indexOf('src="http://');
 	                                var img_end = img_karia.indexOf("/>");
-	                                var img_karib = img_karia.substring(img_indexc + 12,img_end);
+	                                var img_karib = img_karia.substring(img_indexc + 5,img_end);
 	                                //var img_indexb = img_karib.indexOf("66.media.tumblr.com");
                                   //var img_karic = img_karib.substr(img_indexb);
 	                                img_src = '<div class="rssimgcut"><span class="rssimg" style="background-image: url(\'http://' + img_karib + '"></span></div>';
