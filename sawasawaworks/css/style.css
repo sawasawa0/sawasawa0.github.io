@@ -411,6 +411,7 @@ div.bl_postList_ttl {
 .el_postList__small .bl_postList_img img{
     width: 200px;
     height: auto;
+    max-width: 200px;
 }
 
 .el_postList__small div.bl_postList_box{
