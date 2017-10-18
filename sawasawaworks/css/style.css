@@ -227,6 +227,12 @@ h2.bl_ttl:before{
     margin-right: 10px;
 }
 
+.ly_index p.catch img{
+    border: 1px solid #ccc;
+    max-width: 100%;
+    max-height: 500px;
+    margin: 10px auto;
+}
 
 .bl_taggs{
     text-align: left;
