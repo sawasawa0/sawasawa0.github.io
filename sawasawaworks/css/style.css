@@ -474,6 +474,13 @@ ul.el_nav__col5 li ul {
     margin: 10px auto;
 }
 
+.catch img{
+    border: 1px solid #ccc;
+    max-width: 100%;
+    max-height: 500px;
+    margin: 10px auto;
+}
+
 .el_underline{
     height: 1px;
     padding: 0px;
