@@ -118,8 +118,8 @@ $(function () {
         //tag="ニコニコ動画";
 
     //現在の記事のタグを取得する（二つ目のタグ）
-    //var my_url = location.href;
-    var my_url = "http://blog.sawasawaworks.com/post/93654958557/20130217";
+    var my_url = location.href;
+    //var my_url = "http://blog.sawasawaworks.com/post/93654958557/20130217";
     var my_id_index = my_url.indexOf("post/")+5;
     var my_id_str = my_url.substr(my_id_index);
     var my_id_str2 = my_id_str.indexOf("/");

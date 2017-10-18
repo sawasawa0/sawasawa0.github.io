@@ -88,7 +88,8 @@ ul,li {
 }
 
 .ly_aside_content img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 150px;
     border: 1px solid #ccc;
     margin: 10px auto;
 }
@@ -100,6 +101,7 @@ ul,li {
     text-align: left;
     margin: 10px auto;
     padding: 0.2em 0.4em;
+    border-bottom: 1px solid #3161b4;
 }
 
 .ly_aside_content h4::before{
@@ -116,6 +118,7 @@ ul,li {
     color: #fff;
     width: 100%;
     padding: 20px;
+    font-weight: 700;
 }
 /* block */
 ul.bl_navbar {
@@ -300,14 +303,33 @@ div.bl_btn_social{
 }
 
 .bl_prof_aside{
-    background-color: #eee;
+    background-color: #cdf3ff;
     border-radius: 8px;
     padding: 10px;
     font-size: 95%;
 }
 
+.bl_prof_footer{
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    color: #333;
+    position: relative;
+    min-height: 240px;
+}
 
-
+.bl_prof_footer::before{
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  height: 0;
+  left: -65px;
+  top: 60px;
+  border-right: 120px solid #fff;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
 .bl_prof_aside ul{
     list-style: none;
 }
@@ -445,7 +467,9 @@ ul.el_nav__col5 li ul {
 
 .el_catch img{
     border: 1px solid #ccc;
-    width: 100%;
+    max-width: 100%;
+    max-height: 500px;
+    margin: 10px auto;
 }
 
 .el_underline{
@@ -455,8 +479,8 @@ ul.el_nav__col5 li ul {
     margin-top: 0.3em;
     margin-bottom: 0.8em;
     box-shadow-blend-mode: linear;
-        background-image: -webkit-linear-gradient(left, transparent, #ffcc32 90%, #ffcc32 70%, transparent);
-        background-image: linear-gradient(to right, transparent, #ffcc32 90%, #ffcc32 70%, transparent);
+        background-image: -webkit-linear-gradient(left, transparent, #ff6b00 90%, #ff6b00 70%, transparent);
+        background-image: linear-gradient(to right, transparent, #ff6b00 90%, #ff6b00 70%, transparent);
         background-position: center;
         background-repeat: no-repeat;
 }
