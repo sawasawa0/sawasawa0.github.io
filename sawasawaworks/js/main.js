@@ -279,6 +279,5 @@ function get_social_count_hatebu(url, selcter) {
   });
 }
 jQuery(function(){
-  get_social_count_facebook('{Permalink}', '.facebook-count');
   get_social_count_hatebu('{Permalink}', '.hatebu-count');
 });
