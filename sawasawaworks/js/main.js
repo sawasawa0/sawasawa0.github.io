@@ -192,6 +192,8 @@ $(function () {
 });
 
 //◆人気記事取得
+//http://b.hatena.ne.jp/entrylist/json?sort=count&url=blog.sawasawaworks.com&callback=hatebuCallback
+
 function hatebuCallback(data){
 		if(data.length == 0){
 			$("#hatebuList").append("<p>データを読み込めませんでした。</p>");
