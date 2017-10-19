@@ -421,8 +421,8 @@ div.bl_postList_img {
 .bl_postList_img img {
     border: none;
     object-fit: cover;
-    margin-left: -25%;
-    margin-top: -25%;
+    margin-left: -20px;
+    margin-top: -16px;
 }
 
 .bl_postList_img img:hover {
@@ -454,9 +454,9 @@ div.bl_postList_ttl {
 }
 
 .el_postList__small .bl_postList_img img{
-    width: 200px;
+    width: 160px;
     height: auto;
-    max-width: 200px;
+    max-width: 160px;
 }
 
 .el_postList__small div.bl_postList_box{

@@ -196,42 +196,67 @@ $(function () {
             });
 });
 
-//◆人気記事取得
 //http://b.hatena.ne.jp/entrylist/json?sort=count&url=blog.sawasawaworks.com&callback=hatebuCallback
 
-function hatebuCallback(data){
-		if(data.length == 0){
-			$("#hatebuList").append("<p>データを読み込めませんでした。</p>");
-		}
-		else {
-			$("#hatebuList").append("<ul>");
-			for(i = 0 ; i < data.length; i++){
-				$("#hatebuList ul").append('<li><a href="' + data[i].link + '" target="_blank">' + data[i].title +'</a>（<span>' + data[i].count + '）</span></li>');
-			}
-		}
-}
+//◆人気記事取得
+$(function() {
+    var siteurl = "http://blog.sawasawaworks.com";
+    var domain="blog.sawasawaworks.com";
+    var api_key="xq2COMO7SeFjKSapb2VRKTfnm8FGeduoHspOB13aGYLN9rJSsK";
+    var popurarEntry = $("#PopularPost_list")
+    $.ajax({
+        dataType: "jsonp",
+        data: {'sort':'count', 'url':siteurl},
+        cache: true,
+        url: "http://b.hatena.ne.jp/entrylist/json",
+        success: function (data){
+            $.each(data, function(i,item){
+                if(item.link != siteurl) {
+                        var my_url = item.link;
+                        var my_id_index = my_url.indexOf("post/")+5;
+                        var my_id_str = my_url.substr(my_id_index);
+                        var my_id_str2 = my_id_str.indexOf("/");
+                        var my_id = my_id_str.substring(0 ,my_id_str2);
+                        var post_title = item.title;
+                        $.getJSON(
+                                "https://api.tumblr.com/v2/blog/"+ domain +"/posts?api_key="+ api_key +"&limit=1&id="+ my_id +"&jsonp=?",
+                                function(data){
+                                    //jsonを取得した時のみ動作する
+                                    if( data['meta']['status']==200){
+                                        var post_type = data['response']['posts'][0]['type'];
 
+                                        //テキスト投稿の場合
+                                        if (post_type == "text") {
 
+                                            //投稿の本文から最初のimgのsrcを切り出す
+                                            var post_body = data['response']['posts'][0]['body'],
+                                                    img_index = post_body.indexOf("<img"),
+                                                    img_str1 = post_body.substr(img_index),
+                                                    img_str2 = img_str1.indexOf('src="http'),
+                                                    img_end = img_str1.indexOf("/>")-1;
+                                            var post_img = img_str1.substring(img_str2 +5 ,img_end);
 
-$(function () {
-    articleSet();
-    function articleSet(){
-        $('article.box').each(function(index, el) {     //各記事ブロック毎に実行
+                                        //画像投稿の場合
+                                        } else if (post_type == "photo") {
 
-            var getText = $('.replace',this),           // {Caption}が入っているdivを指定
-                targetH2 = $('.title_h2',this),         // タイトルを挿入したいdivを指定
-                targetText = $('.lead',this),           // 冒頭部分を挿入したいdivを指定
-                title = $('h2',getText);                // 投稿内容中のh1部分
-
-            var setTitle = title.text();                // h1の中の文章を取得・代入
-                title.remove();                         // タイトル部分は本文に不要なので削除
-
-            var postText = getText.text();              // 投稿内容の文章を取得・代入
-                setPostText = postText.substr(0,200);   // 文章を200文字に切る
-
-                targetH2.html(setTitle);                // タイトルを挿入
-                targetText.html(setPostText);           // 本文冒頭を挿入
-                getText.remove();                       // 最初に{Caption}を入れたハコは不要なので削除
-        });
-
+                                            //画像投稿の場合アイキャッチはjsonから直接取得可能
+                                            //取得する画像をオリジナルにしているが、（二つ目の0）この数字を帰るとtumblr側でリサイズした画像を取得可能
+                                            //ただし、オリジナルサイズよりも大きなサイズの画像は生成されないため、エラーになる。
+                                            var post_img = data['response']['posts'][0]['photos'][0]['alt_sizes'][0]['url'];
+                                        }
+                                        popurarEntry.append("<a href='" + my_url +"'>"
+                                                + "<li>"
+                                                    + "<div class='bl_postList_box'>"
+                                                        + "<div class='bl_postList_img'><img src='" + post_img + "'></div>"
+                                                        + "<div class='bl_postList_ttl'>" + post_title +"</div>"
+                                                    + "</div>"
+                                                + "</li>"
+                                            +"</a>"
+                                        );
+                                    }
+                                });
+                }
+            });
+        }
+    });
 });
