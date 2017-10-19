@@ -222,10 +222,10 @@ function hatebuCallback(data){
                 title.remove();                         // タイトル部分は本文に不要なので削除
 
             var postText = getText.text();              // 投稿内容の文章を取得・代入
-                //setPostText = postText.substr(0,200);   // 文章を200文字に切る
+                setPostText = postText.substr(0,200);   // 文章を200文字に切る
 
                 targetH2.html(setTitle);                // タイトルを挿入
-                targetText.html(PostText);           // 本文冒頭を挿入
+                targetText.html(setPostText);           // 本文冒頭を挿入
                 getText.remove();                       // 最初に{Caption}を入れたハコは不要なので削除
         });
     }
