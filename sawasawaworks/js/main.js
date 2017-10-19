@@ -205,3 +205,28 @@ function hatebuCallback(data){
 			}
 		}
 }
+
+
+(function() {
+    articleSet();
+
+    function articleSet(){
+        $('article.box').each(function(index, el) {     //各記事ブロック毎に実行
+
+            var getText = $('.replace',this),           // {Caption}が入っているdivを指定
+                targetH2 = $('.title h2',this),         // タイトルを挿入したいdivを指定
+                targetText = $('.lead',this),           // 冒頭部分を挿入したいdivを指定
+                title = $('h2',getText);                // 投稿内容中のh1部分
+
+            var setTitle = title.text();                // h1の中の文章を取得・代入
+                title.remove();                         // タイトル部分は本文に不要なので削除
+
+            var postText = getText.text();              // 投稿内容の文章を取得・代入
+                //setPostText = postText.substr(0,200);   // 文章を200文字に切る
+
+                targetH2.html(setTitle);                // タイトルを挿入
+                targetText.html(PostText);           // 本文冒頭を挿入
+                getText.remove();                       // 最初に{Caption}を入れたハコは不要なので削除
+        });
+    }
+})();
