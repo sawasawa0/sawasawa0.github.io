@@ -262,22 +262,6 @@ $(function() {
 });
 
 
-//Facebookのシェア数を取得
-function get_social_count_facebook(url, selcter) {
-  jQuery.ajax({
-    url:'https://graph.facebook.com/',
-    dataType:'jsonp',
-    data:{
-      id:url
-    },
-    success:function(res){
-      jQuery( selcter ).text( res.share.share_count || 0 );
-    },
-    error:function(){
-      jQuery( selcter ).text('0');
-    }
-  });
-}
 //はてなブックマークではてブ数を取得
 function get_social_count_hatebu(url, selcter) {
   jQuery.ajax({
