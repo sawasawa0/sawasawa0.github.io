@@ -189,6 +189,7 @@ h2.bl_ttl {
     font-size: 180%;
     padding-left: 40px;
     margin: 20px 4px;
+    color: #555;
 }
 
 h2.bl_ttl:before{
@@ -200,7 +201,7 @@ h2.bl_ttl:before{
     margin-right: 6px;
 }
 
-.bl_sect_ttl a{
+.bl_ttl a{
     color: #555;
 }
 
@@ -569,12 +570,69 @@ ul.el_nav__col5 li ul {
 }
 
 /* Font Awesome hatena bookmark */
-.fa-hatena:before {
-    content: "B!";
-    font-family: Verdana;
-    font-weight: bold
-}
 
 .fa-tag {
     margin-right: 6px;
+}
+
+/*シェアボタン*/
+.share-3d{
+    margin-bottom: 10px;
+    text-align: center;
+}
+.share-3d-inner a {
+    position: relative;
+    display: inline-block;
+    width: 15%;
+    height: 40px;
+    line-height: 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+.share-3d .small-text{
+    font-size: 10px;
+}
+.share-3d .hatena-bookmark-button{
+    background: #00A4DE;
+    box-shadow: 0 3px #43638b;
+}
+.share-3d .twitter-button{
+    background: #55ACEE;
+    box-shadow: 0 3px #0092ca;
+}
+.share-3d .googleplus-button{
+    background: #C53727;
+    box-shadow: 0 3px #ad3a2d;
+}
+.share-3d .facebook-button{
+    background: #405BA7;
+    box-shadow: 0 3px #2c4373;
+}
+.share-3d .pocket-button{
+    background: #EE4256;
+    box-shadow: 0 3px 0 #c0392b;
+}
+.share-3d .line-button{
+    position:relative;
+    top: 1px;
+    background: #00C300;
+    box-shadow: 0 3px 0 green;
+}
+.share-3d .share-3d a:active{
+    top: 3px;
+    box-shadow: none;
+}
+.share-3d .line-button:active{
+    top: 4px;
+}
+@media screen and (min-width: 480px) {
+    .line-hide{
+        display: none;
+    }
+    .share-3d-inner a{
+        width: 18%;
+    }
 }
