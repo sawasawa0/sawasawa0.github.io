@@ -112,7 +112,7 @@ $(function () {
 
 //◆ 関連記事取得
 $(function () {
-    var domain ="blog.sawasawaworks.com", //記事を取得したいtumblrブログのドメイン
+    var domain ="test-sawasawaworksblog", //記事を取得したいtumblrブログのドメイン
         limit = "3", //取得したい記事数
         api_key = "xq2COMO7SeFjKSapb2VRKTfnm8FGeduoHspOB13aGYLN9rJSsK";
         //tag="ニコニコ動画";
@@ -143,7 +143,10 @@ $(function () {
 
                                     $.each(data['response']['posts'],function(){
                                         var post_type = this['type'],
-                                            post_url = this['post_url'];
+                                            post_url = this['post_url'],
+                                            obj_id = this['id'];
+
+                                    if (obj_id == my_id) {
 
                                         //テキスト投稿の場合
                                         if (post_type == "text") {
@@ -183,6 +186,8 @@ $(function () {
                                                 + "</li>"
                                             +"</a>"
                                         );
+                                    }
+
                                         post_no = post_no +1;
                                     });
                             }
@@ -207,14 +212,14 @@ function hatebuCallback(data){
 }
 
 
-(function() {
-    articleSet();
 
+$(function () {
+    articleSet();
     function articleSet(){
         $('article.box').each(function(index, el) {     //各記事ブロック毎に実行
 
             var getText = $('.replace',this),           // {Caption}が入っているdivを指定
-                targetH2 = $('.title h2',this),         // タイトルを挿入したいdivを指定
+                targetH2 = $('.title_h2',this),         // タイトルを挿入したいdivを指定
                 targetText = $('.lead',this),           // 冒頭部分を挿入したいdivを指定
                 title = $('h2',getText);                // 投稿内容中のh1部分
 
@@ -228,5 +233,5 @@ function hatebuCallback(data){
                 targetText.html(setPostText);           // 本文冒頭を挿入
                 getText.remove();                       // 最初に{Caption}を入れたハコは不要なので削除
         });
-    }
-})();
+
+});
