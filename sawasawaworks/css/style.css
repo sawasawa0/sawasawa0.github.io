@@ -213,6 +213,8 @@ h2.bl_ttl:before{
 .ly_index p.el_catch ,.ly_index p.catch {
     min-width: 120px;
     min-height: 120px;
+    max-width: 320px;
+    margin-right: 20px;
 }
 
 .ly_index .bl_entry_info{
@@ -228,6 +230,14 @@ h2.bl_ttl:before{
     min-width: 180px;
 }
 
+.ly_index .bl_entry_txt {
+    padding: 10px;
+    margin-bottom: 0;
+}
+
+.ly_index .bl_entry_txt p{
+    margin-bottom: 0;
+}
 @media screen and (min-width:480px) {
     /*　画面サイズが1024pxからはここを読み込む　*/
     .ly_index .bl_entry_info {
@@ -252,7 +262,7 @@ h2.bl_ttl:before{
 .bl_entry_info {
 }
 
-.bl_entry_info ::after{
+.el_underline {
     content: ' ';
     height: 1px;
     padding: 0px;
@@ -277,8 +287,8 @@ h2.bl_ttl:before{
     background-color: #3a489e;
     color: #fff;
     border-radius: 8px;
-    font-size: 80%;
-    padding: 0.2em 0.4em;
+    font-size: 75%;
+    padding: 0.2em 0.8em;
 }
 
 .bl_entry_date{
