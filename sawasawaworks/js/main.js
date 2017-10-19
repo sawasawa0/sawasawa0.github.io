@@ -47,7 +47,7 @@ $(function() {
 
 //◆ 新着記事取得
 $(function () {
-    var domain ="test-sawasawaworksblog", //記事を取得したいtumblrブログのドメイン
+    var domain ="blog.sawasawaworks.com", //記事を取得したいtumblrブログのドメイン
         limit = "5", //取得したい記事数
         api_key = "xq2COMO7SeFjKSapb2VRKTfnm8FGeduoHspOB13aGYLN9rJSsK";
 
@@ -112,8 +112,8 @@ $(function () {
 
 //◆ 関連記事取得
 $(function () {
-    var domain ="test-sawasawaworksblog", //記事を取得したいtumblrブログのドメイン
-        limit = "3", //取得したい記事数
+    var domain ="blog.sawasawaworks.com", //記事を取得したいtumblrブログのドメイン
+        limit = "5", //取得したい記事数
         api_key = "xq2COMO7SeFjKSapb2VRKTfnm8FGeduoHspOB13aGYLN9rJSsK";
         //tag="ニコニコ動画";
 
