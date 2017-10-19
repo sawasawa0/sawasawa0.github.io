@@ -244,11 +244,11 @@ h2.bl_ttl:before{
         flex-direction: row;
     }
 
-    .bl_entry_txt {
+    .ly_index .bl_entry_txt {
         display: flex;
     }
 
-    .bl_entry_txt > p {
+    .ly_index .bl_entry_txt > p {
         flex-grow: 1;
     }
 
