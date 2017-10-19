@@ -575,6 +575,12 @@ ul.el_nav__col5 li ul {
     margin-right: 6px;
 }
 
+.fa-hatena:before {
+    content: "B!";
+    font-family: "Verdana";
+    font-weight: bold;
+}
+
 /*シェアボタン*/
 .share-3d{
     margin-bottom: 10px;
@@ -635,4 +641,66 @@ ul.el_nav__col5 li ul {
     .share-3d-inner a{
         width: 18%;
     }
+}
+/*********フォローボタン**********/
+.follow-btn{
+ width: 100%;
+ margin: 5px 0px 5px 0px;
+}
+.follow-btn ul {
+ list-style: none;
+ display: -webkit-flex;
+ display: flex;
+ margin: 0;
+ padding: 0;
+}
+.follow-btn li {
+ height:60px;
+ width: 100%;
+ -webkit-transition: width 0.3s ease-out;
+ transition: width 0.3s ease-out;
+ display: -webkit-flex;
+ display: flex;
+ -webkit-align-items: center;
+ align-items: center;
+ -webkit-justify-content: center;
+ justify-content: center;
+}
+.follow-btn li:hover {
+ width: 200%;
+}
+.follow-btn li span{
+ line-height:1.5;
+ font-size:180%;
+ font-weight: normal;
+ font-style: normal;
+ font-weight: normal;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+}
+.btn1{
+ background: #5F5E5E;/*読者ボタンの背景色*/
+}
+.btn2{
+ background: #55ACEE;/*Twitterの背景色*/
+}
+.btn3 {
+ background: #82C36F;/*Feedlyの背景色*/
+}
+.btn4 {
+ background: #405BA7;/*Facebookの背景色*/
+}
+
+.follow-btn a {
+ width:100%;
+ height:100%;
+ font-size: 16px;
+ padding-top: 14px;
+ line-height: 1;
+ font-weight: normal;
+ text-decoration: none;
+ text-align: center;
+ color: #fff;
+ -webkit-transition: all 0.3s ease-out;
+ transition: all 0.3s ease-out;
 }
