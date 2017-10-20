@@ -32,7 +32,7 @@
                 <p>スタークリエイツの中の人のブログ</p>
         </div>
             <!-- ナビ１：ポートフォリオ関連 -->
-                    <ul class="bl_navbar el_nav__col5 el_nav__pink2 cf">
+                    <ul class="bl_navbar el_nav__col5 el_nav__pink2 cf el_mobile__hide">
                         <li><a href="http://sawasawaworks.com/">ポートフォリオ</a></li>
                         <li><a href="http://gallery.sawasawaworks.com/">イラストギャラリー</a></li>
                         <li><a href="http://sawasawaworks.com/works">制作実績</a></li>
@@ -40,7 +40,7 @@
                         <li><a href="http://sawasawaworks.com/contact">お問い合わせ</a></li>
                     </ul>
         <!-- ナビ２：ブログ関連 -->
-       <ul class="bl_navbar el_nav_dropdown el_nav__pink cf el_nav__col8">
+       <ul class="bl_navbar el_nav_dropdown el_nav__pink cf el_nav__col8 el_mobile__hide">
          <li><a href="#">ホーム</a></li>
          <li>
              <a href="#">日記 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
@@ -116,7 +116,8 @@
        </ul>
     </header>
 
- <div id="wrapper" class="row ly_body  align-items-top text-center text-md-left">
+ <div id="body" class="ly_body row">
+     <div id="wrapper" class="ly_wrapper row col-lg-offset-1 col-lg-10">
      <div id="main" class="ly_main col-sm-8" role="main">
          <div class="ly_container">
              {block:TagPage}
@@ -365,7 +366,7 @@
      <aside class="ly_aside col-sm-4 ">
          <div class="ly_aside_content">
              <!-- 検索 -->
-             <section id="bl_search">
+             <section id="bl_search" class="el_mobile__hide">
                  <div id="search">
                      <script>
                          (function() {
@@ -383,7 +384,7 @@
                  </div>
              </section>
 
-             <section>
+             <section class="el_mobile__hide">
                  <h4>プロフィール</h4>
                  <div class="bl_portrait el_portrait__small">
                   <img src="https://sawasawa0.github.io/sawasawaworks/img/prof.png" alt="User">
@@ -391,7 +392,7 @@
                  {Description}
              </section>
 
-             <section>
+             <section class="el_mobile__hide">
                  <h4>他にこんなサイト運営してます！</h4>
                  <div id="OtherSites" class="bl_prof_aside">
                      <ul>
@@ -410,7 +411,7 @@
                  </div>
              </section>
 
-             <section>
+             <section class="el_mobile__hide">
                  <h4>フォローお願いいたします</h4>
                  <div id="followbtn_side">
                      <div class="follow-btn">
@@ -454,6 +455,7 @@
              </section>
          </div>
      </aside>
+</div>
 </div>
 
     <footer class="ly_footer fdb-block footer-large">

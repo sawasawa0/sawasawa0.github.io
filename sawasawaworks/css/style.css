@@ -33,19 +33,15 @@ ul,li {
 }
 
 .ly_logo {
-    text-align: left;
+    text-align: center;
     padding: 10px;
     padding-bottom: 0;
 }
 
 .ly_logo img{
-    height: 60px;
     width: auto;
-}
+    height: 60px;
 
-.ly_logo p{
-    min-height: 60px;
-    padding-top: 38px;
 }
 
 .ly_body{
@@ -56,32 +52,31 @@ ul,li {
     background-image: -moz-linear-gradient(top, #fff 0%, #fff 50%, #00568c 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.5, #fff), color-stop(1, #00568c));
 }
-.ly_main{
-    padding: 10px;
-    display: flex;
-    justify-content: center;
+
+.ly_wrapper{
+    padding-top: 20px;
 }
 
-.ly_container{
-    margin-left: 20px;
-    box-shadow: 0px 2px 20px #ccc;
-    border-radius: 10px;
-    padding: 20px;
+.ly_main{
+    padding: 10px;
+}
+
+.ly_container,.ly_aside_content{
     margin-top: 20px;
     background-color: #fff;
+    border-radius: 10px;
+}
+.ly_aside_content{
+    padding: 10px;
 }
 .ly_aside{
     padding: 10px;
 }
 
-.ly_aside_content{
-    box-shadow: 0px 2px 20px #ccc;
-    border-radius: 10px;
-    padding: 20px;
-    margin-top: 20px;
-    margin-right: 20px;
-    background-color: #fff;
+.el_mobile__hide{
+    display: none;
 }
+
 .ly_aside_content div {
     max-width: 100%;
     text-align: left;
@@ -100,7 +95,7 @@ ul,li {
     font-weight: 700;
     text-align: left;
     margin: 10px auto;
-    padding: 0.2em 0.4em;
+    padding: 10px 20px;
     border-bottom: 1px solid #3161b4;
 }
 
@@ -117,19 +112,7 @@ ul,li {
     background-color: #00568c;
     color: #fff;
     width: 100%;
-    padding: 20px;
-}
-
-
-@media screen and (min-width:1280px) {
-    .ly_container{
-        max-width: 900px;
-    }
-
-    .ly_aside_content{
-        max-width: 400px;
-    }
-
+    padding: 10px;
 }
 
 /* block */
@@ -340,8 +323,9 @@ div.bl_btn_social{
     padding: 10px;
     color: #333;
     position: relative;
-    min-height: 450px;
+    min-height: 420px;
     margin-bottom: 20px;
+    margin-top: 20px
 }
 
 .bl_prof_footer::before{
@@ -350,11 +334,11 @@ div.bl_btn_social{
   display: block;
   width: 0;
   height: 0;
-  right: -25px;
-  top: 60px;
-  border-left: 60px solid #fff;
+  right: 60px;
+  bottom: -20px;
+  border-left: 40px solid #fff;
   border-top: 20px solid transparent;
-  border-bottom: 20px solid transparent;
+  border-bottom: 60px solid transparent;
 }
 
 .el_footer__emboss{
@@ -414,6 +398,57 @@ div.bl_portrait{
 }
 .bl_portrait img{
     border-radius: 50%;
+}
+
+.ly_footer div.follow-btn{
+    margin-bottom: 80px;
+}
+
+@media screen and (min-width:800px) {
+    .ly_container{
+        padding: 20px;
+        margin-left: 20px;
+        box-shadow: 0px 2px 20px #ccc;
+        border-radius: 10px;
+    }
+    .ly_logo p{
+        min-height: 60px;
+        padding-top: 38px;
+        text-align: left;
+    }
+    .el_mobile__hide{
+            display: block;
+        }
+
+    .ly_aside_content{
+        padding: 20px;
+        box-shadow: 0px 2px 20px #ccc;
+        margin-right: 20px;
+    }
+
+    .ly_footer{
+        padding: 20px;
+    }
+
+    .bl_prof_footer::before{
+      right: -25px;
+      top: 60px;
+      border-left: 60px solid #fff;
+      border-top: 20px solid transparent;
+      border-bottom: 20px solid transparent;
+    }
+
+}
+
+@media screen and (min-width:1280px) {
+    .ly_container{
+        max-width: 1000px;
+    }
+
+    .ly_aside_content{
+        max-width: 400px;
+    }
+
 }
 
 .el_portrait__small img{
@@ -578,7 +613,7 @@ ul.el_nav__col5 li ul {
     display: none;
     position: fixed;
     bottom: 20px;
-    right: 80px;
+    right: 30px;
     width: 80px;
     height: 80px;
     border-radius: 100%;
