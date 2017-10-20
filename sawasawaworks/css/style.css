@@ -36,7 +36,6 @@ ul,li {
     text-align: left;
     padding: 10px;
     padding-bottom: 0;
-    margin-bottom: -10px;
 }
 
 .ly_logo img{
@@ -59,13 +58,14 @@ ul,li {
 }
 .ly_main{
     padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .ly_container{
     margin-left: 20px;
     box-shadow: 0px 2px 20px #ccc;
     border-radius: 10px;
-    min-height: 2400px;
     padding: 20px;
     margin-top: 20px;
     background-color: #fff;
@@ -79,6 +79,7 @@ ul,li {
     border-radius: 10px;
     padding: 20px;
     margin-top: 20px;
+    margin-right: 20px;
     background-color: #fff;
 }
 .ly_aside_content div {
@@ -118,6 +119,19 @@ ul,li {
     width: 100%;
     padding: 20px;
 }
+
+
+@media screen and (min-width:1280px) {
+    .ly_container{
+        max-width: 900px;
+    }
+
+    .ly_aside_content{
+        max-width: 400px;
+    }
+
+}
+
 /* block */
 ul.bl_navbar {
 	width: 100%;
@@ -213,7 +227,7 @@ h2.bl_ttl:before{
 .ly_index p.el_catch ,.ly_index p.catch {
     min-width: 120px;
     min-height: 120px;
-    max-width: 320px;
+    max-width: 180px;
     margin-right: 20px;
 }
 
@@ -239,7 +253,6 @@ h2.bl_ttl:before{
     margin-bottom: 0;
 }
 @media screen and (min-width:480px) {
-    /*　画面サイズが1024pxからはここを読み込む　*/
     .ly_index .bl_entry_info {
         flex-direction: row;
     }
@@ -384,7 +397,8 @@ div.bl_btn_social{
 .bl_category_footer ul {
     list-style: none;
     margin-left: 30px;
-    font-size: 90%
+    font-size: 90%;
+    text-align: left;
 }
 
 .bl_category_footer li {

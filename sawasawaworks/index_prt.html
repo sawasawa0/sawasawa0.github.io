@@ -8,9 +8,9 @@
     <!-- title index-->
     <title>{block:PermalinkPage}{block:PostSummary}{PostSummary} | {/block:PostSummary}{/block:PermalinkPage}{block:TagPage}{Tag}の投稿一覧 | {/block:TagPage}{Title}</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -31,7 +31,6 @@
             </a>
                 <p>スタークリエイツの中の人のブログ</p>
         </div>
-        <nav class="navbar-default">
             <!-- ナビ１：ポートフォリオ関連 -->
                     <ul class="bl_navbar el_nav__col5 el_nav__pink2 cf">
                         <li><a href="http://sawasawaworks.com/">ポートフォリオ</a></li>
@@ -40,7 +39,6 @@
                         <li><a href="http://sawasawaworks.com/movie">配信動画一覧（準備中）</a></li>
                         <li><a href="http://sawasawaworks.com/contact">お問い合わせ</a></li>
                     </ul>
-        </nav>
         <!-- ナビ２：ブログ関連 -->
        <ul class="bl_navbar el_nav_dropdown el_nav__pink cf el_nav__col8">
          <li><a href="#">ホーム</a></li>
@@ -118,7 +116,7 @@
        </ul>
     </header>
 
- <div id="wrapper" class="row ly_body">
+ <div id="wrapper" class="row ly_body  align-items-top text-center text-md-left">
      <div id="main" class="ly_main col-sm-8" role="main">
          <div class="ly_container">
              {block:TagPage}
@@ -364,7 +362,7 @@
             {/block:Pagination}
          </div>
      </div>
-     <aside class="ly_aside col-sm-4">
+     <aside class="ly_aside col-sm-4 ">
          <div class="ly_aside_content">
              <!-- 検索 -->
              <section id="bl_search">
