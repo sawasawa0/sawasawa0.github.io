@@ -321,19 +321,13 @@ div.bl_btn_social{
 .bl_btn_social div{
 }
 
-.el_footer__emboss{
-    color: #ddd;
-    text-shadow: 1px 1px #fff, -1px -1px #444;
-}
-
-
 .bl_prof_footer{
     background-color: #fff;
     border-radius: 8px;
     padding: 10px;
     color: #333;
     position: relative;
-    min-height: 240px;
+    min-height: 450px;
     margin-bottom: 20px;
 }
 
@@ -348,6 +342,11 @@ div.bl_btn_social{
   border-left: 60px solid #fff;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
+}
+
+.el_footer__emboss{
+    color: #fff;
+    text-shadow: 3px 3px #333;
 }
 
 .bl_prof_aside {
@@ -365,14 +364,52 @@ div.bl_btn_social{
     font-size: 110%;
 }
 
-.bl_portrait{
-    text-align: center;
+.bl_category_footer h4 {
+    font-size: 130%;
+    font-weight: 700;
+    text-align: left;
+    margin: 10px auto;
+    padding: 0.2em 0.4em;
 }
 
-.bl_portrait img{
-    width: 200px;
+.bl_category_footer h4::before{
+    content: url(../img/logo.svg);
+    display: inline-block;
+    width: 20px;
     height: auto;
-    border-radius: 100px;
+    margin-left: -14px;
+    margin-right: 6px;
+}
+
+.bl_category_footer ul {
+    list-style: none;
+    margin-left: 30px;
+    font-size: 90%
+}
+
+.bl_category_footer li {
+    padding: 0.2em 0.4em;
+}
+
+div.bl_portrait{
+    text-align: center;
+}
+.bl_portrait h4{
+    font-size: 280%;
+
+}
+.bl_portrait img{
+    border-radius: 50%;
+}
+
+.el_portrait__small img{
+    width: 160px;
+    height: auto;
+}
+
+.el_portrait__large img{
+    width: 240px;
+    height: auto;
 }
 
 ul.bl_postList {
