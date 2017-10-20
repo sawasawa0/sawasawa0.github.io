@@ -732,3 +732,17 @@ ul.el_nav__col5 li ul {
  -webkit-transition: all 0.3s ease-out;
  transition: all 0.3s ease-out;
 }
+
+
+#___gcse_0 *,.search_box #___gcse_1 * {
+  box-sizing: content-box;
+}/*border-boxの干渉を避ける*/
+
+.gsc-input-box {
+  min-height: 30px;
+  border-radius: 12px;
+}/*inputをウォーターマークがはみ出さない高さに*/
+
+input.gsc-search-button-v2{
+  padding:6px 10px;
+}/*ボタンサイズ設定*/
