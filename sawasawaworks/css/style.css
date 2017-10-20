@@ -30,7 +30,6 @@ ul,li {
 
 /* layout */
 .ly_header{
-    margin-top: -150px;
     margin-bottom: 0px;
     width: 100%;
 }
@@ -43,14 +42,13 @@ ul,li {
 
 .ly_logo img{
     width: auto;
-    height: 60px;
+    height: 80px;
 
 }
 
 .ly_body{
     width: 100%;
     margin: 0;
-    margin-top: 150px;
     background-color: #fff;
     background-image: -moz-linear-gradient(top, #fff 0%, #fff 50%, #00568c 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.5, #fff), color-stop(1, #00568c));
@@ -408,6 +406,13 @@ div.bl_portrait{
 }
 
 @media screen and (min-width:800px) {
+    .ly_header{
+        margin-top: -180px;
+    }
+    .ly_body{
+        margin-top: 180px;
+    }
+
     .ly_container{
         padding: 20px;
         margin-left: 20px;
