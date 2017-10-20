@@ -117,7 +117,6 @@ ul,li {
     color: #fff;
     width: 100%;
     padding: 20px;
-    font-weight: 700;
 }
 /* block */
 ul.bl_navbar {
@@ -322,46 +321,11 @@ div.bl_btn_social{
 .bl_btn_social div{
 }
 
-.el_snsbtn__amount{
-    font-family: Arial;
-    color: #555;
-    border-bottom: 1px solid #ccc;
-    border-right: 1px solid #ccc;
+.el_footer__emboss{
+    color: #ddd;
+    text-shadow: 1px 1px #fff, -1px -1px #444;
 }
 
-.el_snsbtn__hatena{
-    background-color: #00A4DE;
-    color: #fff;
-    padding: 4px;
-}
-
-.el_snsbtn__facebook{
-    background-color: #405BA7;
-    color: #fff;
-    padding: 4px;
-}
-.el_snsbtn__twitter{
-    background-color:#55ACEE;
-    color: #fff;
-    padding: 4px;
-}
-.el_snsbtn__googleplus{
-    background-color:#C53727;
-    color: #fff;
-    padding: 4px;
-}
-.el_snsbtn__pocket{
-    background-color:#EE4256;
-    color: #fff;
-    padding: 4px;
-}
-
-.bl_prof_aside{
-    background-color: #cdf3ff;
-    border-radius: 8px;
-    padding: 10px;
-    font-size: 95%;
-}
 
 .bl_prof_footer{
     background-color: #fff;
@@ -370,6 +334,7 @@ div.bl_btn_social{
     color: #333;
     position: relative;
     min-height: 240px;
+    margin-bottom: 20px;
 }
 
 .bl_prof_footer::before{
@@ -378,12 +343,20 @@ div.bl_btn_social{
   display: block;
   width: 0;
   height: 0;
-  left: -65px;
+  right: -25px;
   top: 60px;
-  border-right: 120px solid #fff;
+  border-left: 60px solid #fff;
   border-top: 20px solid transparent;
   border-bottom: 20px solid transparent;
 }
+
+.bl_prof_aside {
+    background-color: #cdf3ff;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 95%;
+}
+
 .bl_prof_aside ul{
     list-style: none;
 }
@@ -392,6 +365,15 @@ div.bl_btn_social{
     font-size: 110%;
 }
 
+.bl_portrait{
+    text-align: center;
+}
+
+.bl_portrait img{
+    width: 200px;
+    height: auto;
+    border-radius: 100px;
+}
 
 ul.bl_postList {
     list-style: none;
@@ -446,6 +428,16 @@ div.bl_postList_ttl {
     opacity: 0.5;
     transition: 0.8s;
     text-decoration: none;
+}
+
+.bl_copy {
+    font-size: 80%;
+    padding: 10px;
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: -6px;
 }
 
 .el_postList__small div.bl_postList_img {
@@ -539,7 +531,6 @@ ul.el_nav__col5 li ul {
     width: 80px;
     height: 80px;
     border-radius: 100%;
-    border: 1px solid #fff ;
     background-color: #ff6b00;
     color: #ffffff;
 
