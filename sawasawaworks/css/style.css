@@ -1,12 +1,14 @@
 @charset "UTF-8";
 /* PRECSS */
+
+#tumblr_controls, .tmblr-iframe{display:none !important;}
+
 /* 要素 */
 body {
     font-size: 16px;
     text-align: center;
     color: #555;
     overflow-x: hidden;
-    z-index: 80;
 }
 
 header {
