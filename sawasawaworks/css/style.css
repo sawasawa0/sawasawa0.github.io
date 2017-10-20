@@ -32,6 +32,7 @@ ul,li {
 .ly_header{
     margin-bottom: 0px;
     width: 100%;
+    margin-top: -40px;
 }
 
 .ly_logo {
@@ -52,6 +53,7 @@ ul,li {
     background-color: #fff;
     background-image: -moz-linear-gradient(top, #fff 0%, #fff 50%, #00568c 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.5, #fff), color-stop(1, #00568c));
+    margin-top: 60px;
 }
 
 .ly_wrapper{
