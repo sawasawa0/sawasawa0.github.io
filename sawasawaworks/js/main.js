@@ -389,6 +389,7 @@ $(function(){
 
             var getText = $('.replace',this),           // {Caption}が入っているdivを指定
                 targetH2 = $('h2.title_h2',this),         // タイトルを挿入したいdivを指定
+                targetText = $('div.set_lead',this)
                 title = $('h2',getText),                // 投稿内容中のh2部分
                 leadText = $('p.lead',getText);
 
@@ -397,6 +398,8 @@ $(function(){
 
                 targetH2.html(setTitle);                // タイトルを挿入
                 title.remove();                         // タイトル部分は本文に不要なので削除
+
+
 
             // 現在ページのURL取得
             var url   = location.href;
@@ -407,6 +410,9 @@ $(function(){
                 $("meta[name='twitter:title']").attr('content', setTitle_head );
                 $("p.el_catch").children("img").attr('alt', setTitle_head );
                 $("meta[property='og:description']").attr('content', setLeadText );
+            } else {
+                targetText.html(setLeadText);                // タイトルを挿入
+                getText.remove();                         // タイトル部分は本文に不要なので削除
             }
         });
     }
