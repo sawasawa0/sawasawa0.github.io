@@ -262,6 +262,7 @@ $(function() {
 });
 
 
+/**
 //はてなブックマークではてブ数を取得
 function get_social_count_hatebu(url, selcter) {
   jQuery.ajax({
@@ -281,3 +282,4 @@ function get_social_count_hatebu(url, selcter) {
 jQuery(function(){
   get_social_count_hatebu('{Permalink}', '.hatebu-count');
 });
+**/
