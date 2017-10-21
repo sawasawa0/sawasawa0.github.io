@@ -312,6 +312,10 @@ h2.bl_ttl:before{
     padding: 0.2em 0.4em;
 }
 
+.bl_entry_txt p , .bl_entry_txt ul{
+    padding: 10px;
+}
+
 .bl_btn_social{
     width: 100%;
     margin-left: 18px;
