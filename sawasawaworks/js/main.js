@@ -397,10 +397,6 @@ function getPocket(pocketElm) {
     xml.send(null);
 }
 $(function(){
-  getTwitterCount('http://www.ituore.com/entry/sns-share-button', '.twitter-count');
-  getHatenaBookmarkCount('http://www.ituore.com/entry/sns-share-button', '.hatena-bookmark-count');
-  getFacebookCount('http://www.ituore.com/entry/sns-share-button', '.facebook-count');
-  getGoogleplusCount('http://www.ituore.com/entry/sns-share-button', '.googleplus-count');
-//   getPocketCount('http://www.ituore.com/entry/sns-share-button', '.pocket-count');
-  getPocket('pocket-count');
+  getHatenaBookmarkCount('{Permalink}', '.hatena-bookmark-count');
+  getFacebookCount('{Permalink}', '.facebook-count');
 });
