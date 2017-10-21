@@ -24,6 +24,24 @@ ul,li {
     padding: 0;
 }
 
+blockquote {
+background-color:#eee;
+margin: 1.5em;
+padding:1em 1em 1em 3em;
+position:relative;
+}
+
+blockquote:before{
+content:"”";
+font-size:80px;
+font-family: Century;
+line-height:1em;
+color:#999;
+position:absolute;
+left:5px;
+top:0px;
+}
+
 /* クリアフィックス */
 .cf::after {
   content: '';
@@ -637,6 +655,8 @@ p.el_catch ,p.catch {
     max-height: 500px;
     margin: 10px auto;
 }
+
+
 
 /* Bootstrap */
 .navbar-default {
