@@ -47,13 +47,13 @@
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> ホーム</a></li>
-                        <li><a href="/tagged/%E6%97%A5%E8%A8%98"><i class="fa fa-book" aria-hidden="true"></i> 日記 <i class="fa fa-chevron-down" aria-hidden="true"></i></a></li>
-                        <li><a href="/tagged/%E3%83%9E%E3%83%B3%E3%82%AC%E3%83%BB%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88"><i class="fa fa-star" aria-hidden="true"></i> マンガ・イラスト <i class="fa fa-chevron-down" aria-hidden="true"></i></a></li>
-                        <li><a href="/tagged/%E7%8B%AC%E7%AB%8B%E3%83%BB%E8%B5%B7%E6%A5%AD"><i class="fa fa-line-chart" aria-hidden="true"></i> 独立・起業 <i class="fa fa-chevron-down" aria-hidden="true"></i></a></li>
-                        <li><a href="/tagged/IT%E3%83%BB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E9%96%8B%E7%99%BA"><i class="fa fa-desktop" aria-hidden="true"></i> IT・システム開発 <i class="fa fa-chevron-down" aria-hidden="true"></i></a></li>
-                        <li><a href="/tagged/%E6%9B%B8%E8%A9%95"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 書評 <i class="fa fa-chevron-down" aria-hidden="true"></i></a></li>
-                        <li><a href="/tagged/%E7%94%9F%E6%B4%BB"><i class="fa fa-coffee" aria-hidden="true"></i> 生活 <i class="fa fa-chevron-down" aria-hidden="true"></i></a></li>
-                        <li><a href="/tagged/%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%BB%E3%83%8D%E3%83%83%E3%83%88"><i class="fa fa-gamepad" aria-hidden="true"></i> ゲーム・ネット <i class="fa fa-chevron-down" aria-hidden="true"></i></a></li>
+                        <li><a href="/tagged/%E6%97%A5%E8%A8%98"><i class="fa fa-book" aria-hidden="true"></i> 日記</a></li>
+                        <li><a href="/tagged/%E3%83%9E%E3%83%B3%E3%82%AC%E3%83%BB%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88"><i class="fa fa-star" aria-hidden="true"></i> マンガ・イラスト</a></li>
+                        <li><a href="/tagged/%E7%8B%AC%E7%AB%8B%E3%83%BB%E8%B5%B7%E6%A5%AD"><i class="fa fa-line-chart" aria-hidden="true"></i> 独立・起業</a></li>
+                        <li><a href="/tagged/IT%E3%83%BB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E9%96%8B%E7%99%BA"><i class="fa fa-desktop" aria-hidden="true"></i> IT・システム開発</a></li>
+                        <li><a href="/tagged/%E6%9B%B8%E8%A9%95"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 書評</a></li>
+                        <li><a href="/tagged/%E7%94%9F%E6%B4%BB"><i class="fa fa-coffee" aria-hidden="true"></i> 生活</a></li>
+                        <li><a href="/tagged/%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%BB%E3%83%8D%E3%83%83%E3%83%88"><i class="fa fa-gamepad" aria-hidden="true"></i> ゲーム・ネット</a></li>
                     </ul>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -152,7 +152,7 @@
      <div id="main" class="ly_main col-sm-8" role="main">
          <div class="ly_container">
              {block:TagPage}
-             <h2 class="bl_ttl">「{Tag}」関連の記事一覧</h2>
+             <h2>「{Tag}」関連の記事一覧</h2>
              {/block:TagPage}
 
              <!-- インデックス用 ここから-->
@@ -565,13 +565,13 @@
 
               <h4 class="el_footer__emboss">こんな記事を書いています！</h4>
               <ul>
-                <li>日記</li>
-                <li>マンガ・イラスト</li>
-                <li>独立・起業</li>
-                <li>IT・システム開発</li>
-                <li>書評</li>
-                <li>生活</li>
-                <li>ゲーム・ネット</li>
+                  <li><a href="/tagged/%E6%97%A5%E8%A8%98"><i class="fa fa-book" aria-hidden="true"></i> 日記</a></li>
+                  <li><a href="/tagged/%E3%83%9E%E3%83%B3%E3%82%AC%E3%83%BB%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88"><i class="fa fa-star" aria-hidden="true"></i> マンガ・イラスト</a></li>
+                  <li><a href="/tagged/%E7%8B%AC%E7%AB%8B%E3%83%BB%E8%B5%B7%E6%A5%AD"><i class="fa fa-line-chart" aria-hidden="true"></i> 独立・起業</a></li>
+                  <li><a href="/tagged/IT%E3%83%BB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E9%96%8B%E7%99%BA"><i class="fa fa-desktop" aria-hidden="true"></i> IT・システム開発</a></li>
+                  <li><a href="/tagged/%E6%9B%B8%E8%A9%95"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 書評</a></li>
+                  <li><a href="/tagged/%E7%94%9F%E6%B4%BB"><i class="fa fa-coffee" aria-hidden="true"></i> 生活</a></li>
+                  <li><a href="/tagged/%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%BB%E3%83%8D%E3%83%83%E3%83%88"><i class="fa fa-gamepad" aria-hidden="true"></i> ゲーム・ネット</a></li>
               </ul>
 
           </div>
