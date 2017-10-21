@@ -901,3 +901,14 @@ input.gsc-search-button-v2{
 .share-buttons .inner .pocket-button:active{
     background: #b5392c;
 }
+
+
+embed[src*="nicovideo.jp"]{
+width: 685px;
+margin: 10px;
+padding: 5px;
+border: solid 1px #cccccc;
+box-shadow: 2px 2px 4px #999999;
+box-shadow-blend-mode: linear;
+
+}
