@@ -627,6 +627,10 @@ ul.el_nav__col5 li ul {
 	width: 20%;
 }
 
+p.el_catch ,p.catch {
+    text-align: center;
+}
+
 .el_catch img,.catch img{
     border: 1px solid #ccc;
     max-width: 100%;
