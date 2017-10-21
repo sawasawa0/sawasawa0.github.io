@@ -32,7 +32,7 @@ ul,li {
 .ly_header{
     margin-bottom: 0px;
     width: 100%;
-    margin-top: -40px;
+    margin-top: -50px;
 }
 
 .ly_logo {
@@ -68,10 +68,9 @@ ul,li {
     margin-top: 20px;
     background-color: #fff;
     border-radius: 10px;
-}
-.ly_aside_content{
     padding: 10px;
 }
+
 .ly_aside{
     padding: 10px;
 }
@@ -430,6 +429,10 @@ div.bl_portrait{
             display: block;
         }
 
+    .el_pc__hide {
+        display: none;
+    }
+
     .ly_aside_content{
         padding: 20px;
         box-shadow: 0px 2px 20px #ccc;
@@ -615,7 +618,39 @@ ul.el_nav__col5 li ul {
     margin: 10px auto;
 }
 
+/* Bootstrap */
+.navbar-default {
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(255, 255, 255, 0);
+    text-align: left;
+    z-index: 80;
+    position: absolute;
+    margin-top: -125px;
+    right:0px;
+    width: 100%
+}
 
+.collapse.in {
+    background-color: #fff;
+    transition: 0.4s;
+}
+
+.navbar-default .navbar-toggle {
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.guide-txt {
+    text-align: center;
+    font-size: 9.5px;
+}
+.navbar-toggle {
+    padding-bottom:  0;
+}
+
+.navbar-toggle .icon-bar {
+    width: 30px;
+}
 
 /* トップに戻るボタン */
 .bl_btn_BackToTop {
