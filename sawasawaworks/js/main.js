@@ -265,29 +265,6 @@ $(function() {
 });
 
 
-//はてなブックマークではてブ数を取得
-function get_social_count_hatebu(url, selcter) {
-  jQuery.ajax({
-    url:'http://api.b.st-hatena.com/entry.count?callback=?',
-    dataType:'jsonp',
-    data:{
-      url:url
-    },
-    success:function(res){
-      jQuery( selcter ).text( res || 0 );
-    },
-    error:function(){
-      jQuery( selcter ).text('0');
-    }
-  });
-}
-jQuery(function(){
-  get_social_count_hatebu('{Permalink}', '.hatebu-count');
-});
-
-
-
-
 //Twitterのシェア数を取得
 function getTwitterCount(url, selcter) {
   $.ajax({
@@ -400,4 +377,30 @@ $(function(){
   getHatenaBookmarkCount('{Permalink}', '.hatena-bookmark-count');
   getFacebookCount('{Permalink}', '.facebook-count');
   getTwitterCount('{Permalink}', '.twitter-count');
+});
+
+
+//◆photo投稿のタイトルをなんとかするやつ
+$(function(){
+    articleSet();
+
+    function articleSet(){
+        $('article.box').each(function(index, el) {     //各記事ブロック毎に実行
+
+            var getText = $('.replace',this),           // {Caption}が入っているdivを指定
+                targetH2 = $('h2.title_h2',this),         // タイトルを挿入したいdivを指定
+                title = $('h2',getText);                // 投稿内容中のh1部分
+
+            var setTitle = title.text();                // h1の中の文章を取得・代入
+                title.remove();                         // タイトル部分は本文に不要なので削除
+
+                targetH2.html(setTitle);                // タイトルを挿入
+        });
+    }
+    //投稿の最初のh2内のtextを取得する
+
+    //h2タグごと取得した範囲を削除する
+    //指定のt1tleにtextを代入する
+    //指定のクラスのh2にtextを代入する
+
 });
