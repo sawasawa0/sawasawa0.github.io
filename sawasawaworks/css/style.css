@@ -328,7 +328,9 @@ div.bl_btn_social{
     position: relative;
     min-height: 420px;
     margin-bottom: 20px;
-    margin-top: 20px
+    margin-top: 20px;
+    text-align: left;
+    line-height: 1.8em;
 }
 
 .bl_prof_footer::before{
@@ -338,10 +340,10 @@ div.bl_btn_social{
   width: 0;
   height: 0;
   right: 60px;
-  bottom: -20px;
-  border-left: 40px solid #fff;
-  border-top: 20px solid transparent;
-  border-bottom: 60px solid transparent;
+  bottom: -30px;
+  border-left: 25px solid #fff;
+  border-top: 15px solid transparent;
+  border-bottom: 30px solid transparent;
 }
 
 .el_footer__emboss{
@@ -451,9 +453,9 @@ div.bl_portrait{
     .bl_prof_footer::before{
       right: -25px;
       top: 60px;
-      border-left: 60px solid #fff;
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid transparent;
+      border-left: 30px solid #fff;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
     }
 
 }
