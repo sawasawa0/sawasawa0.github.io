@@ -393,7 +393,7 @@ $(function(){
                 leadText = $('p.lead',getText);
 
             var setTitle = title.text(),                // h2の中の文章を取得・代入
-                setLeadText = leadText.txt(),
+                setLeadText = leadText.text(),
                 title.remove(),                         // タイトル部分は本文に不要なので削除
                 targetH2.html(setTitle);                // タイトルを挿入
 
