@@ -395,6 +395,7 @@ $(function(){
                 title.remove();                         // タイトル部分は本文に不要なので削除
 
                 targetH2.html(setTitle);                // タイトルを挿入
+                document.title = targetH2;                // タイトルを挿入
         });
     }
     //投稿の最初のh2内のtextを取得する
