@@ -402,7 +402,7 @@ $(function(){
                 var setTitle_head = setTitle + " | sawaGO!(サワゴー！)-子供２人抱えて札幌でマンガ起業する人のブログ-";
                     document.title = setTitle_head;                // タイトルを挿入
                 $("meta[property='og:title']").attr('content', setTitle_head );
-                $("meta[property='twitter:title']").attr('content', setTitle_head );
+                $("meta[name='twitter:title']").attr('content', setTitle_head );
 
             }
         });
