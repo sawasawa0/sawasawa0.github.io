@@ -389,7 +389,7 @@ $(function(){
 
             var getText = $('.replace',this),           // {Caption}が入っているdivを指定
                 targetH2 = $('h2.title_h2',this),         // タイトルを挿入したいdivを指定
-                targetText = $('div.set_lead',this)
+                targetText = $('p.set_lead',this)
                 title = $('h2',getText),                // 投稿内容中のh2部分
                 leadText = $('p.lead',getText);
 
