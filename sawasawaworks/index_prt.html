@@ -6,30 +6,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- title index-->
-    <title>{block:PermalinkPage}{block:PostSummary}{PostSummary} | {/block:PostSummary}{/block:PermalinkPage}{block:TagPage}{Tag}の投稿一覧 | {/block:TagPage}{Title}</title>
+    <title>{block:TagPage}{Tag}に関する投稿一覧 | {/block:TagPage}{Title}</title>
 
     <!-- OGP -->
-    <meta property="og:title" content="{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}" />
-    <meta property="og:type" content="article" />
-    <meta property="og:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png" />
+    <meta property="og:title" content="{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage} | {Title}{block:SearchPage} |「{SearchQuery}」の検索結果{/block:SearchPage}">
 
-    <!-- Twitter tags -->
-    <meta name="twitter:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png" />
+{block:Description}
+    <meta property="og:description" content="{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}{block:indexPage}{MetaDescription}{/block:indexPage}">
+{/block:Description}
+
+<meta property="og:site_name" content="{Title}">
+<meta property="og:type" content="website">
+
+{block:IndexPage}
+    <meta property="og:url" content="http://iioffice.ligmedia.net">
+    <meta property="og:image" content="http://iioffice.liginc.co.jp/blog/images/ogp.png">
+{/block:IndexPage}
+
+{block:PermalinkPage}{block:Posts}{block:Photo}
+    <meta property="og:url" content="{Permalink}">
+    <meta property="og:image" content="{PhotoURL-HighRes}">
+{/block:Photo}{/block:Posts}{/block:PermalinkPage}
+
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="{Title}" />
+
+    <!-- twiter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sawasawa0">
+    <meta name="twitter:title" content="{Title}">
+    <meta name="twitter:url" content="{Permalink}">
+
+    {block:indexPage}
+        <meta property="og:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
+        <meta name="twitter:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
+    {/block:indexPage}
+
+    {block:PermalinkPage}
+        {block:Posts}
+            {block:text}
+                <meta property="og:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
+    <meta name="twitter:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
+            {/block:text}
+        {/block:Posts}
+    {/block:PermalinkPage}
 
      <!-- photo だったら og-image は photoURL にする -->
     {block:PermalinkPage}
       {block:Posts}
         {block:Photo}
-          <meta property="og:image" content="{PhotoURL-HighRes}" />
+            <meta property="og:image" content="{PhotoURL-HighRes}">
+            <meta name="twitter:image" content="{PhotoURL-HighRes}">
         {/block:Photo}
       {/block:Posts}
     {/block:PermalinkPage}
-
-    <meta property="og:site_name" content="{Title}" />
-
-    {block:Description}
-      <meta property="og:description" content="{MetaDescription}">
-    {/block:Description}
 
     {block:IfGoogleAuthor}
       <link rel="author" href="{text:Google Author}" />
@@ -37,19 +67,12 @@
 
     {block:IndexPage}
       <link rel="canonical" href="{BlogURL}"/>
-      <meta property="og:url" content="{BlogURL}" />
     {/block:IndexPage}
 
     {block:PermalinkPage}
       <link rel="canonical" href="{Permalink}"/>
-      <meta property="og:url" content="{Permalink}" />
     {/block:PermalinkPage}
 
-    <!-- twiter card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@sawasawa0">
-    <meta name="twitter:title" content="{block:PermalinkPage}{block:PostSummary}{PostSummary} ? {/block:PostSummary}{/block:PermalinkPage}{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}">
-    <meta name="twitter:url" content="{Permalink}">
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://sawasawa0.github.io/sawasawaworks/img/favicons/apple-touch-icon.png">
@@ -65,7 +88,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://sawasawa0.github.io/sawasawaworks/css/style.css">
     <style>{customcss}</style>
 
     <!--[if lt IE 9]>
@@ -85,7 +108,7 @@
             </a>
         </div>
 
-        <!-- ナビ0：モバイル -->
+                <!-- ナビ0：モバイル -->
         <nav class="navbar-default  el_pc__hide">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -115,8 +138,7 @@
             <!-- /.container-fluid -->
         </nav>
 
-
-        <!-- ナビ１：ポートフォリオ関連 -->
+                    <!-- ナビ１：ポートフォリオ関連 -->
         <ul class="bl_navbar el_nav__col5 el_nav__pink2 cf el_mobile__hide">
             <li><a href="http://sawasawaworks.com/">ポートフォリオ</a></li>
             <li><a href="http://gallery.sawasawaworks.com/">イラストギャラリー</a></li>
@@ -126,9 +148,9 @@
         </ul>
         <!-- ナビ２：ブログ関連 -->
        <ul class="bl_navbar el_nav_dropdown el_nav__pink cf el_nav__col8 el_mobile__hide">
-         <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> ホーム</a></li>
+         <li><a href="/">ホーム</a></li>
          <li>
-             <a href="/tagged/%E6%97%A5%E8%A8%98"><i class="fa fa-book" aria-hidden="true"></i> 日記 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+             <a href="/tagged/%E6%97%A5%E8%A8%98">日記 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
              <ul>
                <div>
                    <li><a href="/tagged/%E3%81%9F%E3%81%A0%E3%81%AE%E6%97%A5%E8%A8%98">ただの日記</a></li>
@@ -139,7 +161,7 @@
              </ul>
          </li>
          <li>
-             <a href="/tagged/%E3%83%9E%E3%83%B3%E3%82%AC%E3%83%BB%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88"><i class="fa fa-star" aria-hidden="true"></i> マンガ・イラスト <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+             <a href="/tagged/%E3%83%9E%E3%83%B3%E3%82%AC%E3%83%BB%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88">マンガ・イラスト <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
              <ul>
                <li><a href="/tagged/%E3%83%9E%E3%83%B3%E3%82%AC">マンガ</a></li>
                <li><a href="/tagged/%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88">イラスト</a></li>
@@ -149,7 +171,7 @@
              </ul>
          </li>
          <li>
-             <a href="/tagged/%E7%8B%AC%E7%AB%8B%E3%83%BB%E8%B5%B7%E6%A5%AD"><i class="fa fa-line-chart" aria-hidden="true"></i> 独立・起業 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+             <a href="/tagged/%E7%8B%AC%E7%AB%8B%E3%83%BB%E8%B5%B7%E6%A5%AD">独立・起業 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
              <ul>
                <li><a href="/tagged/%E7%8B%AC%E7%AB%8B%E3%83%BB%E8%B5%B7%E6%A5%AD">独立・起業</a></li>
                <li><a href="/tagged/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0">マーケティング</a></li>
@@ -160,7 +182,7 @@
              </ul>
          </li>
          <li>
-             <a href="/tagged/IT%E3%83%BB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E9%96%8B%E7%99%BA"><i class="fa fa-desktop" aria-hidden="true"></i> IT・システム開発 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+             <a href="/tagged/IT%E3%83%BB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E9%96%8B%E7%99%BA">IT・システム開発 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
              <ul>
                <li><a href="/tagged/%E3%82%A2%E3%83%97%E3%83%AA">アプリ_Windows</a></li>
                <li><a href="/tagged/Windows">Windows</a></li>
@@ -172,7 +194,7 @@
              </ul>
          </li>
          <li>
-             <a href="/tagged/%E6%9B%B8%E8%A9%95"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 書評 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+             <a href="/tagged/%E6%9B%B8%E8%A9%95">書評 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
              <ul>
                <li><a href="/tagged/%E6%9B%B8%E8%A9%95">書評</a></li>
                <li><a href="/tagged/%E6%9B%B8%E8%A9%95_%E3%83%9E%E3%83%B3%E3%82%AC">書評_マンガ</a></li>
@@ -180,7 +202,7 @@
              </ul>
          </li>
          <li>
-             <a href="/tagged/%E7%94%9F%E6%B4%BB"><i class="fa fa-coffee" aria-hidden="true"></i> 生活 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+             <a href="/tagged/%E7%94%9F%E6%B4%BB">生活 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
              <ul>
                <li><a href="/tagged/%E6%9C%AD%E5%B9%8C">札幌</a></li>
                <li><a href="/tagged/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88">イベント</a></li>
@@ -190,7 +212,7 @@
              </ul>
          </li>
          <li>
-             <a href="/tagged/%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%BB%E3%83%8D%E3%83%83%E3%83%88"><i class="fa fa-gamepad" aria-hidden="true"></i> ゲーム・ネット <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
+             <a href="/tagged/%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%BB%E3%83%8D%E3%83%83%E3%83%88">ゲーム・ネット <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
              <ul>
                <li><a href="/tagged/%E3%82%B2%E3%83%BC%E3%83%A0">ゲーム</a></li>
                <li><a href="/tagged/%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3">ポケモン</a></li>
@@ -201,8 +223,8 @@
        </ul>
     </header>
 
- <div id="body" class="ly_body row">
-     <div id="wrapper" class="ly_wrapper row col-lg-offset-1 col-lg-10">
+ <div id="body" class="row ly_body">
+  <div id="wrapper" class="ly_wrapper row col-lg-offset-1 col-lg-10">
      <div id="main" class="ly_main col-sm-8" role="main">
          <div class="ly_container">
              {block:TagPage}
@@ -215,7 +237,7 @@
                      <!-- テキスト投稿 -->
                      {block:Text}
                      <div class="ly_index">
-                        <article>
+                        <article class="box">
                          <h2 class="bl_ttl"><a href="{Permalink}">{Title}</a></h2>
                          <div class="bl_entry_info">
                              <div class="bl_taggs">
@@ -231,16 +253,18 @@
                                  <i class="fa fa-calendar" aria-hidden="true"></i>
                                  {Year}年{MonthNumber}月{DayOfMonth}日
                              </div>
+                             <div class="bl_entry_date">
+                                 <i class="fa fa-refresh" aria-hidden="true"></i> <span class="bl_entry_update"></span>
+                             </div>
                          </div>
                          <div class="el_underline"></div>
+
                          <div class="bl_entry_txt">
                              {Body}
                          </div>
-                         {block:More}
                             <a href="{Permalink}">
-                            <button class="btn  btn-warning btn-block">記事を読む</button>
+                            <button class="btn  btn-warning btn-block"><i class="fa fa-star" aria-hidden="true"></i> 記事を読む</button>
                             </a>
-                         {/block:More}
                          </article>
                      </div>
                      <hr>
@@ -264,6 +288,9 @@
                                  <i class="fa fa-calendar" aria-hidden="true"></i>
                                  {Year}年{MonthNumber}月{DayOfMonth}日
                              </div>
+                             <div class="bl_entry_date">
+                                 <i class="fa fa-refresh" aria-hidden="true"></i> <span class="bl_entry_update"></span>
+                             </div>
                          </div>
                          <div class="el_underline"></div>
                          <div class="bl_entry_txt">
@@ -271,12 +298,11 @@
                              <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
                            </p>
                          {block:Caption}<div class="replace">{Caption}</div>{/block:Caption}
+                         <p class="set_lead lead"></p>
                          </div>
-                         {block:More}
                             <a href="{Permalink}">
-                            <button class="btn  btn-warning btn-block">記事を読む</button>
+                            <button class="btn  btn-warning btn-block"><i class="fa fa-star" aria-hidden="true"></i> 記事を読む</button>
                             </a>
-                         {/block:More}
                          </article>
 
                      </div>
@@ -291,7 +317,7 @@
                      {block:Posts}
                      <!-- テキスト投稿 -->
                      {block:Text}
-                     <article>
+                     <article class="box">
                           <h2 class="bl_ttl">{Title}</h2>
                          <div class="bl_entry_info">
                              <div class="bl_taggs">
@@ -306,6 +332,9 @@
                              <div class="bl_entry_date">
                                  <i class="fa fa-calendar" aria-hidden="true"></i>
                                  {Year}年{MonthNumber}月{DayOfMonth}日
+                             </div>
+                             <div class="bl_entry_date">
+                                 <i class="fa fa-refresh" aria-hidden="true"></i> <span class="bl_entry_update"></span>
                              </div>
                          </div>
                          <div class="el_underline"></div>
@@ -324,12 +353,12 @@
                                     <a href="https://plus.google.com/share?url={URLEncodedPermalink}" onclick="window.open(this.href, 'GooglePlusWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="googleplus-button"><i class="fa fa-google-plus"></i> <span class="share-text"></span><br><span class="share-text">Google+</span></a>
                                     <!--Pocket-->
                                     <a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i>  <span class="share-text"></span><br><span class="share-text">Pocket</span></a>
-                                </div>
                             </div>
 
                          <div class="bl_entry_txt">
                              {Body}
                          </div>
+
 
                          <h3 class="bl_subttl">ぜひシェアしてください</h3>
                          <!--SNSシェアボタン-->
@@ -347,6 +376,7 @@
                                     <a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i>  <span class="share-text"></span><br><span class="share-text">Pocket</span></a>
                                 </div>
                             </div>
+
                          <div class="follow-btn">
                                 <ul>
                                     <!--Twitterボタン-->
@@ -360,8 +390,9 @@
                                     <a href="FacebookのURL" target="_blank"><i class="fa fa-facebook"></i><br>Facebook</a></li>
                                 </ul>
                         </div>
+
                         <div class="bl_related">
-                            <h3 class="bl_subttl">こちらの記事もどうぞ</h3>
+                            <h2 class="bl_ttl">こちらの記事もどうぞ</h2>
                                 <div id="RelatedPost">
                                     <ul id="RelatedPost_list" class="bl_postList el_postList__middle"></ul>
                                 </div>
@@ -369,10 +400,10 @@
                     </article>
                      {/block:Text}
 
-                     <!-- テキスト投稿 -->
+                     <!-- 画像投稿 -->
                      {block:Photo}
-                     <article>
-                          <h2 class="bl_ttl">{Title}</h2>
+                     <article class="box">
+                          <h2 class="bl_ttl title_h2"></h2>
                          <div class="bl_entry_info">
                              <div class="bl_taggs">
                                  {block:HasTags}
@@ -387,8 +418,12 @@
                                  <i class="fa fa-calendar" aria-hidden="true"></i>
                                  {Year}年{MonthNumber}月{DayOfMonth}日
                              </div>
+                             <div class="bl_entry_date">
+                                 <i class="fa fa-refresh" aria-hidden="true"></i> <span class="bl_entry_update"></span>
+                             </div>
                          </div>
                          <div class="el_underline"></div>
+
                          <!--SNSシェアボタン-->
                             <div class="share-buttons">
                                 <span style="font-size: 12px">この記事をシェア！</span>
@@ -405,12 +440,13 @@
                                     <a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i>  <span class="share-text"></span><br><span class="share-text">Pocket</span></a>
                                 </div>
                             </div>
+
                          <div class="bl_entry_txt">
                            <p class="el_catch">
                              <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
                            </p>
-                             {block:Caption}{Caption}{/block:Caption}
-                         </div>
+                            {block:Caption}<div class="replace">{Caption}</div>{/block:Caption}                         </div>
+
                          <h3 class="bl_subttl">ぜひシェアしてください</h3>
                          <!--SNSシェアボタン-->
                             <div class="share-buttons">
@@ -427,7 +463,7 @@
                                     <a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i>  <span class="share-text"></span><br><span class="share-text">Pocket</span></a>
                                 </div>
                             </div>
-                         <h3 class="bl_subttl">フォローはこちらから</h3>
+
                          <div class="follow-btn">
                                 <ul>
                                     <!--Twitterボタン-->
@@ -441,13 +477,14 @@
                                     <a href="FacebookのURL" target="_blank"><i class="fa fa-facebook"></i><br>Facebook</a></li>
                                 </ul>
                         </div>
+
+
                          <div class="bl_related">
                             <h2 class="bl_ttl">こちらの記事もどうぞ</h2>
                                 <div id="RelatedPost">
                                     <ul id="RelatedPost_list" class="bl_postList el_postList__middle"></ul>
                                 </div>
                         </div>
-
                     </article>
                      {/block:Photo}
 
@@ -457,12 +494,13 @@
             <!-- パーマリンクのページャ -->
             {block:PermalinkPagination}
             <div class="pagenation pagenation-permalink">
-            {block:NextPost}
-            <a href="{NextPost}" class="next" rel="next"><button class="btn btn-info">次の記事</button></a>
-            {/block:NextPost}
             {block:PreviousPost}
-            <a href="{PreviousPost}"><button class="btn btn-info">前の記事</button></a>
+            <a href="{PreviousPost}"><button class="btn btn-info"><i class="fa fa-chevron-left" aria-hidden="true"></i> 前の記事</button></a>
             {/block:PreviousPost}
+            {block:NextPost}
+            <a href="{NextPost}" class="next" rel="next"><button class="btn btn-info"><i class="fa fa-chevron-right" aria-hidden="true"></i> 次の記事</button></a>
+            {/block:NextPost}
+
             </div>
             {/block:PermalinkPagination}
 
@@ -470,23 +508,23 @@
             {block:Pagination}
             <div class="pagenation pagenation-index">
             {block:PreviousPage}
-            <a href="{PreviousPage}">もっと前の記事</a>
+            <a href="{PreviousPage}"><i class="fa fa-chevron-left" aria-hidden="true"></i> もっと前の記事</a>
             {/block:PreviousPage}
             {block:JumpPagination length="5"}
             {block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
             {block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
             {/block:JumpPagination}
             {block:NextPage}
-            <a href="{NextPage}" class="next" rel="next">もっと新しい記事</a>
+            <a href="{NextPage}" class="next" rel="next"><i class="fa fa-chevron-right" aria-hidden="true"></i> もっと新しい記事</a>
             {/block:NextPage}
             </div>
             {/block:Pagination}
          </div>
      </div>
-     <aside class="ly_aside col-sm-4 ">
+       <aside class="ly_aside col-sm-4">
          <div class="ly_aside_content">
              <!-- 検索 -->
-             <section id="bl_search" class="el_mobile__hide">
+             <section id="bl_search" class=" el_mobile__hide">
                  <div id="search">
                      <script>
                          (function() {
@@ -504,18 +542,18 @@
                  </div>
              </section>
 
-             <section class="el_mobile__hide">
+             <section class=" el_mobile__hide">
                  <h4>プロフィール</h4>
                  <div class="bl_portrait el_portrait__small">
-                  <img src="https://sawasawa0.github.io/sawasawaworks/img/prof.png" alt="User">
+                                    <img src="https://sawasawa0.github.io/sawasawaworks/img/prof.png" alt="User">
                  </div>
                  <p class="bl_prof_aside">
                      {Description}
                  </p>
              </section>
 
-             <section class="el_mobile__hide">
-                 <h4>他にこんなサイト運営してます！</h4>
+             <section class=" el_mobile__hide">
+                 <h4>他の運営サイト</h4>
                  <div id="OtherSites" class="bl_prof_aside">
                      <ul>
                          <li>
@@ -533,7 +571,7 @@
                  </div>
              </section>
 
-             <section class="el_mobile__hide">
+             <section class=" el_mobile__hide">
                  <h4>フォローお願いいたします</h4>
                  <div id="followbtn_side">
                      <div class="follow-btn">
@@ -642,10 +680,13 @@
          &copy; {CopyrightYears} sawasawaworks.com
       </div>
     </footer>
+
+
+
     <div class="bl_btn_BackToTop js_BackToTop"><a href="#"><i class="fa fa-chevron-up" aria-hidden="true"></i></a></div>
 
     <script src="https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="https://sawasawa0.github.io/sawasawaworks/js/main.js"></script>
   </body>
 </html>
