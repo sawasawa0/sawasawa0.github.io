@@ -389,16 +389,21 @@ $(function(){
 
             var getText = $('.replace',this),           // {Caption}が入っているdivを指定
                 targetH2 = $('h2.title_h2',this),         // タイトルを挿入したいdivを指定
-                targetText = $('p.set_lead',this)
+                targetText = $('p.set_lead',this),
+                targetUpdate = $('span.bl_entry_update',this),
                 title = $('h2',getText),                // 投稿内容中のh2部分
-                leadText = $('p.lead',getText);
+                leadText = $('p.lead',getText),
+                dateUpdate = $('p.set_update',getText);
 
             var setTitle = title.text(),                // h2の中の文章を取得・代入
-                setLeadText = leadText.text();
+                setLeadText = leadText.text(),
+                setUpdate = dateUpdate.text();
 
                 targetH2.html(setTitle);                // タイトルを挿入
                 title.remove();                         // タイトル部分は本文に不要なので削除
 
+                targetUpdate.html(setUpdate);
+                dateUpdate.remove();
 
 
             // 現在ページのURL取得
