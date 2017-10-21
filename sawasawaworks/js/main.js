@@ -400,7 +400,7 @@ $(function(){
             // 現在ページのURL取得
             var url   = location.href;
             if (url != "http://test-sawasawaworksblog.tumblr.com/") {
-                var setTitle_head = setTitle + " | sawaGO!(サワゴー！)-子供２人抱えて札幌でマンガ起業する人のブログ-";
+                var setTitle_head = setTitle + " | sawaGO!(サワゴー！)-IT × マンガ起業 × 札幌　あと雑記-";
                     document.title = setTitle_head;                // タイトルを挿入
                 $("meta[property='og:title']").attr('content', setTitle_head );
                 $("meta[name='twitter:title']").attr('content', setTitle_head );
