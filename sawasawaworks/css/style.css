@@ -794,7 +794,7 @@ input.gsc-search-button-v2{
 .share-buttons .inner a {
     position: relative;
     display: inline-block;
-    width: 19%;
+    width: 18%;
     height: 45px;
     line-height: 18px;
     font-size: 16px;
@@ -803,7 +803,7 @@ input.gsc-search-button-v2{
     padding:5px;
 }
 .share-buttons .inner .share-text{
-    font-size: 12px;
+    font-size: 10px;
 }
 .share-buttons .inner .hatena-bookmark-button{
     color:#008fde;
