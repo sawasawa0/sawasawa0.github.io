@@ -148,7 +148,7 @@ $(function () {
                                             post_url = this['post_url'],
                                             obj_id = this['id'];
 
-                                    if (obj_id == my_id) {
+                                    if (obj_id != my_id) {
 
                                         //テキスト投稿の場合
                                         if (post_type == "text") {
