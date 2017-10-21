@@ -394,8 +394,9 @@ $(function(){
 
             var setTitle = title.text(),                // h2の中の文章を取得・代入
                 setLeadText = leadText.text(),
-                title.remove(),                         // タイトル部分は本文に不要なので削除
                 targetH2.html(setTitle);                // タイトルを挿入
+
+                title.remove();                         // タイトル部分は本文に不要なので削除
 
             // 現在ページのURL取得
             var url   = location.href;
