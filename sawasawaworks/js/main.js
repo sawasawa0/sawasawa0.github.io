@@ -291,7 +291,7 @@ jQuery(function(){
 //Twitterのシェア数を取得
 function getTwitterCount(url, selcter) {
   $.ajax({
-  url:'https://jsoon.digitiminimi.com/twitter/count.json',
+  url:'https://json.digitiminimi.com/twitter/count.json',
   dataType:'jsonp',
   data:{
     url:url
@@ -399,4 +399,5 @@ function getPocket(pocketElm) {
 $(function(){
   getHatenaBookmarkCount('{Permalink}', '.hatena-bookmark-count');
   getFacebookCount('{Permalink}', '.facebook-count');
+  getTwitterCount('{Permalink}', '.twitter-count');
 });
