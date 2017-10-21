@@ -214,8 +214,8 @@ h2.bl_ttl:before{
 }
 
 .ly_index p.el_catch ,.ly_index p.catch {
-    min-width: 120px;
-    min-height: 120px;
+    min-width: 180px;
+    min-height: 180px;
     max-width: 180px;
     margin-right: 20px;
 }
