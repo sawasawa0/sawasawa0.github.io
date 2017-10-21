@@ -2,6 +2,9 @@
 /* PRECSS */
 
 #tumblr_controls, .tmblr-iframe{display:none !important;}
+.ogpdummy{
+    display: none;
+}
 
 /* 要素 */
 body {
