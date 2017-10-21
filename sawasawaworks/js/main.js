@@ -44,7 +44,7 @@ $(function() {
         return false;
     });
 });
-
+/**
 //◆ 新着記事取得
 $(function () {
     var domain ="blog.sawasawaworks.com", //記事を取得したいtumblrブログのドメイン
@@ -195,7 +195,7 @@ $(function () {
                 }
             });
 });
-
+**/
 //http://b.hatena.ne.jp/entrylist/json?sort=count&url=blog.sawasawaworks.com&callback=hatebuCallback
 
 //◆人気記事取得
