@@ -44,7 +44,9 @@ $(function() {
         return false;
     });
 });
-/**
+
+
+
 //◆ 新着記事取得
 $(function () {
     var domain ="blog.sawasawaworks.com", //記事を取得したいtumblrブログのドメイン
@@ -195,7 +197,8 @@ $(function () {
                 }
             });
 });
-**/
+
+
 //http://b.hatena.ne.jp/entrylist/json?sort=count&url=blog.sawasawaworks.com&callback=hatebuCallback
 
 //◆人気記事取得
@@ -262,7 +265,6 @@ $(function() {
 });
 
 
-/**
 //はてなブックマークではてブ数を取得
 function get_social_count_hatebu(url, selcter) {
   jQuery.ajax({
@@ -282,4 +284,123 @@ function get_social_count_hatebu(url, selcter) {
 jQuery(function(){
   get_social_count_hatebu('{Permalink}', '.hatebu-count');
 });
-**/
+
+
+
+
+//Twitterのシェア数を取得
+function getTwitterCount(url, selcter) {
+  $.ajax({
+  url:'https://jsoon.digitiminimi.com/twitter/count.json',
+  dataType:'jsonp',
+  data:{
+    url:url
+  }}).then(
+  function(res){$( selcter ).text( res.count || 0 );},
+  function(){$( selcter ).text('0');}
+  );
+}
+//HatenaBookMarkのシェア数
+function getHatenaBookmarkCount(entryUrl, selcter) {
+  entryUrl = 'http://api.b.st-hatena.com/entry.count?url=' + encodeURIComponent(entryUrl)
+  $.ajax({
+    url:entryUrl,
+    dataType:'jsonp',
+  }).then(
+    function(result){ $(selcter).text(result || 0); },
+    function(){ $(selcter).text('0'); }
+  );
+}
+//Facebookのシェア数
+function getFacebookCount(entryUrl, selcter) {
+  entryUrl = 'https://graph.facebook.com/' + encodeURIComponent(entryUrl)
+  $.ajax({
+    url:entryUrl,
+    dataType:'jsonp'
+  }).then(
+    function(result){
+        if(result.share && result.share.share_count) {
+            $(selcter).text(result.share.share_count);
+        } else {
+            $(selcter).text('0');
+        }
+    },
+    function(){ $(selcter).text('0'); }
+  );
+}
+//Google＋のシェア数を取得
+function getGoogleplusCount(url, selcter) {
+  jQuery.ajax({
+    type: "get", dataType: "xml",
+    url: "http://query.yahooapis.com/v1/public/yql",
+    data: {
+      q: "SELECT content FROM data.headers WHERE url='https://plusone.google.com/_/+1/fastbutton?hl=ja&url=" + url + "' and ua='#Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36'",
+      format: "xml",
+      env: "store://datatables.org/alltableswithkeys"
+    },
+    success: function (data) {
+      var content = jQuery(data).find("content").text();
+      var match = content.match(/window\.__SSR[\s*]=[\s*]{c:[\s*](\d+)/i);
+      var count = (match != null) ? match[1] : 0;
+
+      jQuery( selcter ).text(count);
+    },
+    error: function (data) {
+      jQuery( selcter ).text("share");
+    }
+  });
+}
+//ポケットのストック数を取得
+// function getPocketCount(url, selcter) {
+//   jQuery.ajax({
+//     type: "get", dataType: "xml",
+//     url: "http://query.yahooapis.com/v1/public/yql",
+//     data: {
+//       q: "SELECT content FROM data.headers WHERE url='https://widgets.getpocket.com/v1/button?label=pocket&count=vertical&v=1&url=" + url + "' and ua='#Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36'",
+//       format: "xml",
+//       env: "store://datatables.org/alltableswithkeys"
+//     },
+//     success: function (data) {
+//       var content = jQuery(data).find("content").text();
+//       console.log("debug:");
+//       console.log(data);
+//       var match = content.match(/<em id="cnt">(\d+)<\/em>/i);
+//       var count = (match != null) ? match[1] : 0;
+
+//       jQuery( selcter ).text(count);
+//     },
+//     error: function (data) {
+//       jQuery( selcter ).text("save");
+//     }
+//   });
+// }
+function getPocket(pocketElm) {
+    var xml = new XMLHttpRequest();
+    xml.onreadystatechange = function() {
+        if ((xml.readyState == 4) && (xml.status == 200)) {
+
+            //受け取った text を JSON にパースする
+            var json = JSON.parse(this.responseText);
+
+            //指定した id を持つ要素に Pocket 数を挿入
+            // document.getElementById(pocketElm).textContent = json.query.results.body.div.a.span.em.content;
+            var elems = document.getElementsByClassName(pocketElm);
+            for(var elem of elems) {
+                elem.textContent = json.query.results.body.div.a.span.em.content;
+            }
+        }
+    };
+
+    //YQL と非同期通信 URLはエンコードする
+    var xmlUrl = "https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20html%20where%20url%3D'http%3A%2F%2Fwidgets.getpocket.com%2Fv1%2Fbutton%3Fv%3D1%26count%3Dhorizontal%26url%3D" + encodeURIComponent(location.href) + "%26src%3D" + encodeURIComponent(location.href) + "'&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
+    xml.open("GET", xmlUrl, true);
+    xml.send(null);
+}
+$(function(){
+  getTwitterCount('http://www.ituore.com/entry/sns-share-button', '.twitter-count');
+  getHatenaBookmarkCount('http://www.ituore.com/entry/sns-share-button', '.hatena-bookmark-count');
+  getFacebookCount('http://www.ituore.com/entry/sns-share-button', '.facebook-count');
+  getGoogleplusCount('http://www.ituore.com/entry/sns-share-button', '.googleplus-count');
+//   getPocketCount('http://www.ituore.com/entry/sns-share-button', '.pocket-count');
+  getPocket('pocket-count');
+});

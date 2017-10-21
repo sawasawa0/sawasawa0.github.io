@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -255,56 +256,44 @@
                              </div>
                          </div>
                          <div class="el_underline"></div>
-                         <div class="bl_share">
-                             <!--シェアボタン-->
-                                <div class="share-3d">
-                                <span style="font-size: 8px">シェアする</span>
-                                <div class="share-3d-inner">
-                                <!--はてブ-->
-                                <a href="http://b.hatena.ne.jp/entry/{URLEncodedPermalink}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{Title}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><i class="blogicon-bookmark lg"></i><br> <span class="hatebu-count small-text"><i class="fa fa-spinner fa-spin"></i></span></a>
-                                <!--Facebook-->
-                                <a href="http://www.facebook.com/sharer.php?u={URLEncodedPermalink}" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="facebook-button"><i class="blogicon-facebook lg"></i><br><span class="facebook-count small-text"><i class="fa fa-spinner fa-spin"></i></span></a>
-                                <!--Twitter-->
-                                <a href="http://twitter.com/intent/tweet?text={Title} {URLEncodedPermalink}" target="_blank" class="twitter-button"><i class="fa fa-twitter"></i><br><span class="small-text">Twitter</span></a>
-                                <!--ググタス-->
-                                <a href="https://plus.google.com/share?url={URLEncodedPermalink}" onclick="window.open(this.href, 'Gwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="googleplus-button"><i class="fa fa-google-plus"></i><br><span class="small-text">Google</span></a>
-                                <!--Pocket-->
-                                <a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i><br><span class="small-text">Pocket</span></a>
-                                <!--ライン-->
-                                <span class="line-hide">
-                                <a href="http://line.me/R/msg/text/?{Title} {URLEncodedPermalink}" class="line-button">
-                                <img src="http://cdn-ak.f.st-hatena.com/images/fotolife/f/ftmaccho/20150905/20150905143148.png" width="18px" height="18px" alt="LINEで送る" /><br><span class="small-text">Line</span>
-                                </a></span>
+
+                         <!--SNSシェアボタン-->
+                            <div class="share-buttons">
+                                <span style="font-size: 12px">この記事をシェア！</span>
+                                <div class="inner">
+                                    <!--はてなブックマーク-->
+                                    <a href="http://b.hatena.ne.jp/entry/{URLEncodedPermalink}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{Title}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><i class="fa fa-hatena"></i> <span class="hatena-bookmark-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br> <span class="share-text">Bookmark!</span></a>
+                                    <!--Facebook-->
+                                    <a href="http://www.facebook.com/sharer.php?u={URLEncodedPermalink}" class="facebook-button" onclick="window.open(this.href,'FaceBookWindow','width=650,height=450,menubar=no,toolbar=no,scrollbars=yes');return false;" title="Facebookでシェア"><i class="fa fa-facebook"></i> <span class="facebook-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br><span class="share-text">Facebook</span></a>
+                                    <!--Twitter-->
+                                    <a href="http://twitter.com/intent/tweet?text={Title} {URLEncodedPermalink}" class="twitter-button" onclick="window.open(this.href, 'TwitterWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i><br><span class="share-text">Twitter</span></a>
+                                    <!--Google+-->
+                                    <a href="https://plus.google.com/share?url={URLEncodedPermalink}" onclick="window.open(this.href, 'GooglePlusWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="googleplus-button"><i class="fa fa-google-plus"></i><br><span class="share-text">Google+</span></a>
+                                    <!--Pocket-->
+                                    <a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i><br><span class="share-text">Pocket</span></a>
                                 </div>
-                                </div>
-                         </div>
+                            </div>
+
                          <div class="bl_entry_txt">
                              {Body}
                          </div>
 
                          <h3 class="bl_subttl">ぜひシェアしてください</h3>
-                         <div class="bl_share">
-                             <!--シェアボタン-->
-                                <div class="share-3d">
-                                <div class="share-3d-inner">
-                                <!--はてブ-->
-                                <a href="http://b.hatena.ne.jp/entry/{URLEncodedPermalink}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{Title}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><i class="fa fa-hatena"></i><br> <span class="hatebu-count small-text"><i class="fa fa-spinner fa-spin"></i></span></a>
-                                <!--Facebook-->
-                                <a href="http://www.facebook.com/sharer.php?u={URLEncodedPermalink}" onclick="window.open(this.href, 'FBwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="facebook-button"><i class="fa fa-facebook"></i><br><span class="small-text">Facebook</span></a>
-                                <!--Twitter-->
-                                <a href="http://twitter.com/intent/tweet?text={Title} {URLEncodedPermalink}" target="_blank" class="twitter-button"><i class="fa fa-twitter"></i><br><span class="small-text">Twitter</span></a>
-                                <!--ググタス-->
-                                <a href="https://plus.google.com/share?url={URLEncodedPermalink}" onclick="window.open(this.href, 'Gwindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="googleplus-button"><i class="fa fa-google-plus"></i><br><span class="small-text">Google</span></a>
-                                <!--Pocket-->
-                                <a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i><br><span class="small-text">Pocket</span></a>
-                                <!--ライン-->
-                                <span class="line-hide">
-                                <a href="http://line.me/R/msg/text/?{Title} {URLEncodedPermalink}" class="line-button">
-                                <img src="http://cdn-ak.f.st-hatena.com/images/fotolife/f/ftmaccho/20150905/20150905143148.png" width="18px" height="18px" alt="LINEで送る" /><br><span class="small-text">Line</span>
-                                </a></span>
+                         <!--SNSシェアボタン-->
+                            <div class="share-buttons">
+                                <div class="inner">
+                                    <!--はてなブックマーク-->
+                                    <a href="http://b.hatena.ne.jp/entry/{URLEncodedPermalink}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{Title}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><i class="fa fa-hatena"></i> <span class="hatena-bookmark-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br> <span class="share-text">Bookmark!</span></a>
+                                    <!--Facebook-->
+                                    <a href="http://www.facebook.com/sharer.php?u={URLEncodedPermalink}" class="facebook-button" onclick="window.open(this.href,'FaceBookWindow','width=650,height=450,menubar=no,toolbar=no,scrollbars=yes');return false;" title="Facebookでシェア"><i class="fa fa-facebook"></i> <span class="facebook-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br><span class="share-text">Facebook</span></a>
+                                    <!--Twitter-->
+                                    <a href="http://twitter.com/intent/tweet?text={Title} {URLEncodedPermalink}" class="twitter-button" onclick="window.open(this.href, 'TwitterWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i><br><span class="share-text">Twitter</span></a>
+                                    <!--Google+-->
+                                    <a href="https://plus.google.com/share?url={URLEncodedPermalink}" onclick="window.open(this.href, 'GooglePlusWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="googleplus-button"><i class="fa fa-google-plus"></i><br><span class="share-text">Google+</span></a>
+                                    <!--Pocket-->
+                                    <a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i><br><span class="share-text">Pocket</span></a>
                                 </div>
-                                </div>
-                         </div>
+                            </div>
                          <div class="follow-btn">
                                 <ul>
                                     <!--Twitterボタン-->
