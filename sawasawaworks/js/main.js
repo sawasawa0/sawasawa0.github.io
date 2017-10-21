@@ -395,7 +395,9 @@ $(function(){
                 title.remove();                         // タイトル部分は本文に不要なので削除
 
                 targetH2.html(setTitle);                // タイトルを挿入
-                document.title = setTitle;                // タイトルを挿入
+
+            var setTitle_head = setTitle + "|sawaGO!(サワゴー！)-子供２人抱えて札幌でマンガ起業する人のブログ-";
+                document.title = setTitle_head;                // タイトルを挿入
         });
     }
     //投稿の最初のh2内のtextを取得する

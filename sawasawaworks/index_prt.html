@@ -8,12 +8,31 @@
     <!-- title index-->
     <title>{block:PermalinkPage}{block:PostSummary}{PostSummary} | {/block:PostSummary}{/block:PermalinkPage}{block:TagPage}{Tag}の投稿一覧 | {/block:TagPage}{Title}</title>
 
+
+    <!-- twiter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sawasawa0">
+    <meta name="twitter:title" content="{block:PermalinkPage}{block:PostSummary}{PostSummary} ? {/block:PostSummary}{/block:PermalinkPage}{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}">
+    <meta name="twitter:description" content="test">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:url" content="{Permalink}">
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://sawasawa0.github.io/sawasawaworks/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://sawasawa0.github.io/sawasawaworks/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://sawasawa0.github.io/sawasawaworks/img/favicons/favicon-16x16.png">
+    <link rel="manifest" href="https://sawasawa0.github.io/sawasawaworks/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://sawasawa0.github.io/sawasawaworks/img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- Bootstrap&fontawesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
-
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <style>{customcss}</style>
 
     <!--[if lt IE 9]>
       <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
