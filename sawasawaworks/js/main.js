@@ -404,7 +404,7 @@ $(function(){
                     document.title = setTitle_head;                // タイトルを挿入
                 $("meta[property='og:title']").attr('content', setTitle_head );
                 $("meta[name='twitter:title']").attr('content', setTitle_head );
-                $("el_catch img").attr('alt', setTitle_head );
+                $("p.el_catch>img").attr('alt', setTitle_head );
                 $("meta[property='og:description']").attr('content', setLeadText );
             }
         });
