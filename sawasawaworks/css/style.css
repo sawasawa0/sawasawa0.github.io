@@ -44,6 +44,7 @@ top:0px;
 
 iframe {
     width: 95%;
+    min-height: 600px;
     height: auto;
 
 }
