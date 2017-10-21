@@ -208,7 +208,7 @@ $(function() {
         dataType: "jsonp",
         data: {'sort':'count', 'url':siteurl},
         cache: true,
-        url: "http://b.hatena.ne.jp/entrylist/json",
+        url: "https://b.hatena.ne.jp/entrylist/json",
         success: function (data){
             $.each(data, function(i,item){
                 if(item.link != siteurl) {
