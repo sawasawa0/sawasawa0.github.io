@@ -385,15 +385,15 @@ $(function(){
     articleSet();
 
     function articleSet(){
-        $('article.box').each(function(index, el) {     //各記事ブロック毎に実行
+        $('article.box').each(function(index, el) {
 
             var getText = $('.replace',this),           // {Caption}が入っているdivを指定
                 targetH2 = $('h2.title_h2',this),         // タイトルを挿入したいdivを指定
-                title = $('h2',getText);                // 投稿内容中のh1部分
+                title = $('h2',getText),                // 投稿内容中のh2部分
+                lead_text = $('p.lead',getText);
 
-            var setTitle = title.text();                // h1の中の文章を取得・代入
+            var setTitle = title.text();                // h2の中の文章を取得・代入
                 title.remove();                         // タイトル部分は本文に不要なので削除
-
                 targetH2.html(setTitle);                // タイトルを挿入
 
             // 現在ページのURL取得
@@ -403,7 +403,8 @@ $(function(){
                     document.title = setTitle_head;                // タイトルを挿入
                 $("meta[property='og:title']").attr('content', setTitle_head );
                 $("meta[name='twitter:title']").attr('content', setTitle_head );
-
+                $("el_catch img").attr('alt', setTitle_head );
+                $("meta[property='og:description']").attr('content', lead_text );
             }
         });
     }
