@@ -391,6 +391,10 @@ div.bl_btn_social{
     padding: 0.2em 0.4em;
 }
 
+.bl_category_footer li a {
+    color: #fff;
+}
+
 div.bl_portrait{
     text-align: center;
 }
@@ -799,7 +803,7 @@ input.gsc-search-button-v2{
     padding:5px;
 }
 .share-buttons .inner .share-text{
-    font-size: 15px;
+    font-size: 12px;
 }
 .share-buttons .inner .hatena-bookmark-button{
     color:#008fde;
