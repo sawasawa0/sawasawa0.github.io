@@ -396,8 +396,12 @@ $(function(){
 
                 targetH2.html(setTitle);                // タイトルを挿入
 
-            var setTitle_head = setTitle + "|sawaGO!(サワゴー！)-子供２人抱えて札幌でマンガ起業する人のブログ-";
-                document.title = setTitle_head;                // タイトルを挿入
+            // 現在ページのURL取得
+            var url   = location.href;
+            if (url != "http://test-sawasawaworksblog.tumblr.com") {
+                var setTitle_head = setTitle + " | sawaGO!(サワゴー！)-子供２人抱えて札幌でマンガ起業する人のブログ-";
+                    document.title = setTitle_head;                // タイトルを挿入
+            }
         });
     }
     //投稿の最初のh2内のtextを取得する
