@@ -914,3 +914,12 @@ box-shadow: 2px 2px 4px #999999;
 box-shadow-blend-mode: linear;
 
 }
+
+.pagenation a{
+    display: inline-block;
+    color: #fff;
+    background-color: #5BC0DE;
+    border-radius: 4px;
+    padding: 10px;
+
+}
