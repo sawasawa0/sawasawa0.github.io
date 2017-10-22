@@ -262,28 +262,6 @@ h2.bl_ttl:before{
 .ly_index .bl_entry_txt p{
     margin-bottom: 0;
 }
-@media screen and (min-width:480px) {
-    .ly_index .bl_entry_info {
-        flex-direction: row;
-    }
-
-    .ly_index .bl_entry_txt {
-        display: flex;
-    }
-
-    .ly_index .bl_entry_txt > p {
-        flex-grow: 1;
-    }
-
-    .ly_index p.el_catch ,.ly_index p.catch {
-        min-width: 180px;
-        min-height: 180px;
-        max-width: 180px;
-        margin-right: 20px;
-    }
-
-
-}
 
 .ly_index hr{
     clear: both;
@@ -324,6 +302,7 @@ h2.bl_ttl:before{
 
 .bl_entry_date{
     text-align: right;
+    font-size: 85%;
 }
 
 
@@ -335,7 +314,7 @@ h2.bl_ttl:before{
 
 .bl_entry_txt h3{
     font-weight: 700;
-    font-size: 150%;
+    font-size: 110%;
     border-left: 4px solid #666;
     padding: 0.2em 0.4em;
 }
@@ -455,6 +434,45 @@ div.bl_portrait{
 .ly_footer div.follow-btn{
     margin-bottom: 80px;
 }
+
+@media screen and (min-width:480px) {
+    .ly_index .bl_entry_info {
+        flex-direction: row;
+    }
+
+    .ly_index .bl_entry_txt {
+        display: flex;
+    }
+
+    .ly_index .bl_entry_txt > p {
+        flex-grow: 1;
+    }
+
+    .ly_index p.el_catch ,.ly_index p.catch {
+        min-width: 180px;
+        min-height: 180px;
+        max-width: 180px;
+        margin-right: 20px;
+    }
+    h2.bl_ttl {
+        font-size: 180%;
+        padding-left: 40px;
+        margin: 20px 4px;
+        color: #555;
+    }
+
+    h2.bl_ttl:before{
+        width: 34px;
+        height: auto;
+        margin-left: -40px;
+        margin-right: 6px;
+    }
+
+    .bl_entry_txt h3{
+        font-size: 150%;
+    }
+}
+
 
 @media screen and (min-width:800px) {
     .ly_header{
