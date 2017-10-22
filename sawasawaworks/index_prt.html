@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- title index-->
-    <title>{block:TagPage}{Tag}に関する投稿一覧 | {/block:TagPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage} | {Title}</title>
+    <title>
+        {block:TagPage}{Tag}に関する投稿一覧 | {/block:TagPage}
+        {block:PermalinkPage}{block:PostSummary}{PostSummary} | {/block:PostSummary}{/block:PermalinkPage}
+        {Title}
+    </title>
 
     <!-- OGP -->
     <meta property="og:title" content="{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage} | {Title}{block:SearchPage} |「{SearchQuery}」の検索結果{/block:SearchPage}">

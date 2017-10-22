@@ -410,8 +410,6 @@ $(function(){
             var url = location.href;
             var checkPostUrl = 'http://blog.sawasawaworks.com/post/';
 
-
-
             if (url.indexOf(checkPostUrl) === 0) {
                 var setTitle_head = setTitle + " | sawaGO!(サワゴー！)-IT × マンガ起業 × 札幌　あと雑記-";
                     document.title = setTitle_head;                // タイトルを挿入
