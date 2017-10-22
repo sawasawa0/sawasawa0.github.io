@@ -422,7 +422,7 @@ $(function(){
                 targetText.html(setLeadText);                // タイトルを挿入
                 getText.remove();                         // タイトル部分は本文に不要なので削除
             }
-        };
+        }
     };
 
         function updateSet(){
