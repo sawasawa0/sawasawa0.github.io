@@ -630,8 +630,9 @@ div.bl_postList_ttl {
 
 
 .el_postList__middle .bl_postList_img img:hover {
-  width: 400px;
-  height: auto;
+    margin-left: -100px;
+    width: 400px;
+    height: auto;
 }
 
 .el_postList__middle div.bl_postList_box{
