@@ -256,6 +256,7 @@ h2.bl_ttl:before{
 
 .ly_index .bl_entry_txt {
     padding: 10px;
+    padding-top: 0px;
     margin-bottom: 0;
 }
 
@@ -291,7 +292,7 @@ h2.bl_ttl:before{
     padding: 0px;
     width: 100%;
     margin-top: 0.3em;
-    margin-bottom: 0.8em;
+    margin-bottom: 5px;
     box-shadow-blend-mode: linear;
         background-image: -webkit-linear-gradient(left, transparent, #ff6b00 90%, #ff6b00 70%, transparent);
         background-image: linear-gradient(to right, transparent, #ff6b00 90%, #ff6b00 70%, transparent);
