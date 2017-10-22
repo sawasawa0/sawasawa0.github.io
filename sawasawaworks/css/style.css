@@ -592,6 +592,16 @@ div.bl_postList_ttl {
     width: 160px;
     height: auto;
     max-width: 160px;
+    -webkit-transition: all 1s ease;
+       -moz-transition: all 1s ease;
+         -o-transition: all 1s ease;
+        -ms-transition: all 1s ease;
+            transition: all 1s ease;
+}
+
+.el_postList__small .bl_postList_img img:hover {
+  width: 400px;
+  height: auto;
 }
 
 .el_postList__small div.bl_postList_box{
