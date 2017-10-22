@@ -234,10 +234,9 @@ h2.bl_ttl:before{
 }
 
 .ly_index p.el_catch ,.ly_index p.catch {
-    min-width: 180px;
-    min-height: 180px;
-    max-width: 180px;
-    margin-right: 20px;
+    min-width: 300px;
+    min-height: 300px;
+    max-width: 300px;
     text-align: center;
 }
 
@@ -275,6 +274,14 @@ h2.bl_ttl:before{
     .ly_index .bl_entry_txt > p {
         flex-grow: 1;
     }
+
+    .ly_index p.el_catch ,.ly_index p.catch {
+        min-width: 180px;
+        min-height: 180px;
+        max-width: 180px;
+        margin-right: 20px;
+    }
+
 
 }
 
