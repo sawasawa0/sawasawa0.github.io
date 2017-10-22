@@ -2,7 +2,6 @@
 /* PRECSS */
 
 #tumblr_controls, .tmblr-iframe{display:none !important;}
-#ga_target{display: none !important;}
 
 .ogpdummy{
     display: none;
@@ -43,13 +42,6 @@ color:#999;
 position:absolute;
 left:5px;
 top:0px;
-}
-
-iframe {
-    width: 95%;
-    min-height: 600px;
-    height: auto;
-
 }
 
 /* クリアフィックス */
