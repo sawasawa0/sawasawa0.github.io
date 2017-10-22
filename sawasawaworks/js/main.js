@@ -392,8 +392,8 @@ $(function(){
                 targetText = $('p.set_lead',this),
                 targetUpdate = $('span.bl_entry_update',this),
                 title = $('h2',getText),                // 投稿内容中のh2部分
-                leadText = $('p.lead',this),
-                dateUpdate = $('p.set_update',getText);
+                leadText = $('p.lead',getText),
+                dateUpdate = $('p.set_update',this);
 
             var setTitle = title.text(),                // h2の中の文章を取得・代入
                 setLeadText = leadText.text(),
