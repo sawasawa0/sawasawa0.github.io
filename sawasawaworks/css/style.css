@@ -646,15 +646,16 @@ div.bl_postList_ttl {
 .el_postList__middle .bl_postList_img img{
     width: 240px;
     height: auto;
-    -webkit-transition: all 1s ease;
-       -moz-transition: all 1s ease;
-         -o-transition: all 1s ease;
-        -ms-transition: all 1s ease;
-            transition: all 1s ease;
+    -webkit-transition: all 3s ease;
+       -moz-transition: all 3s ease;
+         -o-transition: all 3s ease;
+        -ms-transition: all 3s ease;
+            transition: all 3s ease;
 }
 
 
 .el_postList__middle .bl_postList_img img:hover {
+    margin-top: -100px;
     margin-left: -100px;
     width: 400px;
     height: auto;
