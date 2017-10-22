@@ -934,3 +934,10 @@ box-shadow-blend-mode: linear;
 .pagenation-index a:hover{
 background-color: #31B0D5;
 }
+
+.pagenation-index span.current-page {
+    display: inline-block;
+    padding: 10px 15px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
