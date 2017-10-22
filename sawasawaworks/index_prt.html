@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- title index-->
-    <title>{block:TagPage}{Tag}に関する投稿一覧 | {/block:TagPage}{Title}</title>
+    <title>{block:TagPage}{Tag}に関する投稿一覧 | {/block:TagPage}{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage} | {Title}</title>
 
     <!-- OGP -->
     <meta property="og:title" content="{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage} | {Title}{block:SearchPage} |「{SearchQuery}」の検索結果{/block:SearchPage}">
@@ -103,7 +103,7 @@
         <div id="blog_ttl" class="ly_logo row">
             <a href="/">
                 <h1 class="col-sm-4">
-                    <img src="https://sawasawa0.github.io/sawasawaworks/img/logo.png" alt="sawaGO!（サワゴー！）子供２人抱えて札幌でマンガ起業する人のブログ">
+                    <img src="https://sawasawa0.github.io/sawasawaworks/img/logo.png" alt="sawaGO!(サワゴー！)-IT × マンガ起業 × 札幌　あと雑記-">
                 </h1>
             </a>
         </div>
@@ -262,6 +262,7 @@
                          <div class="bl_entry_txt">
                              {Body}
                          </div>
+                         {block:More}{/block:More}
                             <a href="{Permalink}">
                             <button class="btn  btn-warning btn-block"><i class="fa fa-star" aria-hidden="true"></i> 記事を読む</button>
                             </a>
@@ -270,6 +271,7 @@
                      <hr>
                      {/block:Text}
 
+                     <!-- 画像投稿 -->
                      {block:photo}
                      <div class="ly_index">
                         <article class="box">
@@ -494,12 +496,12 @@
             <!-- パーマリンクのページャ -->
             {block:PermalinkPagination}
             <div class="pagenation pagenation-permalink">
-            {block:PreviousPost}
-            <a href="{PreviousPost}"><button class="btn btn-info"><i class="fa fa-chevron-left" aria-hidden="true"></i> 前の記事</button></a>
-            {/block:PreviousPost}
             {block:NextPost}
-            <a href="{NextPost}" class="next" rel="next"><button class="btn btn-info"><i class="fa fa-chevron-right" aria-hidden="true"></i> 次の記事</button></a>
+            <a href="{NextPost}" class="next" rel="next"><button class="btn btn-info"><i class="fa fa-chevron-left" aria-hidden="true"></i> 次の記事</button></a>
             {/block:NextPost}
+            {block:PreviousPost}
+            <a href="{PreviousPost}"><button class="btn btn-info">前の記事  <i class="fa fa-chevron-right" aria-hidden="true"></i></button></a>
+            {/block:PreviousPost}
 
             </div>
             {/block:PermalinkPagination}
@@ -508,14 +510,14 @@
             {block:Pagination}
             <div class="pagenation pagenation-index">
             {block:PreviousPage}
-            <a href="{PreviousPage}"><i class="fa fa-chevron-left" aria-hidden="true"></i> もっと前の記事</a>
+            <a href="{PreviousPage}"><i class="fa fa-chevron-left" aria-hidden="true"></i> もっと新しい記事</a>
             {/block:PreviousPage}
             {block:JumpPagination length="5"}
             {block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
             {block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
             {/block:JumpPagination}
             {block:NextPage}
-            <a href="{NextPage}" class="next" rel="next"><i class="fa fa-chevron-right" aria-hidden="true"></i> もっと新しい記事</a>
+            <a href="{NextPage}" class="next" rel="next">もっと前の記事 <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
             {/block:NextPage}
             </div>
             {/block:Pagination}
