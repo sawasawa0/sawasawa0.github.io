@@ -422,7 +422,8 @@ $(function(){
                 targetText.html(setLeadText);                // タイトルを挿入
                 getText.remove();                         // タイトル部分は本文に不要なので削除
             }
-        });
+        };
+    };
 
         function updateSet(){
             $('article.boxTxt').each(function(index, el) {
@@ -435,7 +436,7 @@ $(function(){
                     targetUpdate.html(setUpdate);
                     dateUpdate.remove();
             });
-    }
+    };
     //投稿の最初のh2内のtextを取得する
 
     //h2タグごと取得した範囲を削除する
