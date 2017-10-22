@@ -204,7 +204,7 @@ ul.bl_navbar li:hover ,ul.bl_navbar li ul li:hover{
 	zoom: 1;
 }
 
-h2.bl_ttl {
+h1.bl_ttl , h2.bl_ttl {
     text-align: left;
     padding-top: -10px;
     font-weight: 700;
@@ -214,7 +214,7 @@ h2.bl_ttl {
     color: #555;
 }
 
-h2.bl_ttl:before{
+h1.bl_ttl:before , h2.bl_ttl:before{
     content: url(../img/logo.svg);
     display: inline-block;
     width: 20px;
@@ -454,14 +454,14 @@ div.bl_portrait{
         max-width: 180px;
         margin-right: 20px;
     }
-    h2.bl_ttl {
+    h1.bl_ttl , h2.bl_ttl {
         font-size: 180%;
         padding-left: 40px;
         margin: 20px 4px;
         color: #555;
     }
 
-    h2.bl_ttl:before{
+    h1.bl_ttl:before , h2.bl_ttl:before{
         width: 34px;
         height: auto;
         margin-left: -40px;

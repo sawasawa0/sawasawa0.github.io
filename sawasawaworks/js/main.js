@@ -88,11 +88,11 @@ $(function () {
                             //ただし、オリジナルサイズよりも大きなサイズの画像は生成されないため、エラーになる。
                             var post_img = this['photos'][0]['alt_sizes'][0]['url']
 
-                            //投稿の本文から最初のh2をタイトルとして取得する
+                            //投稿の本文から最初のh1をタイトルとして取得する
                             var post_body = this['caption'];
-                            var title_index = post_body.indexOf("<h2>");
+                            var title_index = post_body.indexOf("<h1>");
                             var title_str1 = post_body.substr(title_index);
-                            var title_end = title_str1.indexOf("</h2>");
+                            var title_end = title_str1.indexOf("</h1>");
                             var post_title = title_str1.substring(4 ,title_end);
                         }
 
@@ -171,11 +171,11 @@ $(function () {
                                             //ただし、オリジナルサイズよりも大きなサイズの画像は生成されないため、エラーになる。
                                             var post_img = this['photos'][0]['alt_sizes'][0]['url']
 
-                                            //投稿の本文から最初のh2をタイトルとして取得する
+                                            //投稿の本文から最初のh1をタイトルとして取得する
                                             var post_body = this['caption'];
-                                            var title_index = post_body.indexOf("<h2>");
+                                            var title_index = post_body.indexOf("<h1>");
                                             var title_str1 = post_body.substr(title_index);
-                                            var title_end = title_str1.indexOf("</h2>");
+                                            var title_end = title_str1.indexOf("</h1>");
                                             var post_title = title_str1.substring(4 ,title_end);
                                         }
 
@@ -389,18 +389,18 @@ $(function(){
         $('article.box').each(function(index, el) {
 
             var getText = $('.replace',this),           // {Caption}が入っているdivを指定
-                targetH2 = $('h2.title_h2',this),         // タイトルを挿入したいdivを指定
+                targetH1 = $('h1.title_h1',this),         // タイトルを挿入したいdivを指定
                 targetText = $('p.set_lead',this),
                 targetUpdate = $('span.bl_entry_update',this),
-                title = $('h2',getText),                // 投稿内容中のh2部分
+                title = $('h1',getText),                // 投稿内容中のh1部分
                 leadText = $('p.lead',getText),
                 dateUpdate = $('p.set_update',this);
 
-            var setTitle = title.text(),                // h2の中の文章を取得・代入
+            var setTitle = title.text(),                // h1の中の文章を取得・代入
                 setLeadText = leadText.text(),
                 setUpdate = dateUpdate.text();
 
-                targetH2.html(setTitle);                // タイトルを挿入
+                targetH1.html(setTitle);                // タイトルを挿入
                 title.remove();                         // タイトル部分は本文に不要なので削除
 
                 targetUpdate.html(setUpdate);
@@ -437,10 +437,10 @@ $(function(){
                     dateUpdate.remove();
             });
     }
-    //投稿の最初のh2内のtextを取得する
+    //投稿の最初のh1内のtextを取得する
 
-    //h2タグごと取得した範囲を削除する
+    //h1タグごと取得した範囲を削除する
     //指定のt1tleにtextを代入する
-    //指定のクラスのh2にtextを代入する
+    //指定のクラスのh1にtextを代入する
 
 });
