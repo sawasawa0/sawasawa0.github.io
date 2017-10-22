@@ -383,6 +383,7 @@ $(function(){
 //◆photo投稿のタイトルをなんとかするやつ
 $(function(){
     articleSet();
+    updateSet();
 
     function articleSet(){
         $('article.box').each(function(index, el) {
@@ -422,6 +423,18 @@ $(function(){
                 getText.remove();                         // タイトル部分は本文に不要なので削除
             }
         });
+
+        function updateSet(){
+            $('article.boxTxt').each(function(index, el) {
+
+                var targetUpdate = $('span.bl_entry_update',this),
+                    dateUpdate = $('p.set_update',this);
+
+                var  setUpdate = dateUpdate.text();
+
+                    targetUpdate.html(setUpdate);
+                    dateUpdate.remove();
+            });
     }
     //投稿の最初のh2内のtextを取得する
 
