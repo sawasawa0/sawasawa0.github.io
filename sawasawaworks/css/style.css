@@ -312,9 +312,16 @@ h1.bl_ttl:before , h2.bl_ttl:before{
     margin-bottom: 30px;
 }
 
-.bl_entry_txt h3{
+.bl_entry_txt h2{
     font-weight: 700;
     font-size: 110%;
+    border-left: 4px solid #666;
+    padding: 0.2em 0.4em;
+}
+
+.bl_entry_txt h3{
+    font-weight: 700;
+    font-size: 105%;
     border-left: 4px solid #666;
     padding: 0.2em 0.4em;
 }
@@ -468,9 +475,14 @@ div.bl_portrait{
         margin-right: 6px;
     }
 
-    .bl_entry_txt h3{
+    .bl_entry_txt h2{
         font-size: 150%;
     }
+
+    .bl_entry_txt h3{
+        font-size: 130%;
+    }
+
 }
 
 
@@ -989,4 +1001,8 @@ background-color: #31B0D5;
     padding: 10px 15px;
     margin-left: 1px;
     margin-right: 1px;
+}
+
+.bl_entry_txt img{
+    max-width: 100%;
 }

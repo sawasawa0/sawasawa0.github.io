@@ -5,6 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PR57Q8J');</script>
+    <!-- End Google Tag Manager -->
+
     <!-- title index-->
     <title>
         {block:TagPage}{Tag}に関する投稿一覧 | {/block:TagPage}
@@ -13,32 +21,34 @@
     </title>
 
     <!-- OGP -->
-    <meta property="og:title" content="{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage} | {Title}{block:SearchPage} |「{SearchQuery}」の検索結果{/block:SearchPage}">
+    {block:Description}
+        <meta property="og:description" content="{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}{block:indexPage}{MetaDescription}{/block:indexPage}">
+    {/block:Description}
 
-{block:Description}
-    <meta property="og:description" content="{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}{block:indexPage}{MetaDescription}{/block:indexPage}">
-{/block:Description}
+    <meta property="og:site_name" content="sawaGO!(サワゴー！)-IT × マンガ起業 × 札幌　あと雑記-">
+    <meta property="fb:app_id" content="233804487143118">
 
-<meta property="og:site_name" content="{Title}">
-<meta property="og:type" content="website">
 
-{block:IndexPage}
-    <meta property="og:url" content="http://iioffice.ligmedia.net">
-    <meta property="og:image" content="http://iioffice.liginc.co.jp/blog/images/ogp.png">
-{/block:IndexPage}
+    {block:IndexPage}
+    <meta property="og:type" content="website">
+        <meta property="og:url" content="http://iioffice.ligmedia.net">
+        <meta property="og:image" content="http://iioffice.liginc.co.jp/blog/images/ogp.png">
+    {/block:IndexPage}
 
-{block:PermalinkPage}{block:Posts}{block:Photo}
-    <meta property="og:url" content="{Permalink}">
-    <meta property="og:image" content="{PhotoURL-HighRes}">
-{/block:Photo}{/block:Posts}{/block:PermalinkPage}
-
+    {block:PermalinkPage}
     <meta property="og:type" content="article">
-    <meta property="og:site_name" content="{Title}" />
+    {/block:PermalinkPage}
+
+
+    {block:PermalinkPage}{block:Posts}{block:Photo}
+        <meta property="og:url" content="{Permalink}">
+        <meta property="og:image" content="{PhotoURL-HighRes}">
+    {/block:Photo}{/block:Posts}{/block:PermalinkPage}
+
 
     <!-- twiter card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@sawasawa0">
-    <meta name="twitter:title" content="{Title}">
     <meta name="twitter:url" content="{Permalink}">
 
     {block:indexPage}
@@ -64,10 +74,6 @@
         {/block:Photo}
       {/block:Posts}
     {/block:PermalinkPage}
-
-    {block:IfGoogleAuthor}
-      <link rel="author" href="{text:Google Author}" />
-    {/block:IfGoogleAuthor}
 
     {block:IndexPage}
       <link rel="canonical" href="{BlogURL}"/>
@@ -103,12 +109,17 @@
 
 
   <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PR57Q8J"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
     <header class="ly_header">
         <div id="blog_ttl" class="ly_logo row">
             <a href="/">
-                <h1 class="col-sm-4">
+                <div class="col-sm-4">
                     <img src="https://sawasawa0.github.io/sawasawaworks/img/logo.png" alt="sawaGO!(サワゴー！)-IT × マンガ起業 × 札幌　あと雑記-">
-                </h1>
+                </div>
             </a>
         </div>
 
@@ -241,8 +252,8 @@
                      <!-- テキスト投稿 -->
                      {block:Text}
                      <div class="ly_index">
-                        <article class="box">
-                         <h2 class="bl_ttl"><a href="{Permalink}">{Title}</a></h2>
+                        <article class="boxTxt">
+                         <h1 class="bl_ttl"><a href="{Permalink}">{Title}</a></h1>
                          <div class="bl_entry_info">
                              <div class="bl_taggs">
                                  {block:HasTags}
@@ -279,7 +290,7 @@
                      {block:photo}
                      <div class="ly_index">
                         <article class="box">
-                         <a href="{Permalink}"><h2 class="bl_ttl title_h2"></h2></a>
+                         <a href="{Permalink}"><h1 class="bl_ttl title_h1"></h1></a>
                          <div class="bl_entry_info">
                              <div class="bl_taggs">
                                  {block:HasTags}
@@ -323,8 +334,8 @@
                      {block:Posts}
                      <!-- テキスト投稿 -->
                      {block:Text}
-                     <article class="box">
-                          <h2 class="bl_ttl">{Title}</h2>
+                     <article class="boxTxt">
+                          <h1 class="bl_ttl">{Title}</h1>
                          <div class="bl_entry_info">
                              <div class="bl_taggs">
                                  {block:HasTags}
@@ -345,6 +356,17 @@
                          </div>
                          <div class="el_underline"></div>
 
+                         <!--アドセンス-->
+                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                             style="display:block; text-align:center;"
+                             data-ad-layout="in-article"
+                             data-ad-format="fluid"
+                             data-ad-client="ca-pub-8703002731513607"
+                             data-ad-slot="8674319417"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
                          <!--SNSシェアボタン-->
                             <div class="share-buttons">
                                 <span style="font-size: 12px">この記事をシェア！</span>
@@ -409,7 +431,7 @@
                      <!-- 画像投稿 -->
                      {block:Photo}
                      <article class="box">
-                          <h2 class="bl_ttl title_h2"></h2>
+                          <h1 class="bl_ttl title_h1"></h1>
                          <div class="bl_entry_info">
                              <div class="bl_taggs">
                                  {block:HasTags}
@@ -429,6 +451,17 @@
                              </div>
                          </div>
                          <div class="el_underline"></div>
+                         <!--アドセンス-->
+                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                        <ins class="adsbygoogle"
+                             style="display:block; text-align:center;"
+                             data-ad-layout="in-article"
+                             data-ad-format="fluid"
+                             data-ad-client="ca-pub-8703002731513607"
+                             data-ad-slot="8674319417"></ins>
+                        <script>
+                             (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
 
                          <!--SNSシェアボタン-->
                             <div class="share-buttons">
@@ -514,14 +547,14 @@
             {block:Pagination}
             <div class="pagenation pagenation-index">
             {block:PreviousPage}
-            <a href="{PreviousPage}"><i class="fa fa-chevron-left" aria-hidden="true"></i> もっと新しい記事</a>
+            <a href="{PreviousPage}"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
             {/block:PreviousPage}
             {block:JumpPagination length="5"}
             {block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
             {block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
             {/block:JumpPagination}
             {block:NextPage}
-            <a href="{NextPage}" class="next" rel="next">もっと前の記事 <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+            <a href="{NextPage}" class="next" rel="next"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
             {/block:NextPage}
             </div>
             {/block:Pagination}
@@ -587,7 +620,7 @@
                                 <a href="https://twitter.com/intent/follow?screen_name=sawasawa0" target="_blank"><i class="fa fa-twitter"></i><br>Twitter</a></li>
                                 <!--Feedlyボタン-->
                                 <li class="btn3">
-                                <a href="http://cloud.feedly.com/#subscription%2Ffeed%2Fhttp%3A%2F%2Fblog.sawasawaworks.com%2Frss" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i><br>Feedly</a></li>
+                                <a href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Fblog.sawasawaworks.com%2Frss" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i><br>Feedly</a></li>
                                 <!--Facebookボタン-->
                                 <li class="btn4">
                                 <a href="FacebookのURL" target="_blank"><i class="fa fa-facebook"></i><br>Facebook</a></li>
@@ -617,6 +650,12 @@
                  <h4>人気の記事</h4>
                  <div id="hatebuList">
                      <ul id="PopularPost_list" class="bl_postList el_postList__small"></ul>
+                 </div>
+             </section>
+             <section>
+             <div>
+             <a href="//www.blogmura.com/ranking.html"><img src="//www.blogmura.com/img/www88_31_3.gif" width="88" height="31" border="0" alt="ブログランキング・にほんブログ村へ" /></a><br /><a href="//www.blogmura.com/ranking.html">にほんブログ村</a>
+
                  </div>
              </section>
          </div>
