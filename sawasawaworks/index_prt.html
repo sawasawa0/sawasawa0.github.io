@@ -12,12 +12,77 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-PR57Q8J');</script>
     <!-- End Google Tag Manager -->
+
     <!-- title index-->
     <title>
         {block:TagPage}{Tag}に関する投稿一覧 | {/block:TagPage}
         {block:PermalinkPage}{block:PostSummary}{PostSummary} | {/block:PostSummary}{/block:PermalinkPage}
         {Title}
     </title>
+
+    <!-- OGP -->
+    {block:Description}
+        <meta property="og:description" content="{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}{block:indexPage}{MetaDescription}{/block:indexPage}">
+    {/block:Description}
+
+    <meta property="og:site_name" content="sawaGO!(サワゴー！)-IT × マンガ起業 × 札幌　あと雑記-">
+    <meta property="fb:app_id" content="233804487143118">
+
+
+    {block:IndexPage}
+    <meta property="og:type" content="website">
+        <meta property="og:url" content="http://iioffice.ligmedia.net">
+        <meta property="og:image" content="http://iioffice.liginc.co.jp/blog/images/ogp.png">
+    {/block:IndexPage}
+
+    {block:PermalinkPage}
+    <meta property="og:type" content="article">
+    {/block:PermalinkPage}
+
+
+    {block:PermalinkPage}{block:Posts}{block:Photo}
+        <meta property="og:url" content="{Permalink}">
+        <meta property="og:image" content="{PhotoURL-HighRes}">
+    {/block:Photo}{/block:Posts}{/block:PermalinkPage}
+
+
+    <!-- twiter card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@sawasawa0">
+    <meta name="twitter:url" content="{Permalink}">
+
+    {block:indexPage}
+        <meta property="og:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
+        <meta name="twitter:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
+    {/block:indexPage}
+
+    {block:PermalinkPage}
+        {block:Posts}
+            {block:text}
+                <meta property="og:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
+    <meta name="twitter:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
+            {/block:text}
+        {/block:Posts}
+    {/block:PermalinkPage}
+
+     <!-- photo だったら og-image は photoURL にする -->
+    {block:PermalinkPage}
+      {block:Posts}
+        {block:Photo}
+            <meta property="og:image" content="{PhotoURL-HighRes}">
+            <meta name="twitter:image" content="{PhotoURL-HighRes}">
+        {/block:Photo}
+      {/block:Posts}
+    {/block:PermalinkPage}
+
+    {block:IndexPage}
+      <link rel="canonical" href="{BlogURL}"/>
+    {/block:IndexPage}
+
+    {block:PermalinkPage}
+      <link rel="canonical" href="{Permalink}"/>
+    {/block:PermalinkPage}
+
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://sawasawa0.github.io/sawasawaworks/img/favicons/apple-touch-icon.png">
@@ -33,7 +98,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://sawasawa0.github.io/sawasawaworks/css/style.css">
+    <style>{customcss}</style>
 
     <!--[if lt IE 9]>
       <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -150,8 +216,8 @@
                 <div id="main" class="ly_main col-sm-8" role="main">
                     <div class="ly_container">
                         {block:TagPage}<h2>「{Tag}」関連の記事一覧</h2>{/block:TagPage}
-                        {block:IndexPage}<div class="ly_index">{/block:IndexPage}
                             {block:Posts}
+                            {block:IndexPage}<div class="ly_index">{/block:IndexPage}
                                 <article {block:Text}class="boxTxt"{/block:Text}{block:photo}class="box"{/block:photo}>
                                 <a href="{Permalink}"><h1 class="bl_ttl {block:photo}title_h1{/block:photo}">{block:Text}{Title}{/block:Text}</h1></a>
                                         <div class="bl_entry_info">
@@ -246,7 +312,7 @@
                                         </div>
                                     {/block:PermalinkPage}
                                     </article>
-                                {/block:IndexPage}</div>{/block:IndexPage}
+                                {block:IndexPage}</div>{/block:IndexPage}
                                 {block:IndexPage}<hr>{/block:IndexPage}
                             {/block:Posts}
                             <!-- パーマリンクのページャ -->

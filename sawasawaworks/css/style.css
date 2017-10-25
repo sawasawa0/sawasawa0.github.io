@@ -138,7 +138,7 @@ p.el_catch ,p.catch{text-align:center;}
 .el_postList__small div.bl_postList_img ,.el_postList__middle div.bl_postList_img {height:60px;width:60px;min-width:60px;}
 .el_postList__small div.bl_postList_box ,.el_postList__middle div.bl_postList_box{height:70px;}
 .el_postList__small div.bl_postList_ttl ,.el_postList__middle div.bl_postList_ttl{max-height:70px;}
-.el_postList__small .bl_postList_img img ,.el_postList__middle .bl_postList_img img{width:80px;height:auto;max-width:80px;}
+.el_postList__small .bl_postList_img img ,.el_postList__middle .bl_postList_img img{width:80px;height:auto;}
 
 /**  **/
 @media screen and (min-width:480px){
