@@ -214,6 +214,9 @@ $(function() {
         url: "https://b.hatena.ne.jp/entrylist/json",
         success: function (data){
             $.each(data, function(i,item){
+                if (i === 6) {
+                    return false;
+                }
                 if(item.link != siteurl) {
                         var my_url = item.link;
                         var my_id_index = my_url.indexOf("post/")+5;
