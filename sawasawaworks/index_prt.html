@@ -12,77 +12,12 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-PR57Q8J');</script>
     <!-- End Google Tag Manager -->
-
     <!-- title index-->
     <title>
         {block:TagPage}{Tag}に関する投稿一覧 | {/block:TagPage}
         {block:PermalinkPage}{block:PostSummary}{PostSummary} | {/block:PostSummary}{/block:PermalinkPage}
         {Title}
     </title>
-
-    <!-- OGP -->
-    {block:Description}
-        <meta property="og:description" content="{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}{block:indexPage}{MetaDescription}{/block:indexPage}">
-    {/block:Description}
-
-    <meta property="og:site_name" content="sawaGO!(サワゴー！)-IT × マンガ起業 × 札幌　あと雑記-">
-    <meta property="fb:app_id" content="233804487143118">
-
-
-    {block:IndexPage}
-    <meta property="og:type" content="website">
-        <meta property="og:url" content="http://iioffice.ligmedia.net">
-        <meta property="og:image" content="http://iioffice.liginc.co.jp/blog/images/ogp.png">
-    {/block:IndexPage}
-
-    {block:PermalinkPage}
-    <meta property="og:type" content="article">
-    {/block:PermalinkPage}
-
-
-    {block:PermalinkPage}{block:Posts}{block:Photo}
-        <meta property="og:url" content="{Permalink}">
-        <meta property="og:image" content="{PhotoURL-HighRes}">
-    {/block:Photo}{/block:Posts}{/block:PermalinkPage}
-
-
-    <!-- twiter card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@sawasawa0">
-    <meta name="twitter:url" content="{Permalink}">
-
-    {block:indexPage}
-        <meta property="og:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
-        <meta name="twitter:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
-    {/block:indexPage}
-
-    {block:PermalinkPage}
-        {block:Posts}
-            {block:text}
-                <meta property="og:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
-    <meta name="twitter:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
-            {/block:text}
-        {/block:Posts}
-    {/block:PermalinkPage}
-
-     <!-- photo だったら og-image は photoURL にする -->
-    {block:PermalinkPage}
-      {block:Posts}
-        {block:Photo}
-            <meta property="og:image" content="{PhotoURL-HighRes}">
-            <meta name="twitter:image" content="{PhotoURL-HighRes}">
-        {/block:Photo}
-      {/block:Posts}
-    {/block:PermalinkPage}
-
-    {block:IndexPage}
-      <link rel="canonical" href="{BlogURL}"/>
-    {/block:IndexPage}
-
-    {block:PermalinkPage}
-      <link rel="canonical" href="{Permalink}"/>
-    {/block:PermalinkPage}
-
 
     <!-- favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://sawasawa0.github.io/sawasawaworks/img/favicons/apple-touch-icon.png">
@@ -98,8 +33,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="https://sawasawa0.github.io/sawasawaworks/css/style.css">
-    <style>{customcss}</style>
+    <link rel="stylesheet" href="css/style.css">
 
     <!--[if lt IE 9]>
       <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -108,564 +42,332 @@
   </head>
 
 
-  <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PR57Q8J"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PR57Q8J"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
-    <header class="ly_header">
-        <div id="blog_ttl" class="ly_logo row">
-            <a href="/">
-                <div class="col-sm-4">
-                    <img src="https://sawasawa0.github.io/sawasawaworks/img/logo.png" alt="sawaGO!(サワゴー！)-IT × マンガ起業 × 札幌　あと雑記-">
-                </div>
-            </a>
-        </div>
-
-                <!-- ナビ0：モバイル -->
-        <nav class="navbar-default  el_pc__hide">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <!-- ハンバーガーボタン -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="guide-txt">メニュー</span>
-                    </button>
-                </div>
-                <!-- メニュー項目 -->
-                <div id="navbar" class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> ホーム</a></li>
-                        <li><a href="/tagged/%E6%97%A5%E8%A8%98"><i class="fa fa-book" aria-hidden="true"></i> 日記</a></li>
-                        <li><a href="/tagged/%E3%83%9E%E3%83%B3%E3%82%AC%E3%83%BB%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88"><i class="fa fa-star" aria-hidden="true"></i> マンガ・イラスト</a></li>
-                        <li><a href="/tagged/%E7%8B%AC%E7%AB%8B%E3%83%BB%E8%B5%B7%E6%A5%AD"><i class="fa fa-line-chart" aria-hidden="true"></i> 独立・起業</a></li>
-                        <li><a href="/tagged/IT%E3%83%BB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E9%96%8B%E7%99%BA"><i class="fa fa-desktop" aria-hidden="true"></i> IT・システム開発</a></li>
-                        <li><a href="/tagged/%E6%9B%B8%E8%A9%95"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 書評</a></li>
-                        <li><a href="/tagged/%E7%94%9F%E6%B4%BB"><i class="fa fa-coffee" aria-hidden="true"></i> 生活</a></li>
-                        <li><a href="/tagged/%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%BB%E3%83%8D%E3%83%83%E3%83%88"><i class="fa fa-gamepad" aria-hidden="true"></i> ゲーム・ネット</a></li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
+    <div id="wrapper" class="ly_wrapper">
+        <header class="ly_header">
+            <div id="blog_ttl" class="ly_logo">
+                <a href="/"><img src="https://sawasawa0.github.io/sawasawaworks/img/logo.png" alt="sawaGO!(サワゴー！)-IT × マンガ起業 × 札幌　あと雑記-"></a>
             </div>
-            <!-- /.container-fluid -->
-        </nav>
 
-                    <!-- ナビ１：ポートフォリオ関連 -->
-        <ul class="bl_navbar el_nav__col5 el_nav__pink2 cf el_mobile__hide">
-            <li><a href="http://sawasawaworks.com/">ポートフォリオ</a></li>
-            <li><a href="http://gallery.sawasawaworks.com/">イラストギャラリー</a></li>
-            <li><a href="http://sawasawaworks.com/works">制作実績</a></li>
-            <li><a href="http://sawasawaworks.com/movie">配信動画一覧（準備中）</a></li>
-            <li><a href="http://sawasawaworks.com/contact">お問い合わせ</a></li>
-        </ul>
-        <!-- ナビ２：ブログ関連 -->
-       <ul class="bl_navbar el_nav_dropdown el_nav__pink cf el_nav__col8 el_mobile__hide">
-         <li><a href="/">ホーム</a></li>
-         <li>
-             <a href="/tagged/%E6%97%A5%E8%A8%98">日記 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-             <ul>
-               <div>
-                   <li><a href="/tagged/%E3%81%9F%E3%81%A0%E3%81%AE%E6%97%A5%E8%A8%98">ただの日記</a></li>
-                   <li><a href="/tagged/%E5%88%B6%E4%BD%9C%E5%A0%B1%E5%91%8A">制作報告</a></li>
-                   <li><a href="/tagged/%E6%99%82%E4%BA%8B%E3%83%8D%E3%82%BF">時事ネタ</a></li>
-                   <li><a href="/tagged/%E3%83%96%E3%83%AD%E3%82%B0%E9%81%8B%E5%96%B6">ブログ運営</a></li>
-               </div>
-             </ul>
-         </li>
-         <li>
-             <a href="/tagged/%E3%83%9E%E3%83%B3%E3%82%AC%E3%83%BB%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88">マンガ・イラスト <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-             <ul>
-               <li><a href="/tagged/%E3%83%9E%E3%83%B3%E3%82%AC">マンガ</a></li>
-               <li><a href="/tagged/%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88">イラスト</a></li>
-               <li><a href="/tagged/%E3%83%9E%E3%83%B3%E3%82%AC%E8%AB%96">マンガ論</a></li>
-               <li><a href="/tagged/%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E6%8A%80%E8%A1%93%E8%AB%96">イラスト技術論</a></li>
-               <li><a href="/tagged/CLIP-STUDIO">CLIP STUDIO</a></li>
-             </ul>
-         </li>
-         <li>
-             <a href="/tagged/%E7%8B%AC%E7%AB%8B%E3%83%BB%E8%B5%B7%E6%A5%AD">独立・起業 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-             <ul>
-               <li><a href="/tagged/%E7%8B%AC%E7%AB%8B%E3%83%BB%E8%B5%B7%E6%A5%AD">独立・起業</a></li>
-               <li><a href="/tagged/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0">マーケティング</a></li>
-               <li><a href="/tagged/%E7%94%9F%E7%94%A3%E6%80%A7UP">生産性UP</a></li>
-               <li><a href="/tagged/Excel">Excel</a></li>
-               <li><a href="/tagged/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E3%82%B9%E3%82%AD%E3%83%AB">パソコンスキル</a></li>
-               <li><a href="/tagged/%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88">タイムマネジメント</a></li>
-             </ul>
-         </li>
-         <li>
-             <a href="/tagged/IT%E3%83%BB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E9%96%8B%E7%99%BA">IT・システム開発 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-             <ul>
-               <li><a href="/tagged/%E3%82%A2%E3%83%97%E3%83%AA">アプリ_Windows</a></li>
-               <li><a href="/tagged/Windows">Windows</a></li>
-               <li><a href="/tagged/Mac">Mac</a></li>
-               <li><a href="/tagged/iphone">iPhone</a></li>
-               <li><a href="/tagged/tumblr">tumblr</a></li>
-               <li><a href="/tagged/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E9%96%8B%E7%99%BA">システム開発</a></li>
-               <li><a href="/tagged/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%8B%89%E5%BC%B7">プログラミング</a></li>
-             </ul>
-         </li>
-         <li>
-             <a href="/tagged/%E6%9B%B8%E8%A9%95">書評 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-             <ul>
-               <li><a href="/tagged/%E6%9B%B8%E8%A9%95">書評</a></li>
-               <li><a href="/tagged/%E6%9B%B8%E8%A9%95_%E3%83%9E%E3%83%B3%E3%82%AC">書評_マンガ</a></li>
-               <li><a href="/tagged/%E6%9B%B8%E8%A9%95_%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9">書評_ビジネス</a></li>
-             </ul>
-         </li>
-         <li>
-             <a href="/tagged/%E7%94%9F%E6%B4%BB">生活 <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-             <ul>
-               <li><a href="/tagged/%E6%9C%AD%E5%B9%8C">札幌</a></li>
-               <li><a href="/tagged/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88">イベント</a></li>
-               <li><a href="/tagged/%E3%82%B0%E3%83%AB%E3%83%A1">グルメ</a></li>
-               <li><a href="/tagged/%E5%AD%90%E8%82%B2%E3%81%A6">子育て</a></li>
-               <li><a href="/tagged/%E3%81%BB%E3%81%97%E3%81%84%E3%82%82%E3%81%AE">買い物</a></li>
-             </ul>
-         </li>
-         <li>
-             <a href="/tagged/%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%BB%E3%83%8D%E3%83%83%E3%83%88">ゲーム・ネット <i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-             <ul>
-               <li><a href="/tagged/%E3%82%B2%E3%83%BC%E3%83%A0">ゲーム</a></li>
-               <li><a href="/tagged/%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3">ポケモン</a></li>
-               <li><a href="/tagged/%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E5%8B%95%E7%94%BB">ニコニコ動画</a></li>
-               <li><a href="/tagged/youtube">youtube</a></li>
-             </ul>
-         </li>
-       </ul>
-    </header>
-
- <div id="body" class="row ly_body">
-  <div id="wrapper" class="ly_wrapper row col-lg-offset-1 col-lg-10">
-     <div id="main" class="ly_main col-sm-8" role="main">
-         <div class="ly_container">
-             {block:TagPage}
-             <h2>「{Tag}」関連の記事一覧</h2>
-             {/block:TagPage}
-
-             <!-- インデックス用 ここから-->
-             {block:IndexPage}
-                 {block:Posts}
-                     <!-- テキスト投稿 -->
-                     {block:Text}
-                     <div class="ly_index">
-                        <article class="boxTxt">
-                         <h1 class="bl_ttl"><a href="{Permalink}">{Title}</a></h1>
-                         <div class="bl_entry_info">
-                             <div class="bl_taggs">
-                                 {block:HasTags}
-                                     {block:Tags}
-                                         <a href="{TagURL}">
-                                             <i class="fa fa-tag" aria-hidden="true"></i>{Tag}
-                                         </a>
-                                     {/block:Tags}
-                                 {/block:HasTags}
-                             </div>
-                             <div class="bl_entry_date">
-                                 <i class="fa fa-calendar" aria-hidden="true"></i>
-                                 {Year}年{MonthNumber}月{DayOfMonth}日
-                             </div>
-                             <div class="bl_entry_date">
-                                 <i class="fa fa-refresh" aria-hidden="true"></i> <span class="bl_entry_update"></span>
-                             </div>
-                         </div>
-                         <div class="el_underline"></div>
-
-                         <div class="bl_entry_txt">
-                             {Body}
-                         </div>
-                         {block:More}{/block:More}
-                            <a href="{Permalink}">
-                            <button class="btn  btn-warning btn-block"><i class="fa fa-star" aria-hidden="true"></i> 記事を読む</button>
-                            </a>
-                         </article>
-                     </div>
-                     <hr>
-                     {/block:Text}
-
-                     <!-- 画像投稿 -->
-                     {block:photo}
-                     <div class="ly_index">
-                        <article class="box">
-                         <a href="{Permalink}"><h1 class="bl_ttl title_h1"></h1></a>
-                         <div class="bl_entry_info">
-                             <div class="bl_taggs">
-                                 {block:HasTags}
-                                     {block:Tags}
-                                         <a href="{TagURL}">
-                                             <i class="fa fa-tag" aria-hidden="true"></i>{Tag}
-                                         </a>
-                                     {/block:Tags}
-                                 {/block:HasTags}
-                             </div>
-                             <div class="bl_entry_date">
-                                 <i class="fa fa-calendar" aria-hidden="true"></i>
-                                 {Year}年{MonthNumber}月{DayOfMonth}日
-                             </div>
-                             <div class="bl_entry_date">
-                                 <i class="fa fa-refresh" aria-hidden="true"></i> <span class="bl_entry_update"></span>
-                             </div>
-                         </div>
-                         <div class="el_underline"></div>
-                         <div class="bl_entry_txt">
-                           <p class="el_catch">
-                             <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
-                           </p>
-                         {block:Caption}<div class="replace">{Caption}</div>{/block:Caption}
-                         <p class="set_lead lead"></p>
-                         </div>
-                            <a href="{Permalink}">
-                            <button class="btn  btn-warning btn-block"><i class="fa fa-star" aria-hidden="true"></i> 記事を読む</button>
-                            </a>
-                         </article>
-
-                     </div>
-                     <hr>
-                     {/block:photo}
-                 {/block:Posts}
-             {/block:IndexPage}
-             <!-- インデックス用 ここまで-->
-
-             <!-- パーマリンク ここから-->
-             {block:PermalinkPage}
-                     {block:Posts}
-                     <!-- テキスト投稿 -->
-                     {block:Text}
-                     <article class="boxTxt">
-                          <h1 class="bl_ttl">{Title}</h1>
-                         <div class="bl_entry_info">
-                             <div class="bl_taggs">
-                                 {block:HasTags}
-                                     {block:Tags}
-                                         <a href="{TagURL}">
-                                             <i class="fa fa-tag" aria-hidden="true"></i>{Tag}
-                                         </a>
-                                     {/block:Tags}
-                                 {/block:HasTags}
-                             </div>
-                             <div class="bl_entry_date">
-                                 <i class="fa fa-calendar" aria-hidden="true"></i>
-                                 {Year}年{MonthNumber}月{DayOfMonth}日
-                             </div>
-                             <div class="bl_entry_date">
-                                 <i class="fa fa-refresh" aria-hidden="true"></i> <span class="bl_entry_update"></span>
-                             </div>
-                         </div>
-                         <div class="el_underline"></div>
-
-                         <!--アドセンス-->
-                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <ins class="adsbygoogle"
-                             style="display:block; text-align:center;"
-                             data-ad-layout="in-article"
-                             data-ad-format="fluid"
-                             data-ad-client="ca-pub-8703002731513607"
-                             data-ad-slot="8674319417"></ins>
-                        <script>
-                             (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-                         <!--SNSシェアボタン-->
-                            <div class="share-buttons">
-                                <span style="font-size: 12px">この記事をシェア！</span>
-                                <div class="inner">
-                                    <!--はてなブックマーク-->
-                                    <a href="http://b.hatena.ne.jp/entry/{URLEncodedPermalink}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{Title}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><i class="fa fa-hatena"></i> <span class="hatena-bookmark-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br> <span class="share-text">Bookmark</span></a>
-                                    <!--Facebook-->
-                                    <a href="http://www.facebook.com/sharer.php?u={URLEncodedPermalink}" class="facebook-button" onclick="window.open(this.href,'FaceBookWindow','width=650,height=450,menubar=no,toolbar=no,scrollbars=yes');return false;" title="Facebookでシェア"><i class="fa fa-facebook"></i> <span class="facebook-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br><span class="share-text">Facebook</span></a>
-                                    <!--Twitter-->
-                                    <a href="http://twitter.com/intent/tweet?text={Title} {URLEncodedPermalink}" class="twitter-button" onclick="window.open(this.href, 'TwitterWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i> <span class="twitter-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br> <span class="share-text">Twitter</span></a>
-                                    <!--Google+-->
-                                    <a href="https://plus.google.com/share?url={URLEncodedPermalink}" onclick="window.open(this.href, 'GooglePlusWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="googleplus-button"><i class="fa fa-google-plus"></i> <span class="share-text"></span><br><span class="share-text">Google+</span></a>
-                                    <!--Pocket-->
-                                    <a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i>  <span class="share-text"></span><br><span class="share-text">Pocket</span></a>
-                            </div>
-
-                         <div class="bl_entry_txt">
-                             {Body}
-                         </div>
-
-
-                         <h3 class="bl_subttl">ぜひシェアしてください</h3>
-                         <!--SNSシェアボタン-->
-                            <div class="share-buttons">
-                                <div class="inner">
-                                    <!--はてなブックマーク-->
-                                    <a href="http://b.hatena.ne.jp/entry/{URLEncodedPermalink}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{Title}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><i class="fa fa-hatena"></i> <span class="hatena-bookmark-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br> <span class="share-text">Bookmark</span></a>
-                                    <!--Facebook-->
-                                    <a href="http://www.facebook.com/sharer.php?u={URLEncodedPermalink}" class="facebook-button" onclick="window.open(this.href,'FaceBookWindow','width=650,height=450,menubar=no,toolbar=no,scrollbars=yes');return false;" title="Facebookでシェア"><i class="fa fa-facebook"></i> <span class="facebook-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br><span class="share-text">Facebook</span></a>
-                                    <!--Twitter-->
-                                    <a href="http://twitter.com/intent/tweet?text={Title} {URLEncodedPermalink}" class="twitter-button" onclick="window.open(this.href, 'TwitterWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i> <span class="twitter-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br> <span class="share-text">Twitter</span></a>
-                                    <!--Google+-->
-                                    <a href="https://plus.google.com/share?url={URLEncodedPermalink}" onclick="window.open(this.href, 'GooglePlusWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="googleplus-button"><i class="fa fa-google-plus"></i> <span class="share-text"></span><br><span class="share-text">Google+</span></a>
-                                    <!--Pocket-->
-                                    <a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i>  <span class="share-text"></span><br><span class="share-text">Pocket</span></a>
-                                </div>
-                            </div>
-
-                         <div class="follow-btn">
-                                <ul>
-                                    <!--Twitterボタン-->
-                                    <li class="btn2">
-                                    <a href="https://twitter.com/intent/follow?screen_name=sawasawa0" target="_blank"><i class="fa fa-twitter"></i><br>Twitter</a></li>
-                                    <!--Feedlyボタン-->
-                                    <li class="btn3">
-                                        <a href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Fblog.sawasawaworks.com%2Frss" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i><br>Feedly</a></li>
-                                    <!--Facebookボタン-->
-                                    <li class="btn4">
-                                    <a href="FacebookのURL" target="_blank"><i class="fa fa-facebook"></i><br>Facebook</a></li>
-                                </ul>
-                        </div>
-
-                        <div class="bl_related">
-                            <h2 class="bl_ttl">こちらの記事もどうぞ</h2>
-                                <div id="RelatedPost">
-                                    <ul id="RelatedPost_list" class="bl_postList el_postList__middle"></ul>
-                                </div>
-                        </div>
-                    </article>
-                     {/block:Text}
-
-                     <!-- 画像投稿 -->
-                     {block:Photo}
-                     <article class="box">
-                          <h1 class="bl_ttl title_h1"></h1>
-                         <div class="bl_entry_info">
-                             <div class="bl_taggs">
-                                 {block:HasTags}
-                                     {block:Tags}
-                                         <a href="{TagURL}">
-                                             <i class="fa fa-tag" aria-hidden="true"></i>{Tag}
-                                         </a>
-                                     {/block:Tags}
-                                 {/block:HasTags}
-                             </div>
-                             <div class="bl_entry_date">
-                                 <i class="fa fa-calendar" aria-hidden="true"></i>
-                                 {Year}年{MonthNumber}月{DayOfMonth}日
-                             </div>
-                             <div class="bl_entry_date">
-                                 <i class="fa fa-refresh" aria-hidden="true"></i> <span class="bl_entry_update"></span>
-                             </div>
-                         </div>
-                         <div class="el_underline"></div>
-                         <!--アドセンス-->
-                         <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                        <ins class="adsbygoogle"
-                             style="display:block; text-align:center;"
-                             data-ad-layout="in-article"
-                             data-ad-format="fluid"
-                             data-ad-client="ca-pub-8703002731513607"
-                             data-ad-slot="8674319417"></ins>
-                        <script>
-                             (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
-
-                         <!--SNSシェアボタン-->
-                            <div class="share-buttons">
-                                <span style="font-size: 12px">この記事をシェア！</span>
-                                <div class="inner">
-                                    <!--はてなブックマーク-->
-                                    <a href="http://b.hatena.ne.jp/entry/{URLEncodedPermalink}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{Title}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><i class="fa fa-hatena"></i> <span class="hatena-bookmark-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br> <span class="share-text">Bookmark</span></a>
-                                    <!--Facebook-->
-                                    <a href="http://www.facebook.com/sharer.php?u={URLEncodedPermalink}" class="facebook-button" onclick="window.open(this.href,'FaceBookWindow','width=650,height=450,menubar=no,toolbar=no,scrollbars=yes');return false;" title="Facebookでシェア"><i class="fa fa-facebook"></i> <span class="facebook-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br><span class="share-text">Facebook</span></a>
-                                    <!--Twitter-->
-                                    <a href="http://twitter.com/intent/tweet?text={Title} {URLEncodedPermalink}" class="twitter-button" onclick="window.open(this.href, 'TwitterWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i> <span class="twitter-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br> <span class="share-text">Twitter</span></a>
-                                    <!--Google+-->
-                                    <a href="https://plus.google.com/share?url={URLEncodedPermalink}" onclick="window.open(this.href, 'GooglePlusWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="googleplus-button"><i class="fa fa-google-plus"></i> <span class="share-text"></span><br><span class="share-text">Google+</span></a>
-                                    <!--Pocket-->
-                                    <a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i>  <span class="share-text"></span><br><span class="share-text">Pocket</span></a>
-                                </div>
-                            </div>
-
-                         <div class="bl_entry_txt">
-                           <p class="el_catch">
-                             <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
-                           </p>
-                            {block:Caption}<div class="replace">{Caption}</div>{/block:Caption}                         </div>
-
-                         <h3 class="bl_subttl">ぜひシェアしてください</h3>
-                         <!--SNSシェアボタン-->
-                            <div class="share-buttons">
-                                <div class="inner">
-                                    <!--はてなブックマーク-->
-                                    <a href="http://b.hatena.ne.jp/entry/{URLEncodedPermalink}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{Title}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><i class="fa fa-hatena"></i> <span class="hatena-bookmark-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br> <span class="share-text">Bookmark</span></a>
-                                    <!--Facebook-->
-                                    <a href="http://www.facebook.com/sharer.php?u={URLEncodedPermalink}" class="facebook-button" onclick="window.open(this.href,'FaceBookWindow','width=650,height=450,menubar=no,toolbar=no,scrollbars=yes');return false;" title="Facebookでシェア"><i class="fa fa-facebook"></i> <span class="facebook-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br><span class="share-text">Facebook</span></a>
-                                    <!--Twitter-->
-                                    <a href="http://twitter.com/intent/tweet?text={Title} {URLEncodedPermalink}" class="twitter-button" onclick="window.open(this.href, 'TwitterWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i> <span class="twitter-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br> <span class="share-text">Twitter</span></a>
-                                    <!--Google+-->
-                                    <a href="https://plus.google.com/share?url={URLEncodedPermalink}" onclick="window.open(this.href, 'GooglePlusWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="googleplus-button"><i class="fa fa-google-plus"></i> <span class="share-text"></span><br><span class="share-text">Google+</span></a>
-                                    <!--Pocket-->
-                                    <a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i>  <span class="share-text"></span><br><span class="share-text">Pocket</span></a>
-                                </div>
-                            </div>
-
-                         <div class="follow-btn">
-                                <ul>
-                                    <!--Twitterボタン-->
-                                    <li class="btn2">
-                                    <a href="https://twitter.com/intent/follow?screen_name=sawasawa0" target="_blank"><i class="fa fa-twitter"></i><br>Twitter</a></li>
-                                    <!--Feedlyボタン-->
-                                    <li class="btn3">
-                                        <a href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Fblog.sawasawaworks.com%2Frss" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i><br>Feedly</a></li>
-                                    <!--Facebookボタン-->
-                                    <li class="btn4">
-                                    <a href="FacebookのURL" target="_blank"><i class="fa fa-facebook"></i><br>Facebook</a></li>
-                                </ul>
-                        </div>
-
-
-                         <div class="bl_related">
-                            <h2 class="bl_ttl">こちらの記事もどうぞ</h2>
-                                <div id="RelatedPost">
-                                    <ul id="RelatedPost_list" class="bl_postList el_postList__middle"></ul>
-                                </div>
-                        </div>
-                    </article>
-                     {/block:Photo}
-
-                     {/block:Posts}
-             {/block:PermalinkPage}
-
-            <!-- パーマリンクのページャ -->
-            {block:PermalinkPagination}
-            <div class="pagenation pagenation-permalink">
-            {block:NextPost}
-            <a href="{NextPost}" class="next" rel="next"><button class="btn btn-info"><i class="fa fa-chevron-left" aria-hidden="true"></i> 次の記事</button></a>
-            {/block:NextPost}
-            {block:PreviousPost}
-            <a href="{PreviousPost}"><button class="btn btn-info">前の記事  <i class="fa fa-chevron-right" aria-hidden="true"></i></button></a>
-            {/block:PreviousPost}
-
-            </div>
-            {/block:PermalinkPagination}
-
-            <!-- ページごとのページャ -->
-            {block:Pagination}
-            <div class="pagenation pagenation-index">
-            {block:PreviousPage}
-            <a href="{PreviousPage}"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
-            {/block:PreviousPage}
-            {block:JumpPagination length="5"}
-            {block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
-            {block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
-            {/block:JumpPagination}
-            {block:NextPage}
-            <a href="{NextPage}" class="next" rel="next"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
-            {/block:NextPage}
-            </div>
-            {/block:Pagination}
-         </div>
-     </div>
-       <aside class="ly_aside col-sm-4">
-         <div class="ly_aside_content">
-             <!-- 検索 -->
-             <section id="bl_search" class=" el_mobile__hide">
-                 <div id="search">
-                     <script>
-                         (function() {
-                         var cx = '005017387964795471960:c6bvzmqb9ke';
-                         var gcse = document.createElement('script');
-                         gcse.type = 'text/javascript';
-                         gcse.async = true;
-                         gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
-                         '//www.google.com/cse/cse.js?cx=' + cx;
-                         var s = document.getElementsByTagName('script')[0];
-                         s.parentNode.insertBefore(gcse, s);
-                         })();
-                         </script>
-                     <gcse:search></gcse:search>
-                 </div>
-             </section>
-
-             <section class=" el_mobile__hide">
-                 <h4>プロフィール</h4>
-                 <div class="bl_portrait el_portrait__small">
-                                    <img src="https://sawasawa0.github.io/sawasawaworks/img/prof.png" alt="User">
-                 </div>
-                 <p class="bl_prof_aside">
-                     {Description}
-                 </p>
-             </section>
-
-             <section class=" el_mobile__hide">
-                 <h4>他の運営サイト</h4>
-                 <div id="OtherSites" class="bl_prof_aside">
-                     <ul>
-                         <li>
-                             <a href="http://starcreates.me">スタークリエイツ<br></a>
-                             実名で活動してる方のサイトです。<br>
-                             北海道・札幌を中心に事業展開しています。<br>
-                             マンガ広告・マンガ業務マニュアル等を制作しています。
-                         </li>
-                         <li>
-                             <a href="http://sawasawaworks.com">sawasawaworks</a><br>
-                             イラストレーター・マンガ家sawasawa名義で活動してる方のサイトです。<br>
-                             お仕事随時募集中です。
-                         </li>
-                     </ul>
-                 </div>
-             </section>
-
-             <section class=" el_mobile__hide">
-                 <h4>フォローお願いいたします</h4>
-                 <div id="followbtn_side">
-                     <div class="follow-btn">
-                            <ul>
-                                <!--Twitterボタン-->
-                                <li class="btn2">
-                                <a href="https://twitter.com/intent/follow?screen_name=sawasawa0" target="_blank"><i class="fa fa-twitter"></i><br>Twitter</a></li>
-                                <!--Feedlyボタン-->
-                                <li class="btn3">
-                                <a href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Fblog.sawasawaworks.com%2Frss" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i><br>Feedly</a></li>
-                                <!--Facebookボタン-->
-                                <li class="btn4">
-                                <a href="FacebookのURL" target="_blank"><i class="fa fa-facebook"></i><br>Facebook</a></li>
-                            </ul>
+            <!-- ナビ0：モバイル -->
+            <nav class="navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <!-- ハンバーガーボタン -->
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="guide-txt">メニュー</span>
+                        </button>
                     </div>
-                 </div>
-             </section>
+                    <!-- メニュー項目 -->
+                    <div id="navbar" class="collapse navbar-collapse">
+                        <ul class="nav navbar bl_navbar el_nav_dropdown el_nav__pink cf el_nav__col8">
+                            <li><a href="/"><i class="fa fa-home" aria-hidden="true"></i> ホーム</a></li>
+                            <li>
+                                <a href="/tagged/%E6%97%A5%E8%A8%98"><i class="fa fa-book" aria-hidden="true"></i> 日記 <i class="fa fa-chevron-down el_mobile__hide" aria-hidden="true"></i></a>
+                                <ul class="el_mobile__hide">
+                                    <li><a href="/tagged/%E3%81%9F%E3%81%A0%E3%81%AE%E6%97%A5%E8%A8%98">ただの日記</a></li>
+                                    <li><a href="/tagged/%E5%88%B6%E4%BD%9C%E5%A0%B1%E5%91%8A">制作報告</a></li>
+                                    <li><a href="/tagged/%E6%99%82%E4%BA%8B%E3%83%8D%E3%82%BF">時事ネタ</a></li>
+                                    <li><a href="/tagged/%E3%83%96%E3%83%AD%E3%82%B0%E9%81%8B%E5%96%B6">ブログ運営</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/tagged/%E3%83%9E%E3%83%B3%E3%82%AC%E3%83%BB%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88"><i class="fa fa-star" aria-hidden="true"></i> マンガ・イラスト <i class="fa fa-chevron-down el_mobile__hide" aria-hidden="true"></i></a>
+                                <ul class="el_mobile__hide">
+                                    <li><a href="/tagged/%E3%83%9E%E3%83%B3%E3%82%AC">マンガ</a></li>
+                                    <li><a href="/tagged/%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88">イラスト</a></li>
+                                    <li><a href="/tagged/%E3%83%9E%E3%83%B3%E3%82%AC%E8%AB%96">マンガ論</a></li>
+                                    <li><a href="/tagged/%E3%82%A4%E3%83%A9%E3%82%B9%E3%83%88%E6%8A%80%E8%A1%93%E8%AB%96">イラスト技術論</a></li>
+                                    <li><a href="/tagged/CLIP-STUDIO">CLIP STUDIO</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/tagged/%E7%8B%AC%E7%AB%8B%E3%83%BB%E8%B5%B7%E6%A5%AD"><i class="fa fa-line-chart" aria-hidden="true"></i> 独立・起業 <i class="fa fa-chevron-down el_mobile__hide" aria-hidden="true"></i></a>
+                                <ul class="el_mobile__hide">
+                                <li><a href="/tagged/%E7%8B%AC%E7%AB%8B%E3%83%BB%E8%B5%B7%E6%A5%AD">独立・起業</a></li>
+                                <li><a href="/tagged/%E3%83%9E%E3%83%BC%E3%82%B1%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0">マーケティング</a></li>
+                                <li><a href="/tagged/%E7%94%9F%E7%94%A3%E6%80%A7UP">生産性</a></li>
+                                <li><a href="/tagged/Excel">Excel</a></li>
+                                <li><a href="/tagged/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3%E3%82%B9%E3%82%AD%E3%83%AB">パソコンスキル</a></li>
+                                <li><a href="/tagged/%E3%82%BF%E3%82%A4%E3%83%A0%E3%83%9E%E3%83%8D%E3%82%B8%E3%83%A1%E3%83%B3%E3%83%88">タイムマネジメント</a></li>
+                            </ul>
+                            </li>
+                                <li>
+                                    <a href="/tagged/IT%E3%83%BB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E9%96%8B%E7%99%BA"><i class="fa fa-desktop" aria-hidden="true"></i> IT・アプリ <i class="fa fa-chevron-down el_mobile__hide" aria-hidden="true"></i></a>
+                                    <ul class="el_mobile__hide">
+                                        <li><a href="/tagged/%E3%82%A2%E3%83%97%E3%83%AA">アプリ</a></li>
+                                        <li><a href="/tagged/Windows">Windows</a></li>
+                                        <li><a href="/tagged/Mac">Mac</a></li>
+                                        <li><a href="/tagged/iphone">iPhone</a></li>
+                                        <li><a href="/tagged/tumblr">tumblr</a></li>
+                                        <li><a href="/tagged/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E9%96%8B%E7%99%BA">システム開発</a></li>
+                                        <li><a href="/tagged/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E5%8B%89%E5%BC%B7">プログラミング</a></li>
+                                    </ul>
+                                </li>
+                            <li>
+                                <a href="/tagged/%E6%9B%B8%E8%A9%95"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> 書評 <i class="fa fa-chevron-down el_mobile__hide" aria-hidden="true"></i></a>
+                                <ul class="el_mobile__hide">
+                                    <li><a href="/tagged/%E6%9B%B8%E8%A9%95">書評</a></li>
+                                    <li><a href="/tagged/%E6%9B%B8%E8%A9%95_%E3%83%9E%E3%83%B3%E3%82%AC">書評_マンガ</a></li>
+                                    <li><a href="/tagged/%E6%9B%B8%E8%A9%95_%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9">書評_ビジネス</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                            <a href="/tagged/%E7%94%9F%E6%B4%BB"><i class="fa fa-coffee" aria-hidden="true"></i> 生活 <i class="fa fa-chevron-down el_mobile__hide" aria-hidden="true"></i></a>
+                            <ul class="el_mobile__hide">
+                                    <li><a href="/tagged/%E6%9C%AD%E5%B9%8C">札幌</a></li>
+                                    <li><a href="/tagged/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88">イベント</a></li>
+                                    <li><a href="/tagged/%E3%82%B0%E3%83%AB%E3%83%A1">グルメ</a></li>
+                                    <li><a href="/tagged/%E5%AD%90%E8%82%B2%E3%81%A6">子育て</a></li>
+                                    <li><a href="/tagged/%E3%81%BB%E3%81%97%E3%81%84%E3%82%82%E3%81%AE">買い物</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="/tagged/%E3%82%B2%E3%83%BC%E3%83%A0%E3%83%BB%E3%83%8D%E3%83%83%E3%83%88"><i class="fa fa-gamepad" aria-hidden="true"></i> ゲーム・ネット <i class="fa fa-chevron-down el_mobile__hide" aria-hidden="true"></i></a>
+                                <ul class="el_mobile__hide">
+                                    <li><a href="/tagged/%E3%82%B2%E3%83%BC%E3%83%A0">ゲーム</a></li>
+                                    <li><a href="/tagged/%E3%83%9D%E3%82%B1%E3%83%A2%E3%83%B3">ポケモン</a></li>
+                                    <li><a href="/tagged/%E3%83%8B%E3%82%B3%E3%83%8B%E3%82%B3%E5%8B%95%E7%94%BB">ニコニコ動画</a></li>
+                                    <li><a href="/tagged/youtube">youtube</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+        </header>
 
-             <!-- nozbe広告 -->
-             <section>
-                 <h4>おすすめのタスク管理アプリ</h4>
-                 <div class="banner-s">
-                     <a href="http://www.nozbe.com/a-sawasawa0">
-                     <img src="https://68.media.tumblr.com/9f861d9946cfb701065f4fdf37d4e7a9/tumblr_inline_oa94joUU241rqh3fv_500.png">
-                     </a>
-                 </div>
-             </section>
+        <div id="body" class="row ly_body">
+            <div class="row col-lg-offset-1 col-lg-10"><!-- adjust_main&aside-->
+                <div id="main" class="ly_main col-sm-8" role="main">
+                    <div class="ly_container">
+                        {block:TagPage}<h2>「{Tag}」関連の記事一覧</h2>{/block:TagPage}
+                        {block:IndexPage}<div class="ly_index">{/block:IndexPage}
+                            {block:Posts}
+                                <article {block:Text}class="boxTxt"{/block:Text}{block:photo}class="box"{/block:photo}>
+                                <a href="{Permalink}"><h1 class="bl_ttl {block:photo}title_h1{/block:photo}">{block:Text}{Title}{/block:Text}</h1></a>
+                                        <div class="bl_entry_info">
+                                            <div class="bl_taggs">
+                                                {block:HasTags}{block:Tags}<a href="{TagURL}"><i class="fa fa-tag" aria-hidden="true"></i>{Tag}</a>{/block:Tags}{/block:HasTags}
+                                            </div>
+                                        <div class="bl_entry_date"><!-- 投稿日 -->
+                                            <i class="fa fa-calendar" aria-hidden="true"></i> {Year}年{MonthNumber}月{DayOfMonth}日
+                                        </div>
+                                        <div class="bl_entry_date"><!-- 更新日 -->
+                                            <i class="fa fa-refresh" aria-hidden="true"></i> <span class="bl_entry_update"></span>
+                                        </div>
+                                    </div>
+                                    <div class="el_underline"></div>
+                                        {block:PermalinkPage}
+                                        <!--アドセンス-->
+                                        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                                            <ins class="adsbygoogle"
+                                            style="display:block; text-align:center;"
+                                            data-ad-layout="in-article"
+                                            data-ad-format="fluid"
+                                            data-ad-client="ca-pub-8703002731513607"
+                                            data-ad-slot="8674319417"></ins>
+                                        <script>
+                                            (adsbygoogle = window.adsbygoogle || []).push({});
+                                        </script>
+                                        <!--SNSシェアボタン-->
+                                        <div class="share-buttons">
+                                            <span style="font-size: 12px">この記事をシェア！</span>
+                                            <div class="inner">
+                                                <!--はてなブックマーク-->
+                                                <a href="http://b.hatena.ne.jp/entry/{URLEncodedPermalink}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{Title}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><i class="fa fa-hatena"></i> <span class="hatena-bookmark-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br> <span class="share-text">Bookmark</span></a>
+                                                <!--Facebook-->
+                                                <a href="http://www.facebook.com/sharer.php?u={URLEncodedPermalink}" class="facebook-button" onclick="window.open(this.href,'FaceBookWindow','width=650,height=450,menubar=no,toolbar=no,scrollbars=yes');return false;" title="Facebookでシェア"><i class="fa fa-facebook"></i> <span class="facebook-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br><span class="share-text">Facebook</span></a>
+                                                <!--Twitter-->
+                                                <a href="http://twitter.com/intent/tweet?text={Title} {URLEncodedPermalink}" class="twitter-button" onclick="window.open(this.href, 'TwitterWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i> <span class="twitter-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br> <span class="share-text">Twitter</span></a>
+                                                <!--Google+-->
+                                                <a href="https://plus.google.com/share?url={URLEncodedPermalink}" onclick="window.open(this.href, 'GooglePlusWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="googleplus-button"><i class="fa fa-google-plus"></i> <span class="share-text"></span><br><span class="share-text">Google+</span></a>
+                                                <!--Pocket-->
+                                                <a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i>  <span class="share-text"></span><br><span class="share-text">Pocket</span></a>
+                                            </div>
+                                        </div>
+                                    {/block:PermalinkPage}
+                                    <div class="bl_entry_txt">
+                                        {block:Text}{Body}{/block:Text}
+                                        {block:photo}
+                                            <p class="el_catch">
+                                                <img src="{PhotoURL-HighRes}" alt="{PhotoAlt}"/>
+                                            </p>
+                                            {block:Caption}<div class="replace">{Caption}</div>{/block:Caption}
+                                            <p class="set_lead lead"></p>
+                                        {/block:photo}
+                                    </div>
+                                    {block:IndexPage}
+                                        {block:Text}{block:More}{/block:More}{/block:Text}
+                                        <a href="{Permalink}">
+                                            <button class="btn  btn-warning btn-block"><i class="fa fa-star" aria-hidden="true"></i> 記事を読む</button>
+                                        </a>
+                                    {/block:IndexPage}
+                                    {block:PermalinkPage}
+                                       <h2 class="bl_subttl">ぜひシェアしてください</h3>
+                                       <!--SNSシェアボタン-->
+                                          <div class="share-buttons">
+                                              <div class="inner">
+                                                  <!--はてなブックマーク-->
+                                                  <a href="http://b.hatena.ne.jp/entry/{URLEncodedPermalink}" class="hatena-bookmark-button" target="_blank" data-hatena-bookmark-title="{Title}" data-hatena-bookmark-layout="simple" title="このエントリーをはてなブックマークに追加"><i class="fa fa-hatena"></i> <span class="hatena-bookmark-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br> <span class="share-text">Bookmark</span></a>
+                                                  <!--Facebook-->
+                                                  <a href="http://www.facebook.com/sharer.php?u={URLEncodedPermalink}" class="facebook-button" onclick="window.open(this.href,'FaceBookWindow','width=650,height=450,menubar=no,toolbar=no,scrollbars=yes');return false;" title="Facebookでシェア"><i class="fa fa-facebook"></i> <span class="facebook-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br><span class="share-text">Facebook</span></a>
+                                                  <!--Twitter-->
+                                                  <a href="http://twitter.com/intent/tweet?text={Title} {URLEncodedPermalink}" class="twitter-button" onclick="window.open(this.href, 'TwitterWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;"><i class="fa fa-twitter"></i> <span class="twitter-count share-text"><i class="fa fa-spinner fa-spin"></i></span><br> <span class="share-text">Twitter</span></a>
+                                                  <!--Google+-->
+                                                  <a href="https://plus.google.com/share?url={URLEncodedPermalink}" onclick="window.open(this.href, 'GooglePlusWindow', 'width=650, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;" class="googleplus-button"><i class="fa fa-google-plus"></i> <span class="share-text"></span><br><span class="share-text">Google+</span></a>
+                                                  <!--Pocket-->
+                                                  <a href="http://getpocket.com/edit?url={URLEncodedPermalink}" class="pocket-button" target="_blank"><i class="fa fa-get-pocket"></i>  <span class="share-text"></span><br><span class="share-text">Pocket</span></a>
+                                              </div>
+                                          </div>
+                                        <div class="follow-btn">
+                                            <ul>
+                                                <!--Twitterボタン-->
+                                                <li class="btn2"><a href="https://twitter.com/intent/follow?screen_name=sawasawa0" target="_blank"><i class="fa fa-twitter"></i><br>Twitter</a></li>
+                                                <!--Feedlyボタン-->
+                                                <li class="btn3"><a href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Fblog.sawasawaworks.com%2Frss" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i><br>Feedly</a></li>
+                                                <!--Facebookボタン-->
+                                                <li class="btn4"><a href="FacebookのURL" target="_blank"><i class="fa fa-facebook"></i><br>Facebook</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="bl_related">
+                                            <h2 class="bl_ttl">こちらの記事もどうぞ</h2>
+                                            <div id="RelatedPost">
+                                                <ul id="RelatedPost_list" class="bl_postList el_postList__middle"></ul>
+                                            </div>
+                                        </div>
+                                    {/block:PermalinkPage}
+                                    </article>
+                                {/block:IndexPage}</div>{/block:IndexPage}
+                                {block:IndexPage}<hr>{/block:IndexPage}
+                            {/block:Posts}
+                            <!-- パーマリンクのページャ -->
+                            {block:PermalinkPagination}
+                                <div class="pagenation pagenation-permalink">
+                                    {block:NextPost}
+                                        <a href="{NextPost}" class="next" rel="next"><button class="btn btn-info"><i class="fa fa-chevron-left" aria-hidden="true"></i> 次の記事</button></a>
+                                    {/block:NextPost}
+                                    {block:PreviousPost}
+                                        <a href="{PreviousPost}"><button class="btn btn-info">前の記事  <i class="fa fa-chevron-right" aria-hidden="true"></i></button></a>
+                                    {/block:PreviousPost}
+                                </div>
+                            {/block:PermalinkPagination}
+                           <!-- ページごとのページャ -->
+                           {block:Pagination}
+                               <div class="pagenation pagenation-index">
+                                   {block:PreviousPage}
+                                       <a href="{PreviousPage}"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a>
+                                   {/block:PreviousPage}
+                                   {block:JumpPagination length="5"}
+                                       {block:CurrentPage}<span class="current-page">{PageNumber}</span>{/block:CurrentPage}
+                                       {block:JumpPage}<a class="jump-page" href="{URL}">{PageNumber}</a>{/block:JumpPage}
+                                   {/block:JumpPagination}
+                                   {block:NextPage}
+                                       <a href="{NextPage}" class="next" rel="next"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+                                   {/block:NextPage}
+                               </div>
+                           {/block:Pagination}
+                        </div>
+                </div>
 
-             <section>
-                 <h4>最近の記事</h4>
-                     <div id="ResentPost">
-                         <ul id="ResentPost_list" class="bl_postList el_postList__small"></ul>
-                     </div>
-             </section>
+                <aside class="ly_aside col-sm-4">
+                    <div class="ly_aside_content">
+                        <section id="search" class="el_mobile__hide"><!-- 検索 -->
+                            <div>
+                                <script>
+                                (function() {
+                                var cx = '005017387964795471960:c6bvzmqb9ke';
+                                var gcse = document.createElement('script');
+                                gcse.type = 'text/javascript';
+                                gcse.async = true;
+                                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                                '//www.google.com/cse/cse.js?cx=' + cx;
+                                var s = document.getElementsByTagName('script')[0];
+                                s.parentNode.insertBefore(gcse, s);
+                                })();
+                                </script>
+                                <gcse:search></gcse:search>
+                            </div>
+                        </section>
+                        <section id="prof_aside "class="el_mobile__hide"><!-- プロフィール -->
+                            <h4>プロフィール</h4>
+                            <div class="bl_portrait el_portrait__small">
+                                <img src="https://sawasawa0.github.io/sawasawaworks/img/prof.png" alt="User">
+                            </div>
+                            <p class="bl_prof_aside">
+                                {Description}
+                            </p>
+                        </section>
+                        <section id="portfolio" class=" el_mobile__hide"><!-- portfolio -->
+                            <h4>他の運営サイト</h4>
+                            <div id="OtherSites" class="bl_prof_aside">
+                                <ul>
+                                    <li>
+                                        <a href="http://starcreates.me">スタークリエイツ<br></a>
+                                        実名で活動してる方のサイトです。<br>
+                                        北海道・札幌を中心に事業展開しています。<br>
+                                        マンガ広告・マンガ業務マニュアル等を制作しています。
+                                    </li>
+                                    <li>
+                                        <a href="http://sawasawaworks.com">sawasawaworks</a><br>
+                                        イラストレーター・マンガ家sawasawa名義で活動してる方のサイトです。<br>
+                                        お仕事随時募集中です。
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section id="followbtn_side" class=" el_mobile__hide"><!-- follow -->
+                            <h4>フォローお願いいたします</h4>
+                            <div class="follow-btn">
+                                <ul>
+                                    <!--Twitterボタン-->
+                                    <li class="btn2"><a href="https://twitter.com/intent/follow?screen_name=sawasawa0" target="_blank"><i class="fa fa-twitter"></i><br>Twitter</a></li>
+                                    <!--Feedlyボタン-->
+                                    <li class="btn3"><a href="https://feedly.com/i/subscription/feed%2Fhttp%3A%2F%2Fblog.sawasawaworks.com%2Frss" target="_blank"><i class="fa fa-rss" aria-hidden="true"></i><br>Feedly</a></li>
+                                    <!--Facebookボタン-->
+                                    <li class="btn4"><a href="FacebookのURL" target="_blank"><i class="fa fa-facebook"></i><br>Facebook</a></li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section id="nozbeAd_aside"><!-- nozbeAd -->
+                            <h4>おすすめのタスク管理アプリ</h4>
+                                <div class="banner-s">
+                                    <a href="http://www.nozbe.com/a-sawasawa0"><img src="https://68.media.tumblr.com/9f861d9946cfb701065f4fdf37d4e7a9/tumblr_inline_oa94joUU241rqh3fv_500.png"></a>
+                                </div>
+                        </section>
+                        <section id="ResentPost"><!-- ResentPost -->
+                            <h4>最近の記事</h4>
+                            <ul id="ResentPost_list" class="bl_postList el_postList__small"></ul>
+                        </section>
+                        <section id="hatebuList"><!-- ResentPost -->
+                            <h4>人気の記事</h4>
+                            <ul id="PopularPost_list" class="bl_postList el_postList__small"></ul>
+                        </section>
+                        <section>
+                            <div>
+                                <a href="//www.blogmura.com/ranking.html">
+                                <img src="//www.blogmura.com/img/www88_31_3.gif" width="88" height="31" border="0" alt="ブログランキング・にほんブログ村へ" /></a>
+                                <br>
+                                <a href="//www.blogmura.com/ranking.html">にほんブログ村</a>
+                            </div>
+                        </section>
+                    </div>
+                </aside>
+            </div><!-- adjust_main&aside-->
+        </div><!-- #body -->
+    </div><!-- #wrapper -->
 
-             <section>
-                 <h4>人気の記事</h4>
-                 <div id="hatebuList">
-                     <ul id="PopularPost_list" class="bl_postList el_postList__small"></ul>
-                 </div>
-             </section>
-             <section>
-             <div>
-             <a href="//www.blogmura.com/ranking.html"><img src="//www.blogmura.com/img/www88_31_3.gif" width="88" height="31" border="0" alt="ブログランキング・にほんブログ村へ" /></a><br /><a href="//www.blogmura.com/ranking.html">にほんブログ村</a>
 
-                 </div>
-             </section>
-         </div>
-     </aside>
-</div>
-</div>
-
-    <footer class="ly_footer fdb-block footer-large">
-      <div class="container">
-        <div class="row align-items-top text-center text-md-left">
+    <footer class="ly_footer">
+        <div class="row">
           <div class="col-12 col-sm-6 col-md-4 bl_category_footer">
             <h4 class="el_footer__emboss">ポートフォリオなど</h4>
                 <ul class="el_footer__emboss">
@@ -720,7 +422,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           </div>
         </div>
-      </div>
       <div class="bl_copy col text-center">
          &copy; {CopyrightYears} sawasawaworks.com
       </div>
