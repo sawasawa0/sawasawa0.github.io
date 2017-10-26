@@ -46,7 +46,7 @@ blockquote:before{content:"”";font-size:80px;font-family:Century;line-height:1
 .ly_index p.el_catch ,.ly_index p.catch{min-width:180px;min-height:180px;max-width:180px;margin-right:20px;}
 }
 
-@media screen and (min-width:800px){
+@media screen and (min-width:768px){
     .ly_header{}
     .ly_logo{text-align:left;padding-left: 10px}
     .ly_logo img{max-width:340px;}
@@ -148,7 +148,7 @@ h1.bl_ttl:before , h2.bl_ttl:before{width:34px;height:auto;margin-left:-40px;mar
 .bl_entry_txt h3{font-size:110%;}
 }
 
-@media screen and (min-width:800px){
+@media screen and (min-width:768px){
     .el_mobile__hide{display:inline;}
     .el_pc__hide{display:none;}
     .bl_prof_footer::before{right:-25px;top:60px;border-left:30px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;}
