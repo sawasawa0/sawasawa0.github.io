@@ -209,7 +209,7 @@ input.gsc-search-button-v2{padding:6px 10px;}
 .row ,.col-lg-offset-1,.col-lg-10{margin: 0;padding: 0;}
 
 
-@media screen and (min-width:800px){
+@media screen and (min-width:768px){
     .navbar{border: 0px;}
     .navbar-default {left:0;top:90px; width: 100%;border: 0px;}
     .container-fluid{margin: 0;padding: 0;border: 0px;}
