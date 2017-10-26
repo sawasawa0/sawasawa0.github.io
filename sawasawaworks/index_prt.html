@@ -31,8 +31,7 @@
 
     {block:IndexPage}
     <meta property="og:type" content="website">
-        <meta property="og:url" content="http://iioffice.ligmedia.net">
-        <meta property="og:image" content="http://iioffice.liginc.co.jp/blog/images/ogp.png">
+    <meta property="og:url" content="http://blog.sawasawaworks.com">
     {/block:IndexPage}
 
     {block:PermalinkPage}
@@ -45,11 +44,16 @@
         <meta property="og:image" content="{PhotoURL-HighRes}">
     {/block:Photo}{/block:Posts}{/block:PermalinkPage}
 
-
     <!-- twiter card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@sawasawa0">
     <meta name="twitter:url" content="{Permalink}">
+    <meta name="twitter:title" content="{MetaDescription}">
+
+    {block:PermalinkPage}{block:Posts}{block:Photo}
+    <meta name="twitter:image" content="{PhotoURL-HighRes}">
+    {/block:Photo}{/block:Posts}{/block:PermalinkPage}
+
 
     {block:indexPage}
         <meta property="og:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
@@ -60,7 +64,7 @@
         {block:Posts}
             {block:text}
                 <meta property="og:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
-    <meta name="twitter:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
+                <meta name="twitter:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png">
             {/block:text}
         {/block:Posts}
     {/block:PermalinkPage}
@@ -97,9 +101,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
 
+    <!--webfont-->
+    <link href="https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css" rel="stylesheet" />
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://sawasawa0.github.io/sawasawaworks/css/style.css">
     <style>{customcss}</style>
+
 
     <!--[if lt IE 9]>
       <script src="https://cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
