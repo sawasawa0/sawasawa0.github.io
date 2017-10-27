@@ -15,7 +15,10 @@ blockquote:before{content:"”";font-size:80px;font-family:Century;line-height:1
 .ly_wrapper{width: 100%;}
 .ly_header{width: 100%;}
 .ly_logo{text-align:right;padding-top: 10px;}
-.ly_logo img{width: calc(100% - 70px);}
+.ly_logo img{
+    max-height: 80px;
+    width: auto;
+}
 .ly_body{width:100%;background-color:#fff;
     background-image:-moz-linear-gradient(top, #fff 0%, #fff 50%, #00568c 100%);
     background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.5, #fff), color-stop(1, #00568c));}
@@ -192,6 +195,10 @@ h1.bl_ttl:before , h2.bl_ttl:before{width:34px;height:auto;margin-left:-40px;mar
 .pagenation-index a:hover{background-color:#31B0D5;}
 .pagenation-index span.current-page{display:inline-block;padding:10px 15px;margin-left:1px;margin-right:1px;}
 
+
+
+
+
 /** 外部サービス関係 **/
 /**Awesome font **/
 .fa-tag{margin-right:6px;}
@@ -219,6 +226,9 @@ input.gsc-search-button-v2{padding:6px 10px;}
     .container-fluid{margin: 0;padding: 0;border: 0px;}
     .navbar-collapse{margin: 0;padding: 0;border: 0px;}
     .ly_body{margin-top: 70px }
+    .row {margin-right: -15px;margin-left: -15px;}
+    .col-lg-offset-1 {margin-left: 8.33333333%;}
+    .col-lg-10,{padding-right: 15px;padding-left: 15px;}
 }
 
 /** フォローボタン**/
