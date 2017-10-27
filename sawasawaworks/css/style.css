@@ -15,10 +15,7 @@ blockquote:before{content:"”";font-size:80px;font-family:Century;line-height:1
 .ly_wrapper{width: 100%;}
 .ly_header{width: 100%;}
 .ly_logo{text-align:right;padding-top: 10px;}
-.ly_logo img{
-    max-height: 80px;
-    width: auto;
-}
+.ly_logo img{width: calc(100% - 70px)}
 .ly_body{width:100%;background-color:#fff;
     background-image:-moz-linear-gradient(top, #fff 0%, #fff 50%, #00568c 100%);
     background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.5, #fff), color-stop(1, #00568c));}
