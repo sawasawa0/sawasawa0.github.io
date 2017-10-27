@@ -217,7 +217,6 @@ input.gsc-search-button-v2{padding:6px 10px;}
 .navbar-toggle .icon-bar{width:30px;}
 .navbar-toggle {float: none;padding: 9px 10px;margin: 0;}
 
-.row ,.col-lg-offset-1,.col-lg-10{margin: 0;padding: 0;}
 
 
 @media screen and (min-width:768px){
@@ -226,9 +225,6 @@ input.gsc-search-button-v2{padding:6px 10px;}
     .container-fluid{margin: 0;padding: 0;border: 0px;}
     .navbar-collapse{margin: 0;padding: 0;border: 0px;}
     .ly_body{margin-top: 70px }
-    .row {margin-right: -15px;margin-left: -15px;}
-    .col-lg-offset-1 {margin-left: 8.33333333%;}
-    .col-lg-10 {padding-right: 15px;padding-left: 15px;}
 }
 
 /** フォローボタン**/
