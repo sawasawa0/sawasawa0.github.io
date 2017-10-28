@@ -225,6 +225,10 @@ div#body.row {margin-left: 0;margin-right: 0;}
     .navbar-collapse{margin: 0;padding: 0;border: 0px;}
 }
 
+@media screen and (min-width: 992px){
+    .col-md-offset-1 {margin-left: 8.33333333%;}
+}
+
 /** フォローボタン**/
 .follow-btn{width:100%;margin:5px 0px 5px 0px;}
 .follow-btn ul{list-style:none;display:-webkit-flex;display:flex;margin:0;padding:0;}
