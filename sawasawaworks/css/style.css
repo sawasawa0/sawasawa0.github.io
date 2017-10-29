@@ -13,8 +13,8 @@ iframe{max-width: calc(100% - 20px)}
 .cf::after{content:'';display:block;clear:both;}
 
 /** レイアウト **/
-.ly_wrapper{}
-.ly_header{}
+.ly_wrapper{width: 100%;}
+.ly_header{width: 100%;}
 .ly_logo{text-align:right;padding-top: 10px;}
 .ly_logo img{width: calc(100% - 70px)}
 .ly_body{background-color:#fff;
@@ -215,11 +215,8 @@ input.gsc-search-button-v2{padding:6px 10px;}
 .guide-txt{text-align:center;font-size:9.5px;}
 .navbar-toggle .icon-bar{width:30px;}
 .navbar-toggle {float: none;padding: 9px 10px;margin: 0;}
-<<<<<<< HEAD
-=======
 .ly_body.row {margin-left: 0;margin-right: 0;}
 .ly_body>.row {margin-left: 0;margin-right: 0;padding-left: 0;padding-right: 0;}
->>>>>>> origin/master
 
 @media screen and (min-width:768px){
     .navbar{border: 0px;}
