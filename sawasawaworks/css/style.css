@@ -7,7 +7,6 @@ h1,h2,h3,h4,div.bl_postList_ttl,.pagenation{font-family: "Rounded Mplus 1c";font
 ul,li{margin:0;padding:0;}
 blockquote{background-color:#eee;margin:1.5em;padding:1em 1em 1em 3em;position:relative;}
 blockquote:before{content:"”";font-size:80px;font-family:Century;line-height:1em;color:#999;position:absolute;left:5px;top:0px;}
-iframe{max-width: calc(100% - 20px)}
 
 /** クリアフィックス **/
 .cf::after{content:'';display:block;clear:both;}
@@ -24,7 +23,7 @@ iframe{max-width: calc(100% - 20px)}
 .ly_container{padding: auto 10px;background-color:#fff;}
 .ly_aside{margin-top: 20px;}
 .ly_aside_content{background-color:#fff;padding: 10px;border-radius: 8px;}
-.ly_aside_content div{text-align:left;padding: auto 10px;}
+.ly_aside_content div{text-align:left;}
 .ly_aside_content img{width:100%;border:1px solid #ccc;}
 .ly_aside_content h4{font-size:1.7rem;font-weight:700;text-align:left;margin:10px auto;padding:10px 10px;border-bottom:1px solid #00568c;}
 .ly_aside_content h4::before{content:url(../img/logo.svg);display:inline-block;width:20px;height:auto;margin-left:-14px;margin-right:6px;}
