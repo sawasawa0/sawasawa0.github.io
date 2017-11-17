@@ -196,7 +196,7 @@ input.gsc-search-button-v2{padding:6px 10px;}
 .guide-txt{text-align:center;font-size:9.5px;}
 .navbar-toggle .icon-bar{width:30px;}
 .navbar-toggle {float: none;padding: 9px 10px;margin: 0;}
-.row{margin-left: 0;margin-right: 0}
+
 
 @media screen and (min-width:768px){
     .navbar{border: 0px;}
