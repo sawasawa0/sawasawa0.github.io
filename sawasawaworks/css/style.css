@@ -87,7 +87,7 @@ h1.bl_ttl:before , h2.bl_ttl:before{content:url(../img/logo.svg);display:inline-
 .bl_entry_txt{text-align:left;line-height:1.8em;margin-bottom:30px;font-size: 18px;}
 .bl_entry_txt h2{font-weight:700;font-size:110%;border-left:4px solid #666;padding:0.2em 0.4em;}
 .bl_entry_txt h3{font-weight:700;font-size:105%;border-left:2px solid #00568c;padding:0.2em 0.4em;}
-.bl_entry_txt p{padding:10px;}
+.bl_entry_txt p{padding:10px; margin-bottom: 2em;}
 .bl_entry_txt ul{padding:20px;margin-left:20px;}
 .bl_entry_txt img{max-width:100%;}
 .bl_btn_social{width:100%;margin-left:18px;margin-bottom:16px;}
