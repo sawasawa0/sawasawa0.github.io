@@ -21,9 +21,8 @@ div.ly_logo {background-image: url(https://sawasawa0.github.io/sawasawaworks/img
 .ly_body{background-color:#fff;
     background-image:-moz-linear-gradient(top, #fff 0%, #fff 50%, #00568c 100%);
     background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.5, #fff), color-stop(1, #00568c));}
-.ly_main{margin-top: 40px;}
+.ly_main , .ly_aside{margin-top: 80px;}
 .ly_container{padding: auto 10px;background-color:#fff;}
-.ly_aside{margin-top: 40px;}
 .ly_aside_content{background-color:#fff;padding: 10px;border-radius: 8px;}
 .ly_aside_content div{text-align:left;}
 .ly_aside_content img{width:100%;border:1px solid #ccc;}
@@ -126,17 +125,17 @@ div.bl_postList_ttl{overflow:hidden;text-align:left;}
 .el_portrait__small img{width:160px;height:auto;}
 .el_portrait__large img{width:240px;height:auto;}
 .el_mobile__hide{display:none;}
-.el_nav li a{transition:0.4s;color:#333;border: 1px solid #fff;}
+.el_nav li a{transition:0.4s;color:#fff;border: 1px solid #fff;}
 .el_nav li a:hover{color:#fff;background-color:#000;}
 
-.el_nav__pink a{background:linear-gradient(to right, hsla(0, 79%, 56%, 0.9), hsla(0, 79%, 56%, 0.9));background-color:#ffffff;}
-.el_nav__pinkorange a{background:linear-gradient(to right, hsla(2, 79%, 63%, 0.9), hsla(2, 79%, 63%, 0.9));background-color:#ffffff;}
-.el_nav__orange a{background:linear-gradient(to right, hsla(26, 88%, 63%, 0.9), hsla(26, 88%, 63%, 0.9));background-color:#ffffff;}
-.el_nav__yellow a{background:linear-gradient(to right, hsla(46, 96%, 61%, 0.9), hsla(46, 96%, 61%, 0.9));background-color:#ffffff;}
-.el_nav__limeyellow a{background:linear-gradient(to right, hsla(55, 64%, 56%, 0.9), hsla(55, 64%, 56%, 0.9));background-color:#ffffff;}
-.el_nav__yellogreen a{background:linear-gradient(to right, hsla(68, 51%, 54%, 0.9), hsla(68, 51%, 54%, 0.9));background-color:#ffffff;}
-.el_nav__mosgreen a{background:linear-gradient(to right, hsla(90, 49%, 55%, 0.9), hsla(90, 49%, 55%, 0.9));background-color:#ffffff;}
-.el_nav__green a{background:linear-gradient(to right, hsla(103, 43%, 57%, 0.9), hsla(103, 43%, 57%, 0.9));background-color:#ffffff;}
+.el_nav__pink a{background:linear-gradient(to right, hsla(0, 79%, 56%, 0.9), hsla(0, 79%, 56%, 0.9));background-color:#ccc;}
+.el_nav__pinkorange a{background:linear-gradient(to right, hsla(2, 79%, 63%, 0.9), hsla(2, 79%, 63%, 0.9));background-color:#ccc;}
+.el_nav__orange a{background:linear-gradient(to right, hsla(26, 88%, 63%, 0.9), hsla(26, 88%, 63%, 0.9));background-color:#ccc;}
+.el_nav__yellow a{background:linear-gradient(to right, hsla(46, 96%, 61%, 0.9), hsla(46, 96%, 61%, 0.9));background-color:#ccc;}
+.el_nav__limeyellow a{background:linear-gradient(to right, hsla(55, 64%, 56%, 0.9), hsla(55, 64%, 56%, 0.9));background-color:#ccc;}
+.el_nav__yellogreen a{background:linear-gradient(to right, hsla(68, 51%, 54%, 0.9), hsla(68, 51%, 54%, 0.9));background-color:#ccc;}
+.el_nav__mosgreen a{background:linear-gradient(to right, hsla(90, 49%, 55%, 0.9), hsla(90, 49%, 55%, 0.9));background-color:#ccc;}
+.el_nav__green a{background:linear-gradient(to right, hsla(103, 43%, 57%, 0.9), hsla(103, 43%, 57%, 0.9));background-color:#ccc;}
 
 
 p.el_catch ,p.catch{text-align:center;}
