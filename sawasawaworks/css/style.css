@@ -17,7 +17,6 @@ blockquote:before{content:"”";font-size:80px;font-family:Century;line-height:1
 .ly_logo{text-align:right;padding-top: 10px;}
 div.ly_logo {background-image: url(https://sawasawa0.github.io/sawasawaworks/img/logo.png);height: 80px;width: 300px;display: inline-block;background-size: contain; background-repeat: no-repeat;float:left;position: absolute;top: 10px;left: 10px;}
 
-.ly_header div {text-align: left;}
 
 .ly_body{background-color:#fff;
     background-image:-moz-linear-gradient(top, #fff 0%, #fff 50%, #00568c 100%);

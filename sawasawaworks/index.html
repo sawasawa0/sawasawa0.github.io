@@ -22,35 +22,38 @@
 
     <!-- OGP -->
     <!-- 共通項目 -->
-    {block:IndexPage}
-        <meta property="og:title" content="{title}" />
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="http://blog.sawasawaworks.com/" />
-        <meta property="og:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png" />
-    {/block:IndexPage}
+       {block:IndexPage}
+            <meta property="og:title" content="{title}" />
+            <meta property="og:type" content="website">
+            <meta property="og:url" content="http://blog.sawasawaworks.com/" />
+            <meta property="og:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png" />
+            <meta property="og:description" content="{block:indexPage}{MetaDescription}{/block:indexPage}">
+       {/block:IndexPage}
 
-    {block:PermalinkPage}
-        <meta property="og:title" content="{MetaDescription}" />
-        <meta property="og:type" content="blog">
-        <meta property="og:url" content="{Permalink}" />
-        {block:Posts}
-            {block:text}<meta property="og:image" content="https://sawasawa0.github.io/sawasawaworks/img/OGP_image.png" />{/block:text}
-            {block:Photo}<meta property="og:image" content="{PhotoURL-HighRes}" />{/block:Photo}
-        {/block:Posts}
-    {/block:PermalinkPage}
+       {block:PermalinkPage}
+           <meta property="og:type" content="blog" />
+           <meta property="og:url" content="{Permalink}" />
+           {block:Posts}
+                {block:text}
+                   <meta property="og:title" content="{title}" />
+                {/block:text}
+               {block:Photo}
+                   <meta property="og:title" content="{block:PostSummary} {PostSummary} {/block:PostSummary}" />
+                   <meta property="og:image" content="{PhotoURL-HighRes}" />
+                {/block:Photo}
+           {/block:Posts}
+       {/block:PermalinkPage}
 
-<meta property="og:site_name"  content="sawaGO!(サワゴー！)-IT × マンガ起業 × 札幌　あと雑記-" />
-    {block:Description}
-        <meta property="og:description" content="{block:PermalinkPage}{block:PostSummary}{PostSummary}{/block:PostSummary}{/block:PermalinkPage}{block:indexPage}{MetaDescription}{/block:indexPage}">
-    {/block:Description}
+   <meta property="og:site_name"  content="sawaGO!(サワゴー！)-IT × マンガ起業 × 札幌　あと雑記-" />
 
-<!-- Facebook用  -->
-<meta property="fb:app_id" content="233804487143118" />
-<meta property="article:publisher" content="https://www.facebook.com/spr.starcreates/" />
 
-<!-- Twitter用 -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="@sawasawa0" />
+   <!-- Facebook用  -->
+   <meta property="fb:app_id" content="233804487143118" />
+   <meta property="article:publisher" content="https://www.facebook.com/spr.starcreates/" />
+
+   <!-- Twitter用 -->
+   <meta name="twitter:card" content="summary_large_image" />
+   <meta name="twitter:site" content="@sawasawa0" />
 
 
     <!-- favicon -->
