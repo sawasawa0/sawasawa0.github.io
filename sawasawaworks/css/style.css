@@ -15,13 +15,16 @@ blockquote:before{content:"”";font-size:80px;font-family:Century;line-height:1
 .ly_wrapper{width: 100%;}
 .ly_header{width: 100%;}
 .ly_logo{text-align:right;padding-top: 10px;}
-.ly_logo img{width: calc(100% - 70px)}
+div.ly_logo {background-image: url(https://sawasawa0.github.io/sawasawaworks/img/logo.png);height: 80px;width: 300px;display: inline-block;background-size: contain; background-repeat: no-repeat;float:left;position: absolute;top: 10px;left: 10px;}
+
+.ly_header div {text-align: left;}
+
 .ly_body{background-color:#fff;
     background-image:-moz-linear-gradient(top, #fff 0%, #fff 50%, #00568c 100%);
     background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.5, #fff), color-stop(1, #00568c));}
-.ly_main{margin-top: 20px;}
+.ly_main{margin-top: 40px;}
 .ly_container{padding: auto 10px;background-color:#fff;}
-.ly_aside{margin-top: 20px;}
+.ly_aside{margin-top: 40px;}
 .ly_aside_content{background-color:#fff;padding: 10px;border-radius: 8px;}
 .ly_aside_content div{text-align:left;}
 .ly_aside_content img{width:100%;border:1px solid #ccc;}
