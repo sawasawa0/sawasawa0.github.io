@@ -377,9 +377,10 @@ function getPocket(pocketElm) {
     xml.send(null);
 }
 $(function(){
-  getHatenaBookmarkCount('{Permalink}', '.hatena-bookmark-count');
-  getFacebookCount('{Permalink}', '.facebook-count');
-  getTwitterCount('{Permalink}', '.twitter-count');
+  var site_Permalink = location.href;
+  getHatenaBookmarkCount(site_Permalink, '.hatena-bookmark-count');
+  getFacebookCount(site_Permalink, '.facebook-count');
+  getTwitterCount(site_Permalink, '.twitter-count');
 });
 
 
